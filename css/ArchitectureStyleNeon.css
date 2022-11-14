@@ -1,8 +1,18 @@
+@import "/public/App.svelte";
+@import "/public/cards.svelte";
+@import "normalize.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,400;8..144,600&family=Spectral:ital,wght@0,200;0,400;0,600;1,400&display=swap');
 
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
 
 :root {
 
@@ -39,13 +49,13 @@
       --h5-font-size: .30rem;
       --h6-font-size: .25rem;
 
-      --font-family-01: 'Lato', sans-serif;
+      --font-family-01: 'Josefin', sans-serif;
       --font-family-02: 'Dancing', sans-serif;
-      --font-family-03: 'Oswald', sans-serif;
+      --font-family-03: 'Orbitron', sans-serif;
       --font-family-04: 'Roboto', sans-serif;
       --font-family-05: 'Poppins', sans-serif;
-      --font-family-06: 'Oswald', sans-serif;
-      --font-family-07: 'Josefin', sans-serif;
+      --font-family-06: 'Cyber', sans-serif;
+      --font-family-07: 'Lato', sans-serif;
       --font-family-08: 'Raleway', sans-serif;
       --font-family-09: 'Goudy+Bookletter+1911', sans-serif;
       --font-family-10: 'Amaranth', sans-serif;
@@ -74,8 +84,9 @@ justify-items: center;
 
     font-family: "Helvetica", "Verdana", "Roboto", sans-serif;
   }
-h1 {
 
+
+h1 {
     margin-left: auto;
     margin-right: auto;
     width: -webkit-fit-content;
@@ -92,12 +103,7 @@ font-family: 'dickinson';
 text-align: center;
     color: var(--text-color-light-04);
 
-
-
-
     border-bottom: 1px ridge #1f0754;
-
-
 
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.925), 0 0 10px rgba(255, 255, 255, 0.945),
      0 0 20px #f4b403de, 0 0 30px #f47703b6, 0 0 40px #f4a003d5, 0 0 50px #f48c039f,
@@ -119,9 +125,9 @@ text-align: center;
 justify-content: center;
 width: fit-content;
 
-    font-family: var(--font-family-07);
+    font-family: var(--font-family-05);
     font-size: var(--h2-font-size);
-font-family: 'helvetica';
+
 text-align: center;
 color: var(--text-color-light-04);
 
@@ -142,7 +148,7 @@ h3 {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    font-family: var(--font-family-07);    
+    font-family: var(--font-family-06);    
     font-size: var(--h3-font-size);
     font-family: 'Sylfaen';
     text-decoration-style: double;
@@ -196,7 +202,7 @@ h3 {
   .front {
     position: absolute;
     top: 60px;
-    border: 15px solid #007fff;
+    border: 15px solid #000306;
     border-radius: 4px;
     box-sizing: border-box;
     width: 450px;
@@ -206,7 +212,7 @@ h3 {
   }
   
   /* Invisible inputs */
-  /* input {
+   input {
     display: none;
     position: absolute;
     top: -90px;
@@ -215,7 +221,7 @@ h3 {
     height: 450px;
     cursor: pointer;
     opacity: 0;
-  } */
+  } 
   input:indeterminate {
     display: initial;
   }
@@ -374,46 +380,7 @@ h3 {
   }
   
 
-  
-  /* Button style */
-  .button2 {
-    margin: 20px auto;
-    border: none;
-    border-radius: 2px;
-    padding: 12px 18px;
-    font-size: 16px;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: #fff;
-    background: #2196f3 center;
-    box-shadow: 0 0 4px rgb(129, 117, 117);
-    outline: none;
-    transition: background 0.5s;
-  }
-  button:hover {
-    background: #47a7f5 radial-gradient(circle, transparent 1%, #0f4f84 1%) center/15000%;
-  }
-  button:active {
-    background-color: #6eb9f7;
-    background-size: 100%;
-    transition: background 5s;
-  }
-  
-  @keyframes outcome {
-    0% {
-      opacity: 0;
-    }
-    35% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-
-
-.main-container {
+  .main-container {
     padding: 8px;
     margin: 8px;
     text-align: center;    
@@ -444,17 +411,64 @@ h3 {
  
 /* Common CSS for all Buttons - commandes css pour tous les boutons */
 button {
-
-    width: 140px;
-    height: 50px;
+ color: var(--text-color-light-04);
+    width: 105px;
+    height: auto;
     border-radius: 22px;
     cursor:crosshair;
-    font-family: var(--font-family-06);
-    text-align: center;
-    -webkit-text-stroke: .25px rgba(0, 0, 0, 0.534);
-    text-decoration: none;
+    font-family: var(--font-family-04);
+    font-size: var(--h1-font-size);
+    text-align: center;       
+    align-items: center;
+    justify-content: center;
+
+    -webkit-text-stroke: .25px rgba(0, 0, 0, 0.78);
+    text-decoration: none;    
+
 }
  
+  
+  /* Button style */
+  .button2 {
+
+    border: none;
+    border-radius: 1.5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background: #f19e04 center;
+    box-shadow: 0 0 2px rgb(159, 225, 194);
+    outline: none;
+    transition: background 0.5s;
+
+  }
+  button:hover {
+    background: #000000fa radial-gradient(circle, transparent 1%, #4b0321 1%) center/15000%;
+  }
+  button:active {
+    background-color: #0b66ab;
+    background-size: 100%;
+    transition: background 0.5s;
+  }
+  
+  @keyframes outcome {
+    0% {
+      opacity: 0;
+    }
+    35% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
 /* Solid Button */
 .sky-neon {
     color: #175e80;
@@ -472,8 +486,8 @@ button {
  
 /* Breath Button */
 .breath-neon {
-    color: #277afff3;
-    background-color: #000153fa;
+    color: #4488f5f3;
+    background-color: #010231fa;
     border: 2px solid transparent;
     -webkit-transition: .5s all ease-in;
     transition: .5s all ease-in;
@@ -489,7 +503,7 @@ button {
  
 /* Heart Bit Button */
 .heart-bit-neon {
-    background-color: #3f5395e3;
+    background-color: #0a122ee3;
     color: #fff;
     border: 2px solid transparent;
 }
