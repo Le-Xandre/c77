@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Possibilités pour Cards CSS en Holographic Effect</title>
+
+<meta name="description" content="source here : An exploration of what's possible with CSS for Pokemon Cards, simeydotme (Simon Goellner)" />
+<link rel="canonical" href="https://poke-holo.simey.me" />
+
+<link rel="icon" href="favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap"> 
+
+<link rel="stylesheet" href="public/vite-env.d.ts" />
+<link rel="stylesheet" href="public/App.svelte" /> 
+<link rel="stylesheet" href="public/cards.svelte" /> 
+
+
+<link rel="stylesheet" href="src/css/global.css" />
+<link rel="stylesheet" href="public/app.css" /> 
+
+<link rel="stylesheet" href="src/css/cards.css" />
+<link rel="stylesheet" href="public/input.css" />
+<link rel="stylesheet" href="dist/output.css" />
+
+
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/ArchitectureStyleNeon.css">
+<link rel="stylesheet" href="./css/normalize.min.css">
+</head>
+
+<body>
+
+<section class="cyber-slider" id="Cyberpunk"> 		
+
+<div id="cyberSlider" class="cyber-slider">
+
+<ul class="cyber-slider__wrapper">
+
+<li data-slideid="1" class="cyber-slider__slide active ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide-1.jpg" alt="Slide 1">
+<span class="glitch-area">
+	
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+<h2>Slide 01</h2><h1 class="heading-lg">VIVRE DANS LA VILLE, DU FUTUR ???</h1>						
+<br><p>Entrez dans le très immersif Open World de Night City, <br><br>un lieu qui établit de nouvelles normes en termes de visuels, de complexité & de profondeur narrative.</p><br><img class="slide-image" src="./img/slides/slide-2.jpg" alt="Slide 2">
+</div>
+</div>
+</li>
+
+<li data-slideid="2" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide-2.jpg" alt="Slide 2">
+<span class="glitch-area">
+
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+	<h2>Slide 02</h2><h3 class="heading-lg">NIGHT CITY VOUS TRANSFORME </h3>
+<br><p>
+	
+Cyberpunk 2077 est un jeu d’action-aventure en monde ouvert qui se déroule à Night City,</br> <br>une mégalopole obsédée par le pouvoir, la séduction et <br>les modifications corporelles.<br></p></br><img class="slide-image" src="./img/slides/slide-3.jpg" alt="Slide 2"><br>
+</div>
+</div>
+</li>
+
+<li data-slideid="3" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide-3.jpg" alt="Slide 3">
+<span class="glitch-area">
+
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+	<h2> Slide 03</h2><h3 class="heading-lg">Incarnation</h3>
+<p> <br>Vous incarnez & orienté <strong>V</strong>. 
+	<br>Vous débutez à la recherche d’un implant cybernétique
+	<br>pouvant être la clé de gagner en notoriété voir, d'après les rumeurs d'une certaine immortalité ou + à qui sait se l'approprier. Seulement, à quel prix ?<br><br><img class="slide-image" src="./img/slides/slide  (3).png" alt="Slide 3"><br>
+	</p>
+</div>
+</div>
+</li>
+
+<li data-slideid="4" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide  (4).png" alt="Slide 4">
+<span class="glitch-area">
+
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+	<h2>Slide 04</h2><h3 class="heading-lg">Personnalisation</h3>
+<p><br>Personnalisez les cyberlogiciels, les compétences, <br>le style de jeu de votre personnage <br>(<strong>Corporatiste </strong>, <strong>Gosse des Rues</strong> ou <strong>Badlands</strong> ) <br>et explorez cette ville immense où chacun de vos choix aura un impact direct sur l’histoire et le monde qui vous entoure.</p><br><img class="slide-image" src="./img/slides/slide  (4).png" alt="Slide 4">
+</div>
+</div>
+</li>
+
+<li data-slideid="5" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide  (5).png" alt="Slide 5">
+<span class="glitch-area">
+
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+<h2>Slide 05</h2><h3 class="heading-lg">EXPLOREZ LA VILLE DU FUTUR</h3>
+<p>
+<br>
+Night City regorge de choses à faire,
+<br> d'endroits à voir et de gens à rencontrer.<br> Et vous êtes libre d'aller où vous voulez, quand vous voulez, comme vous voulez.</p><br><img class="slide-image" src="./img/slides/slide  (5).png" alt="Slide 5"><br>
+</div>
+</div>
+</li>
+<li data-slideid="6" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide  (6).png" alt="Slide 6">
+<span class="glitch-area">
+Erreur 404
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+<h2>Slide 06</h2><h3 class="heading-lg">FORGEZ VOTRE LÉGENDE</h3>
+
+<p></br>Affrontez des grands patrons, des escrocs miteux <br>et tous les individus les plus craints de Night City,<br> qui ne reculeront devant rien pour s’emparer de cette puce.</p><br><img class="slide-image" src="./img/slides/slide  (6).png" alt="Slide 6"><br>
+</div>
+</div>
+</li>
+
+<li data-slideid="7" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide  (7).png" alt="Slide 7">
+<span class="glitch-area">
+
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+<h2>Slide 7</h2><h3 class="heading-lg">Interactions</h3>
+<p><br>Marchandez avec des fixers malhonnêtes, des stars désespérées et des intelligences artificielles renégates, qui luttent tous pour se faire un nom à Night City.</p></br><img class="slide-image" src="./img/slides/slide  (7).png" alt="Slide 7"><br>
+</div>
+</div>
+</li>
+
+<li data-slideid="8" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide  (8).png" alt="Slide 8">
+<span class="glitch-area">
+
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+<h2>Slide 8</h2><h3 class="heading-lg">Différents choix</h3>
+<p><br>Découvrez comment vos choix et vos actions influenceront l’histoire du jeu.</p><br><img class="slide-image" src="./img/slides/slide  (8).png" alt="Slide 5"><br>
+</div>
+</div>
+</li>
+
+</ul>
+
+<ul class="cyber-slider__controls">
+
+<li data-slide="1" class="current">
+<a href="#Slide 1"><span class="sr-only">Slide 1</span></a>
+</li>
+<li data-slide="2">
+<a href="#Slide 2"><span class="sr-only">Slide 2</span></a>
+</li>
+<li data-slide="3">
+<a href="#Slide 3"><span class="sr-only">Slide 3</span></a>
+</li>                
+
+<li data-slide="4">
+<a href="#Slide 4"><span class="sr-only">Slide 4</span></a>
+</li>
+
+<li data-slide="5">
+<a href="#Slide 5">
+<span class="sr-only">Slide 5</span>
+</a>
+</li>
+
+<li data-slide="6"><a href="#Slide 6"><span class="sr-only">Slide 6</span></a></li>
+<li data-slide="7"><a href="#Slide 7"><span class="sr-only">Slide 7</span></a></li>
+<li data-slide="8"><a href="#Slide 8"><span class="sr-only">Slide 8</span></a></li>
+</ul></div>
+
+
+<br>
+</section> 
+
+
+<section class="cyber-slider" id="Cyberpunk">
+
+<div id="cyberSlider" class="cyber-slider">
+
+<ul class="cyber-slider__wrapper">
+	<li data-slideid="9" class="cyber-slider__slide ">
+		<span class="cyber-slider__imgwrap">
+		<img class="slide-image" src="./img/slides/slide  (9).png" alt="Slide 9">
+		<span class="glitch-area">
+		
+		</span>
+		</span>
+		
+		<div class="cyber-slider__content">
+		<!-- class glitching -->
+		<div class="cyber-slider__slidetext">
+			<h2> Slide 09</h2><h3 class="heading-lg">CRÉEZ VOTRE PROPRE CYBERPUNK</h3>
+		<p>
+			<br>
+		Devenez un hors-la-loi urbain équipé d'améliorations cybernétiques et forgez votre légende dans les rues de Night City.</p>
+		<br><img class="slide-image" src="./img/slides/slide  (9).png" alt="Slide 17"><br></div>
+		</div>
+		</li>
+
+<li data-slideid="10" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide  (10).png" alt="Slide 10">
+<span class="glitch-area">
+
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+Slide 10 : <h3 class="heading-lg">FORGEZ VOTRE LÉGENDE</h3>
+<p>Arpentez les rues d’une ville immense, explorez des zones où les guerres de gangs font rage, dévalisez des paradis fiscaux et sillonnez un centre-ville en effervescence.</p><img class="slide-image" src="./img/slides/slide  (10).png" alt="Slide 10">
+</div>
+</div>
+</li>
+
+<li data-slideid="11" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide  (11).png" alt="Slide 11">
+<span class="glitch-area">
+
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+Slide 11<h3 class="heading-lg">PNJ</h3><img class="slide-image" src="./img/slides/slide  (11).png" alt="Slide 11">
+<p>
+Lancez-vous dans des aventures risquées et nouez des relations avec des personnages inoubliables dont le sort dépendra de vos choix.</p>
+</div>
+</div>
+</li>
+
+<li data-slideid="12" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide  (12).png" alt="Slide 12">
+<span class="glitch-area">
+
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+Slide 12<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (12).png" alt="Slide 12">
+<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+visuals, complexity and depth.</p>
+
+</div>
+</div>
+</li>
+
+<li data-slideid="13" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide  (13).png" alt="Slide 13">
+<span class="glitch-area">
+
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+Slide 13<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (13).png" alt="Slide 13">
+<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+visuals, complexity and depth.</p>
+</div>
+</div>
+</li>
+
+<li data-slideid="14" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide  (14).png" alt="Slide 14">
+<span class="glitch-area">
+
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+Slide 14<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (14).png" alt="Slide 14">
+<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+visuals, complexity and depth.</p>
+</div>
+</div>
+</li>
+
+<li data-slideid="15" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide  (15).png" alt="Slide 15">
+<span class="glitch-area">
+
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+Slide 15<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (15).png" alt="Slide 15">
+<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+visuals, complexity and depth.</p>
+</div>
+</div>
+</li>
+
+<li data-slideid="16" class="cyber-slider__slide ">
+<span class="cyber-slider__imgwrap">
+<img class="slide-image" src="./img/slides/slide  (16).png" alt="Slide 16">
+<span class="glitch-area">
+
+</span>
+</span>
+
+<div class="cyber-slider__content">
+<!-- class glitching -->
+<div class="cyber-slider__slidetext">
+Slide 16<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (16).png" alt="Slide 5">
+<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+visuals, complexity and depth.</p>
+</div>
+</div>
+</li>
+</ul>
+<ul class="cyber-slider__controls">
+<li data-slide="9" class="#Slide 9"><a href="#Slide 9"><span class="sr-only">Slide 09</span></a></li>
+<li data-slide="10"><a href="#Slide 10"><span class="sr-only">Slide 10</span></a></li>
+<li data-slide="11"><a href="#Slide 11"><span class="sr-only">Slide 11</span></a></li>                
+<li data-slide="12"><a href="#Slide 12"><span class="sr-only">Slide 12</span></a></li>
+<li data-slide="13"><a href="#Slide 13"><span class="sr-only">Slide 13
+</span></a></li>
+<li data-slide="14"><a href="#Slide 14"><span class="sr-only">Slide 14</span></a></li>
+<li data-slide="15"><a href="#Slide 15"><span class="sr-only">Slide 15</span></a></li>
+<li data-slide="16"><a href="#Slide 16"><span class="sr-only">Slide 16</span></a></li>
+</ul>
+</div>
+</section>
+<section class="cyber-slider" id="Cyberpunk">
+
+	<div id="cyberSlider" class="cyber-slider">
+	
+	<ul class="cyber-slider__wrapper">
+	<li data-slideid="17" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (17).png" alt="Slide 17">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 17 : <h3 class="heading-lg">CRÉEZ VOTRE PROPRE CYBERPUNK</h3>
+	<p>
+	
+	Devenez un hors-la-loi urbain équipé d'améliorations cybernétiques et forgez votre légende dans les rues de Night City.</p>
+	<img class="slide-image" src="./img/slides/slide  (17).png" alt="Slide 17"><br></div>
+	</div>
+	</li>
+	
+	<li data-slideid="18" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (18).png" alt="Slide 18">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 18 : <h3 class="heading-lg">FORGEZ VOTRE LÉGENDE</h3>
+	<p>Arpentez les rues d’une ville immense, explorez des zones où les guerres de gangs font rage, dévalisez des paradis fiscaux et sillonnez un centre-ville en effervescence.</p><img class="slide-image" src="./img/slides/slide  (18).png" alt="Slide 18">
+	</div>
+	</div>
+	</li>
+	
+	<li data-slideid="19" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (19).png" alt="Slide 19">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 19<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (19).png" alt="Slide 19">
+	<p>
+	Lancez-vous dans des aventures risquées et nouez des relations avec des personnages inoubliables dont le sort dépendra de vos choix.</p>
+	</div>
+	</div>
+	</li>
+	
+	<li data-slideid="20" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (20).png" alt="Slide 20">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 20<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (20).png" alt="Slide 20">
+	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+	visuals, complexity and depth.</p>
+	
+	</div>
+	</div>
+	</li>
+	
+	<li data-slideid="21" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (21).png" alt="Slide 21">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 21<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (21).png" alt="Slide 21">
+	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+	visuals, complexity and depth.</p>
+	</div>
+	</div>
+	</li>
+	
+	<li data-slideid="22" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (22).png" alt="Slide 22">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 22<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (22).png" alt="Slide 22">
+	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+	visuals, complexity and depth.</p>
+	</div>
+	</div>
+	</li>
+	
+	<li data-slideid="23" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (23).png" alt="Slide 23">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 23<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (23).png" alt="Slide 23">
+	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+	visuals, complexity and depth.</p>
+	</div>
+	</div>
+	</li>
+	
+	<li data-slideid="24" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (24).png" alt="Slide 24">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 24<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (24).png" alt="Slide 24">
+	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+	visuals, complexity and depth.</p>
+	</div>
+	</div>
+	</li>
+	</ul>
+	
+	<ul class="cyber-slider__controls">
+	<li data-slide="17" class="#Slide 17"><a href="#Slide 17"><span class="sr-only">Slide 17</span></a></li>
+	<li data-slide="18"><a href="#Slide 18"><span class="sr-only">Slide 18</span></a></li>
+	<li data-slide="19"><a href="#Slide 19"><span class="sr-only">Slide 19</span></a></li>                
+	<li data-slide="20"><a href="#Slide 20"><span class="sr-only">Slide 20</span></a></li>
+	<li data-slide="21"><a href="#Slide 21"><span class="sr-only">Slide 21
+	</span></a></li>
+	<li data-slide="22"><a href="#Slide 22"><span class="sr-only">Slide 22</span></a></li>
+	<li data-slide="23"><a href="#Slide 23"><span class="sr-only">Slide 23</span></a></li>
+	<li data-slide="24"><a href="#Slide 24"><span class="sr-only">Slide 24</span></a></li>
+	</ul>
+	
+	</div>
+	
+	</section>
+
+<section class="bg-gray-900 h-screen flex justify-center items-center gap-x-16 text-white">
+<div
+class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
+>
+<div
+class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
+>
+<div class="absolute backface-hidden border-2 w-full h-full">
+<img src="src/assets/kingsman.jpg" class="w-full h-full"  alt="c77"/>
+</div>
+<div
+class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
+>
+<div
+class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
+>
+<h1 class="text-3xl font-semibold">The King's Man</h1>
+<p class="my-2">9.0 Rating</p>
+<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+itaque assumenda saepe animi maxime libero non quasi, odit natus
+veritatis enim culpa nam inventore doloribus quidem temporibus
+amet velit accusamus.
+</p>
+<button
+class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+>
+Watch Now
+</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</section>
+
+<section class="bg-gray-900 h-screen flex justify-center items-center gap-x-16 text-white">
+
+<div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
+<div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+<div class="absolute backface-hidden border-2 w-full h-full">
+<img src="public/img/geometric.png" class="w-full h-full" alt="c77">
+</div>
+
+<div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden" >
+<div class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24" >
+<h1 class="text-3xl font-semibold">The King's Man</h1>
+<p class="my-2">9.5 Rating</p>
+<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+itaque assumenda saepe animi maxime libero non quasi, odit natus
+veritatis enim culpa nam inventore doloribus quidem temporibus
+amet velit accusamus.
+</p>
+<button
+class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+>
+Watch Now
+</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div
+class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
+>
+<div
+class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
+>
+<div class="absolute backface-hidden border-2 w-full h-full">
+<img src="public/assets/rednotice.jpg" class="w-full h-full" alt="c77"/>
+</div>
+<div
+class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
+>
+<div
+class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
+>
+<h1 class="text-3xl font-semibold">The Red Notice</h1>
+<p class="my-2">10.05 Rating</p>
+<p>
+	<div class="bg-transparent"><img class="slide-image" src="img/slides/slide  (17).png" alt="c77"/></div>
+</p>
+<button
+class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+>
+Watch Now
+</button><div id="app">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-gray-900 h-screen flex justify-center items-center gap-x-16 text-white">
+	<div
+	class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
+	>
+	<div
+	class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
+	>
+	<div class="absolute backface-hidden border-2 w-full h-full">
+	<img src="public/assets/spider.jpg" class="w-full h-full" alt="c77"/>
+	</div>
+	<div
+	class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
+	>
+	<div
+	class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
+	>
+	<h1 class="text-3xl font-semibold">Spider Man</h1>
+	<p class="my-2">9.0 Rating</p>
+	<p>
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+	itaque assumenda saepe animi maxime libero non quasi, odit natus
+	veritatis enim culpa nam inventore doloribus quidem temporibus
+	amet velit accusamus.
+	</p>
+	<button
+	class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+	>
+	Watch Now
+	</button>
+	</div>
+	</div>
+	</div>
+	<span class="c-news__image--glitch-effect" style="background-image: url(https://static.cdprojektred.com/cms.cdprojektred.com/16x9_big/23f12c864022304aeaf05d8f760417d583a1602d-1280x720.jpg);"></span></div></section>
+
+
+<section class="bg-gray-900 h-screen flex justify-center items-center gap-x-16 text-white">
+	<div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
+	<div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+	<div class="absolute backface-hidden border-2 w-full h-full">
+	<img src="public/img/rainbow.jpg" class="w-full h-full" alt="c77">
+	</div>
+	
+	<div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden" >
+	<div class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24" >
+	<h1 class="text-3xl font-semibold">The King's Man</h1>
+	<p class="my-2">9.0 Rating</p>
+	<p>
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+	itaque assumenda saepe animi maxime libero non quasi, odit natus
+	veritatis enim culpa nam inventore doloribus quidem temporibus
+	amet velit accusamus.
+	</p>
+	<button
+	class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+	>
+	Watch Now
+	</button>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div
+	class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
+	>
+	<div
+	class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
+	>
+	<div class="absolute backface-hidden border-2 w-full h-full">
+	<img src="public/img/galaxy-source.png" class="w-full h-full"  alt="c77"/>
+	</div>
+	<div
+	class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
+	>
+	<div
+	class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
+	>
+	<h1 class="text-3xl font-semibold">The King</h1>
+	<p class="my-2">10.0 Rating</p>
+	<p>
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+	itaque assumenda saepe animi maxime libero non quasi, odit natus
+	veritatis enim culpa nam inventore doloribus quidem temporibus
+	amet velit accusamus.
+	</p><a href="https://cdn-l-mkt.cdprojektred.com/document/Rules-FR_p6yd6fw7cmsyisfc.pdf"></a>
+	<button
+	class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+	>
+	Watch Now	
+	</button>
+	</div>
+	</div>
+	</div>
+	</div>
+</section>
+
+</body>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_GA%"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '%VITE_GA%', {
+'linker': { 'domains': ['poke-holo.simey.me', 'deck-24abcd.netlify.app'] }
+});
+</script>
+<script type="module" src="src/lib/stores/orientation.js"></script>
+<script type="module" src="jsconfig.json"></script>
+<script type="module" src="tailwind.config.js"></script>
+<script type="module" src="vite.config.js"></script>
+
+
+<script type="module" src="public/data.json"></script>
+<script type="module" src="yarn.lock"></script></script>
+<script type="module" src="src/lib/stores/activeCard.js"></script>
+<script type="module" src="public/lib/components/card-shine.svelte"></script>
+<script type="module" src="public/lib/components/card.svelte"></script>
+<script type="module" src="public/lib/helpers/Math.js"></script>
+<script type="module" src="public/lib/helpers/Quaternion.js"></script>
+<script type="module" src="public/lib/stores/orientation.js"></script>
+<script type="module" src="/src/main.js"></script><script src="./js/scripts.js"></script>
+<script type="module" src="public/main.js"></script>
+</html>
