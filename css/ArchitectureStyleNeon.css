@@ -95,8 +95,8 @@ h1 {
 
  justify-content: center;
  justify-items: center;
-    font-family: var(--font-family-04);
-font-family: 'dickinson';
+    font-family: var(--font-family-03);
+
     font-size: var(--h1-font-size);
     font-weight: normal;
     text-align: center;
@@ -125,7 +125,7 @@ text-align: center;
 justify-content: center;
 width: fit-content;
 
-    font-family: var(--font-family-05);
+    font-family: var(--font-family-04);
     font-size: var(--h2-font-size);
 
 text-align: center;
@@ -148,7 +148,7 @@ h3 {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    font-family: var(--font-family-06);    
+    font-family: var(--font-family-05);    
     font-size: var(--h3-font-size);
     font-family: 'Sylfaen';
     text-decoration-style: double;
@@ -411,20 +411,18 @@ h3 {
  
 /* Common CSS for all Buttons - commandes css pour tous les boutons */
 button {
- color: var(--text-color-light-04);
-    width: 105px;
+
+    width: 100px;
     height: auto;
-    border-radius: 22px;
-    cursor:crosshair;
-    font-family: var(--font-family-04);
-    font-size: var(--h1-font-size);
+    font-family: var(--font-family-03);
+    font-size: var(--h2-font-size);
     text-align: center;       
     align-items: center;
     justify-content: center;
-
-    -webkit-text-stroke: .25px rgba(0, 0, 0, 0.78);
+    color: var(--text-color-light-04);
+    -webkit-text-stroke: .25px rgba(0, 0, 0, 0.977);
     text-decoration: none;    
-
+cursor:crosshair;
 }
  
   
@@ -432,11 +430,10 @@ button {
   .button2 {
 
     border: none;
-    border-radius: 1.5px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 12px;
+    font-size: 10px;
     text-transform: uppercase;
     cursor: pointer;
     color: rgb(0, 0, 0);
