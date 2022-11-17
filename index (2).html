@@ -2,44 +2,111 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8" />
-<link rel="icon" href="src/favicon.png" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Possibilités pour Cards CSS en Holographic Effect</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="source here : Une exploration en Css pour Cyberpunk 2077, Le-Xandre (Alexandre Coté). "/>
+<link rel="canonical" href="https://le-xandre.github.io/Responsive-Portfolio-Alex/index.html" content="Le-Xandre (Alexandre Coté)."/>
+
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="img/slides/slide (220).png" type="image/x-icon">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<meta name="description" content="source here : Une exploration en Css pour Cyberpunk 2077, Le-Xandre (Alexandre Coté). "/>
-<link rel="canonical" href="https://le-xandre.github.io/Responsive-Portfolio-Alex/index.html" content="Le-Xandre (Alexandre Coté)."/>
 
-<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&display=swap" rel="stylesheet">
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<title>Possibilités pour Cards CSS en Holographic Effect</title>
+        <!--=============== ICONS & text ===============-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap"> 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Heebo:wght@100..900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&display=swap">
 
 
+
+<!-- Css  -->
+
+<link rel="stylesheet" href="dist/output.css" />
 
 <link rel="stylesheet" href="css/demo.css">
-<link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="dist/output.css" />
+
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/style.css">
+
 <link rel="stylesheet" href="./css/ArchitectureStyleNeon.css">
 
+        <!--=============== SWIPER CSS ===============-->
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+        
 <link rel="stylesheet" href="./css/normalize.min.css">
+<!--
+-->
 
-<!-- <link rel="stylesheet" href="public/vite-env.d.ts" />
-<link rel="stylesheet" href="public/App.svelte" /> 
-<link rel="stylesheet" href="public/cards.svelte" /> <link rel="stylesheet" href="src/app.css" />
-<link rel="stylesheet" href="src/css/cards.css" /> -->
-<!--  -->
 </head>
 
 <body>
+	
+        <!--=============== HEADER ===============-->
 
-	<br>
-<h1>Cyberpunk <strong>2077</strong></h1>
-<br>	
+        <header class="header" id="header">
+            <a href="#" class="nav__logo"><h2>Cyberpunk <strong>2077</strong></h2></a>
+			<nav class="nav container">				                
+				
+                							
+					
+				<div class="nav__menu">
 
+                    <ul class="nav__list"><!-- theme change -->
+						<i class="bx bx-moon change-theme" id="theme-button"></i> 
 
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link" title="home">
+                                <i class='bx bx-home-heart'></i>
+                            </a><h3 class="nav__item-title">Menu</h3>
+                            
+                        </li>
+                        <li class="nav_item">
+                            <a href="#about" class="nav__link" title="about">
+                                <i class="bx bx-user"></i>
+                            </a><h3 class="nav__item-title">A propos</h3>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link" title="skills">
+                                <i class="bx bx-book-open"></i>
+                            </a><h3 class="nav__item-title">Skills</h3>
+                        </li>
+                        <!-- <li class="nav__item">
+                            <a href="#services" class="nav__link" title="services">
+                                <i class="bx bx-briefcase"></i>
+                            </a><h3 class="nav__item-title">Services</h3>
+                        </li> -->
+                        <li class="nav__item">
+                            <a href="#work" class="nav__link" title="work">
+                                <i class="bx bx-briefcase-alt"></i>
+                            </a><h3 class="nav__item-title">Portfolio</h3>
+                        </li>
+                        <!-- <li class="nav__item">
+                            <a href="#testimonial" class="nav__link" title="testimonial" alt="Témoignages">
+                                <i class='bx bx-male-female'></i>
+                            </a><h3 class="nav__item-title">Témoignages</h3>
+                        </li> -->
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link" title="contact">
+                                <i class="bx bx-message-square-detail"></i>
+                            </a><h3 class="nav__item-title">Contacts</h3>
+                        </li>
+						
+                    </ul>
+            </div>
+		</nav>
+		
+        </header>
+
+		<main>
+<br><br>
 <section class="cyber-slider" id="Cyberpunk">		
 
 <div id="cyberSlider" class="cyber-slider">
@@ -225,44 +292,18 @@ Erreur 404
 <li data-slide="6"><a href="#Slide 6"><span class="sr-only">Slide 6</span></a></li>
 <li data-slide="7"><a href="#Slide 7"><span class="sr-only">Slide 7</span></a></li>
 <li data-slide="8"><a href="#Slide 8"><span class="sr-only">Slide 8</span></a></li>
-</ul></div>
+</ul>
+</div>
 
-
-<br>
-	
 </section>
 	
-			<section class="cyber-slider">
+<section class="cyber-slider">
 	
 <iframe id="ytplayer" class="v-header" type="video/mp4" width="100%" height="360" src="https://www.youtube.com/embed/1DSutjnvTX4?list=PL4dX1IHww9p1ZnvQrC5Um3rXIEBGRY7Rk" title="Cyberpunk 2077 — Bande-annonce de lancement officielle — V" autoplay="autoplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
 		</iframe>
-</section><br>
-
-<section class="cyber-slider">	
-<iframe  id="ytplayer" class="v-header" type="video/mp4" width="100%"  height="240" src="https://www.youtube.com/embed/gyM_HysQN7s" title="Cyberpunk 2077: Phantom Liberty — Teaser officiel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen alt="Teaser"></iframe>
-<section class="cyber-slider__content">
-	<iframe id="ytplayer" type="text/html" width="auto" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLDisKgcnAC4SqX0mi1J5_gd7-hrIS5yJp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br><button class="cybr-btn">
-	Cyber<span aria-hidden="false">_</span>
-	<span aria-hidden="false" class="cybr-btn__glitch">Cyber_</span>
-	<a href="https://www.cyberpunk.net/fr/fr/"></a>
-	<span aria-hidden="false" class="cybr-btn__tag sky-neon">R24</span>
-</button><br>
-<div class="container"><br> 
-<iframe id="iframe" src="https://open.spotify.com/embed/playlist/6KH41lq4pKgNZ6DRmbzse7?si=94d644f944b04317utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><br></div>
-  <button class="cybr-btn" aria-hidden="false">
-	Buttons<span aria-hidden="true">_</span>
-	<span aria-hidden="true" class="cybr-btn__glitch">Buttons_</span>
-	<span aria-hidden="true" class="cybr-btn__tag sky-neon">R25</span>
-  </button>
 </section>
-
-  <!--<br><audio controls autoplay></audio> <div class="header" aria-hidden="true"></div>-->
-  <br>
- 
-	
-</section>
-
+<br>
 
 <section class="cyber-slider" id="Cyberpunk">
 
@@ -427,9 +468,46 @@ visuals, complexity and depth.</p>
 </ul>
 </div>
 </section>
+<div class="container sky-neon">
+		<h1>DÉFI MODE PHOTO <br><br>- 2e édition<br><br> </h1>N°3 : Verticalité
+		<button class="cybr-btn" aria-hidden="true">
+			 <span aria-hidden="true">
+			</span>
+			<span aria-hidden="false" class="cybr-btn__glitch">°... :x ...°</span>
+			<a href="https://www.cyberpunk.net/fr/photo-mode-challenge">Participer<box-icon name='down-arrow-alt' type='solid' animation='tada' flip='vertical'></box-icon></a>
+			<span aria-hidden="false" class="cybr-btn__tag sky-neon"><i class='bx bxs-down-arrow-alt bx-tada bx-flip-vertical'><br></i>R26</span>
+		</button>
+	<hr>
+</div>
+<section class="cyber-slider">
+	<iframe  id="ytplayer" class="v-header" type="video/mp4" width="100%"  height="240" src="https://www.youtube.com/embed/gyM_HysQN7s" title="Cyberpunk 2077: Phantom Liberty — Teaser officiel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen alt="Teaser">
+</iframe></section>
+<section class="cyber-slider">
 
+<section class="cyber-slider__content">
+<button class="cybr-btn">
+	Cyber<span aria-hidden="true">_</span>
+		<span aria-hidden="true" class="cybr-btn__glitch"><a href="https://www.cyberpunk.net/fr/fr/">Cyber_</a></span>
+	
+	<span aria-hidden="false" class="cybr-btn__tag sky-neon">R24</span>
+</button><iframe id="iframe" src="https://open.spotify.com/embed/playlist/6KH41lq4pKgNZ6DRmbzse7?si=94d644f944b04317utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+<button class="cybr-btn" aria-hidden="true">
+	Buttons<span aria-hidden="true">_</span>
+	<a href="https://youtu.be/gyM_HysQN7s"><span aria-hidden="true" class="cybr-btn__glitch">
+		Buttons_</span></a>
+	<span aria-hidden="false" class="cybr-btn__tag sky-neon">R25</span>
+  </button>
+<br>
+<iframe id="ytplayer" type="text/html" width="auto" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLDisKgcnAC4SqX0mi1J5_gd7-hrIS5yJp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+</section>
+
+
+</section>
 
 <section class="cyber-slider" id="Cyberpunk">
+
 	
 	<div class="container">
 		<!-- <h1 class="main-title">Our Products</h1> -->
@@ -464,7 +542,7 @@ visuals, complexity and depth.</p>
 			</div>
 		  </div>
 		  <div class="card stacked">
-			<img src="img/slides/slide  (28).png" alt="" class="card__img">
+			<img src="img/slides/slide  (31).png" alt="" class="card__img">
 			<div class="card__content">
 			  <h2 class="card__title">Minima, earum ipsam.</h2>
 			  <p class="card__price">$500</p>
@@ -472,7 +550,7 @@ visuals, complexity and depth.</p>
 			</div>
 		  </div>
 		  <div class="card stacked">
-			<img src="img/slides/slide  (29).png" alt="" class="card__img">
+			<img src="img/slides/slide  (28).png" alt="" class="card__img">
 			<div class="card__content">
 			  <h2 class="card__title">Odio, nam consequatur.</h2>
 			  <p class="card__price">$255</p>
@@ -480,7 +558,7 @@ visuals, complexity and depth.</p>
 			</div>
 		  </div>
 		  <div class="card stacked">
-			<img src="img/slides/slide  (30).png" alt="" class="card__img">
+			<img src="img/slides/slide  (29).png" alt="" class="card__img">
 			<div class="card__content">
 			  <h2 class="card__title">Quidem, aut numquam!</h2>
 			  <p class="card__price">$345</p>
@@ -488,7 +566,7 @@ visuals, complexity and depth.</p>
 			</div>
 		  </div>
 		  <div class="card stacked">
-			<img src="img/slides/slide  (31).png" alt="" class="card__img">
+			<img src="img/slides/slide  (30).png" alt="" class="card__img">
 			<div class="card__content">
 			  <h2 class="card__title">Accusantium, placeat dolores?</h2>
 			  <p class="card__price">$105</p>
@@ -502,7 +580,9 @@ visuals, complexity and depth.</p>
 	  
 	  </div> 
 
-	</section>
+</section>
+
+
 
 <section class="cyber-slider" id="Cyberpunk">
 
@@ -668,8 +748,9 @@ visuals, complexity and depth.</p>
 	</ul>
 	
 	</div>
-	
-	</section>
+	<hr>
+
+</section>
 
 <section class="bg-gray-900 h-screen flex justify-center items-center gap-x-16 text-white">
 
@@ -872,25 +953,62 @@ Watch Now
 	</div>
 	</div>
 </section>
+</main>
 
-<footer>
-	<section>
+<footer class="footer">
+	<div class="footer__container container"><h2 class="footer__title">2022 / 2023</h2>
+		
+		<ul class="footer__list">
+			<li>
+				<a href="#about" class="footer__link">A propos</a>
+			</li>
+			<li>
+				<a href="#work" class="footer__link">Projets</a>
+			</li>
+			<li>
+				<a href="#testimonial" class="footer__link">Avis clients</a>
+			</li>
+		</ul>
 
-
-<h1>Alex.<a href=""></a></h1>
-<h2>A propos</h2></a>
-<a href=""><h2>Projets</h2></a>
-<a href=""><h2>Avis clients</h2>
-<p>© Alex. "All rights reserved"© . Inspirations (& Thanks to) friends etc.</p>
-</section>
+		<ul class="footer__social">
+			<li>
+			<a href="https://www.facebook.com" rel="noopener" title="facebook" target="__blank" class="footer__social-link">
+				<i class="bx bxl-facebook"></i>
+			</a>
+			<a href="https://www.instagram.com" rel="noopener" title="instagram" target="__blank" class="footer__social-link">
+				<i class="bx bxl-instagram"></i>
+			</a>
+			<a href="https://www.twitter.com" rel="noopener" title="twitter" target="_blank" class="footer__social-link">
+				<i class="bx bxl-twitter"></i>
+			</a>
+		</ul>
+	</li>
+		<span class="footer__copy">
+			<h4>&#169; Alex. "All rights reserved"© .
+			(Inspirations & Thanks to friends.)
+			<br>
+		</h4>
+		</span>
+	</div>
+	<a href="#" class="back-to-top" id="back-to-top">°0°</a>
 </footer>
-<script src="js/swiper-bundle.min.js"></script>
-<script src="vite.config.js"></script>
 
-<script src="src/main.js"></script>
-<script src="src/index.js"></script>
-
-<script src="./js/scripts.js"></script>
 </body>
 
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src="js/scrollreveal.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="js/swipper-bundle.min.js"></script>
+
+        <!--=============== MIXITUP FILTER ===============-->
+
+        <script src="/js/mixitup.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+		<script src="src/main.js"></script>
+		<script src="./js/scripts.js"></script>
+		
+		<script src="src/index.js"></script>
 </html>
