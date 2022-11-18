@@ -1,6 +1,13 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @import "normalize.min.css";
-@import "/public/App.svelte";
-@import "/public/cards.svelte";
+
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,400;8..144,600&family=Spectral:ital,wght@0,200;0,400;0,600;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
@@ -15,7 +22,96 @@
 
 
 
+
 :root {
+
+  --height_header01:90px;
+  --height_header02:150px;
+  --height_header03:300px;
+  --height_header04:480px;
+
+  --blanc: #d9d9d9fd;
+  --noir: #000002;
+  --gris-transparent: #212020ca;
+  --body-color: #000000f8;
+  --first-hue: 205;
+  --sat: 45%;
+  --lig: 45%;
+  --second-hue: 245;
+
+  --first-color: hsla(var(--first-hue), var(--sat), var(--lig));
+  --first-color-alt: hsla(var(--first-hue), var(--sat), 71%); /* -4% */
+  --title-color: hsla(var(--second-hue), 15%, 95%);
+  --text-color: hsla(var(--second-hue), 8%, 75%);
+  --text-color-light: hsla(var(--second-hue), 4%, 55%);
+  --body-color: hsla(var(--second-hue), 48%, 8%);
+  --container-color: hsla(var(--second-hue), 32%, 12%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 1.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --h4-font-size: .5rem;
+  --special-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --tiny-font-size: .625rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semibold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+  --premiere-color:rgb(4, 4, 4);
+  --seconde-color:rgba(238, 127, 83, 0.991);
+  --third-color:rgb(51, 73, 119);
+
+  --text-color-light-01: rgb(223, 251, 179);
+  --text-color-light-02: rgb(66, 227, 144);
+  --text-color-light-03: rgb(255, 153, 0);
+  --text-color-light-04: rgba(32, 38, 52, 0.972);
+  --text-color-light-05: rgb(145, 14, 14);
+  --text-color-light-06: rgb(34, 38, 33);
+
+
+  --smaller-font-size: .50rem;
+  --normal-font-size: 1rem;
+  --biggest-font-size: 1.75rem;
+
+  --h1-font-size:1.25rem;
+  --h2-font-size: .75rem;
+  --h3-font-size: .50rem;
+  --h4-font-size: .45rem;
+  --h5-font-size: .30rem;
+  --h6-font-size: .25rem;
+
+  --font-family-01: 'Lato', sans-serif;
+  --font-family-02: 'Dancing', sans-serif;
+  --font-family-03: 'Orbitron', sans-serif;
+  --font-family-04: 'Roboto', sans-serif;
+  --font-family-05: 'Poppins', sans-serif;
+  --font-family-06: 'Cyber', sans-serif;
+  --font-family-07: 'Josefin', sans-serif;
+  --font-family-08: 'Raleway', sans-serif;
+  --font-family-09: 'Goudy+Bookletter+1911', sans-serif;
+  --font-family-10: 'Amaranth', sans-serif;
+  
+  --filter-blur: blur(100px);
+  --filter-blur02: blur(200px);
+
+}
+
+
+:root {
+
+
   --ff-primary: Heebo, sans-serif;
   --ff-secondary: Bungee, cursive;
   --ff-accent: Bungee Shade, cursive;
@@ -93,12 +189,25 @@
   }
 }
 
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
+body {
+  font-family: var(--ff-primary);
+}
+
 
 /* Remove default margin */
 body,
@@ -111,14 +220,21 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;
+  margin: 0;  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--ff-secondary);
+  font-family: var(--bg-deg);
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -159,61 +275,6 @@ select {
   font: inherit;
 }
 
-
-
-:root {
-
-  --height_header01:90px;
-  --height_header02:150px;
-  --height_header03:300px;
-  --height_header04:480px;
-
-  --blanc: #f3ebebfd;
-  --noir: #000002;
-  --gris-transparent: #62686881;
-  --body-color: #000000f8;
-
-  --premiere-color:rgb(4, 4, 4);
-  --seconde-color:rgba(248, 216, 198, 0.991);
-  --third-color:rgb(17, 88, 241);
-
-  --text-color-light-01: rgb(249, 199, 142);
-  --text-color-light-02: rgb(207, 253, 241);
-  --text-color-light-03: rgb(255, 153, 0);
-  --text-color-light-04: rgba(3, 24, 74, 0.956);
-  --text-color-light-05: rgb(255, 0, 0);
-  --text-color-light-06: rgb(43, 46, 49);
-
-
-  --smaller-font-size: .50rem;
-  --normal-font-size: 1rem;
-  --biggest-font-size: 1.75rem;
-
-  --h1-font-size:1.25rem;
-  --h2-font-size: .75rem;
-  --h3-font-size: .50rem;
-  --h4-font-size: .45rem;
-  --h5-font-size: .30rem;
-  --h6-font-size: .25rem;
-
-  --font-family-01: 'Lato', sans-serif;
-  --font-family-02: 'Dancing', sans-serif;
-  --font-family-03: 'Orbitron', sans-serif;
-  --font-family-04: 'Roboto', sans-serif;
-  --font-family-05: 'Poppins', sans-serif;
-  --font-family-06: 'Cyber', sans-serif;
-  --font-family-07: 'Josefin', sans-serif;
-  --font-family-08: 'Raleway', sans-serif;
-  --font-family-09: 'Goudy+Bookletter+1911', sans-serif;
-  --font-family-10: 'Amaranth', sans-serif;
-  
-  --filter-blur: blur(100px);
-  --filter-blur02: blur(200px);
-  
-}
-
-
-
 img {
 max-width: 100%;
 }
@@ -236,15 +297,20 @@ h3,
 h4 {
 margin-bottom: 0.25em;
 margin-top: 0;
+align-items: center;
+justify-items: center;
+justify-content: center;
+text-align: center;
 }
 
 p {
 line-height: 1.25;
+
 }
 
 body {
 
-
+color: rgb(0, 0, 0);
 align-items: center;
 text-align: center;
 flex-direction: column;
@@ -252,7 +318,7 @@ justify-content: center;
 width: 99%;
 min-height: 200vh;
 font-family: 'Cyber', sans-serif;
-background: linear-gradient(90deg, #0a076228 70%, #e6de00 70%), #ff00ff92;    
+background: linear-gradient(90deg, #073e6228 70%, #e6de00 70%), #ff040092;    
 grid-template-columns: auto;
 }
 
@@ -280,25 +346,13 @@ justify-content: center;
 text-align: center;
 }
 
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+footer {
+  color: whitesmoke;
+  align-items: center;
+  font-family: fantasy;
+text-align: center;
 }
-body {
-  font-family: var(--ff-primary);
-}
+
 
 .text-neutral-100 {
   color: hsl(var(--clr-neutral-100));
@@ -675,10 +729,10 @@ body {
 
 /*# sourceMappingURL=style.css.map */
 header {
-  padding-block: max(10vh, 5rem);
+  padding-block: max(2.5vh, 1.25rem);
   text-align: center;
   position: relative;
-  margin-bottom: 10vh;
+  margin-bottom: 2.5vh;
 }
 
 .heading-lg {
@@ -711,6 +765,10 @@ header {
   font-size:1rem;
   line-height:1.5;
   color:#333;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
   }
   .text{
   position:absolute;
@@ -718,6 +776,10 @@ header {
   font-size:50px;
   left:50%;
   transform:translateX(-50%);
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
   z-index:99;
   }
   .v-header video{
@@ -728,6 +790,10 @@ header {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
   }
   .v-header{
   position: relative;
@@ -735,6 +801,10 @@ header {
   height: 100vh;
   padding: 0;
   margin: 0;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
   overflow: hidden; 
   }
   
@@ -1117,908 +1187,6 @@ header {
 
 
 
-
-  .card__shine {
-
-    --grain: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCI+CjxmaWx0ZXIgaWQ9Im4iPgo8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjciIG51bU9jdGF2ZXM9IjEwIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIj48L2ZlVHVyYnVsZW5jZT4KPC9maWx0ZXI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjMDAwIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWx0ZXI9InVybCgjbikiIG9wYWNpdHk9IjAuMyI+PC9yZWN0Pgo8L3N2Zz4=");
-    
-    --space: 5%;
-    --angle: 133deg;
-    --imgsize: 500px;
-  
-    --red: #f80e7b;
-    --yel: #eedf10;
-    --gre: #21e985;
-    --blu: #0dbde9;
-    --vio: #c929f1;
-  
-  }
-  
-  
-  
-  /*
-  
-    HOLO
-  
-  */
-  
-  .card[data-rarity="rare holo"] .card__shine {
-  
-    --space: 1.5%;
-    --h: 21;
-    --s: 70%;
-    --l: 50%;
-    --bars: 4%;
-    --bar-color: rgba(255, 255, 255, 0.6);
-    --bar-bg: rgb(10, 10, 10);
-  
-    clip-path: inset( 10% 8.5% 52.5% 8.5% );
-  
-    background-image:
-      repeating-linear-gradient( 90deg, 
-        hsl(calc(var(--h)*0), var(--s), var(--l)) calc(var(--space)*0), hsl(calc(var(--h)*0), var(--s), var(--l)) calc(var(--space)*1), 
-        black calc(var(--space)*1.001), black calc(var(--space)*1.999),
-        hsl(calc(var(--h)*1), var(--s), var(--l)) calc(var(--space)*2), hsl(calc(var(--h)*1), var(--s), var(--l)) calc(var(--space)*3), 
-        black calc(var(--space)*3.001), black calc(var(--space)*3.999),
-        hsl(calc(var(--h)*2), var(--s), var(--l)) calc(var(--space)*4), hsl(calc(var(--h)*2), var(--s), var(--l)) calc(var(--space)*5), 
-        black calc(var(--space)*5.001), black calc(var(--space)*5.999),
-        hsl(calc(var(--h)*3), var(--s), var(--l)) calc(var(--space)*6), hsl(calc(var(--h)*3), var(--s), var(--l)) calc(var(--space)*7), 
-        black calc(var(--space)*7.001), black calc(var(--space)*7.999),
-        hsl(calc(var(--h)*4), var(--s), var(--l)) calc(var(--space)*8), hsl(calc(var(--h)*4), var(--s), var(--l)) calc(var(--space)*9), 
-        black calc(var(--space)*9.001), black calc(var(--space)*9.999),
-        hsl(calc(var(--h)*5), var(--s), var(--l)) calc(var(--space)*10), hsl(calc(var(--h)*5), var(--s), var(--l)) calc(var(--space)*11), 
-        black calc(var(--space)*11.001), black calc(var(--space)*11.999),
-        hsl(calc(var(--h)*6), var(--s), var(--l)) calc(var(--space)*12), hsl(calc(var(--h)*6), var(--s), var(--l)) calc(var(--space)*13), 
-        black calc(var(--space)*13.001), black calc(var(--space)*13.999),
-        hsl(calc(var(--h)*7), var(--s), var(--l)) calc(var(--space)*14), hsl(calc(var(--h)*7), var(--s), var(--l)) calc(var(--space)*15), 
-        black calc(var(--space)*15.001), black calc(var(--space)*15.999),
-        hsl(calc(var(--h)*8), var(--s), var(--l)) calc(var(--space)*16), hsl(calc(var(--h)*8), var(--s), var(--l)) calc(var(--space)*17), 
-        black calc(var(--space)*17.001), black calc(var(--space)*17.999),
-        hsl(calc(var(--h)*9), var(--s), var(--l)) calc(var(--space)*18), hsl(calc(var(--h)*9), var(--s), var(--l)) calc(var(--space)*19), 
-        black calc(var(--space)*19.001), black calc(var(--space)*19.999),
-        hsl(calc(var(--h)*10), var(--s), var(--l)) calc(var(--space)*20), hsl(calc(var(--h)*10), var(--s), var(--l)) calc(var(--space)*21), 
-        black calc(var(--space)*21.001), black calc(var(--space)*21.999),
-        hsl(calc(var(--h)*11), var(--s), var(--l)) calc(var(--space)*22), hsl(calc(var(--h)*11), var(--s), var(--l)) calc(var(--space)*23), 
-        black calc(var(--space)*23.001), black calc(var(--space)*23.999),
-        hsl(calc(var(--h)*12), var(--s), var(--l)) calc(var(--space)*24), hsl(calc(var(--h)*12), var(--s), var(--l)) calc(var(--space)*25), 
-        black calc(var(--space)*25.001), black calc(var(--space)*25.999),
-        hsl(calc(var(--h)*13), var(--s), var(--l)) calc(var(--space)*26), hsl(calc(var(--h)*13), var(--s), var(--l)) calc(var(--space)*27), 
-        black calc(var(--space)*27.001), black calc(var(--space)*27.999),
-        hsl(calc(var(--h)*14), var(--s), var(--l)) calc(var(--space)*28), hsl(calc(var(--h)*14), var(--s), var(--l)) calc(var(--space)*29), 
-        black calc(var(--space)*29.001), black calc(var(--space)*29.999),
-        hsl(calc(var(--h)*15), var(--s), var(--l)) calc(var(--space)*30), hsl(calc(var(--h)*15), var(--s), var(--l)) calc(var(--space)*31), 
-        black calc(var(--space)*31.001), black calc(var(--space)*31.999)
-      ),
-      repeating-linear-gradient( 90deg, 
-        var(--vio), var(--blu), var(--gre), var(--yel), var(--red), var(--vio)
-      ),
-      repeating-linear-gradient( 90deg, 
-        var(--bar-bg) calc(var(--bars)*2), var(--bar-color) calc(var(--bars)*3), var(--bar-bg) calc(var(--bars)*3.5), var(--bar-color) calc(var(--bars)*4), var(--bar-bg) calc(var(--bars)*5), var(--bar-bg) calc(var(--bars)*12)
-      ),
-      repeating-linear-gradient( 90deg, 
-        var(--bar-bg) calc(var(--bars)*2), var(--bar-color) calc(var(--bars)*3), var(--bar-bg) calc(var(--bars)*3.5), var(--bar-color) calc(var(--bars)*4), var(--bar-bg) calc(var(--bars)*5), var(--bar-bg) calc(var(--bars)*9)
-      ),
-      radial-gradient(
-        farthest-corner circle 
-          at var(--mx) var(--my), 
-          rgba(230, 230, 230, 0.85) 0%, 
-          rgba(200, 200, 200, .1) 25%, 
-          rgb(0, 0, 0) 90%
-        );
-  
-    background-blend-mode: soft-light, soft-light, screen, overlay;
-    background-position: center, calc(((50% - var(--posx)) * 25) + 50%) center, calc(var(--posx)*-1.2) var(--posy), var(--pos), center;
-    background-size: 100px 100px, 200% 200%, 237% 237%, 195% 195%, 120% 120%;
-  
-    filter: brightness(calc((var(--hyp) + 0.7)*0.7)) contrast(3) saturate(.35);
-  
-  }
-  
-  
-  /*
-  
-    GALAXY HOLO
-  
-  */
-  
-  .card[data-rarity="rare holo galaxy"] .card__glare {
-    
-    background-image:
-    radial-gradient( 
-      farthest-corner circle 
-      at var(--mx) var(--my), 
-      rgba(222, 245, 250, 0.7) 10%, 
-      rgba(255, 255, 255, 0.5) 20%, 
-      rgba(0, 0, 0, 0.5) 90% 
-      );
-      
-  }
-  
-  .card[data-rarity="rare holo"]:not([data-gallery="true"]) .card__glare:after,
-  .card[data-rarity="rare holo galaxy"] .card__glare:after {
-  
-    content: "";
-    clip-path: inset( 10% 8.5% 52.5% 8.5% );
-    background-image: 
-      radial-gradient( 
-        farthest-corner circle 
-        at var(--mx) var(--my), 
-        rgb(229, 239, 255) 5%, 
-        rgba(100, 100, 100, 0.5) 35%, 
-        rgba(0, 0, 0, 0.9) 80% 
-      );
-  
-  }
-  
-  .card[data-rarity="rare holo galaxy"] .card__shine {
-  
-    --space: 4%;
-  
-    clip-path: inset( 10% 8.5% 52.5% 8.5% );
-  
-    background-image: 
-      url("../img/galaxy.jpg"),
-      url("../img/galaxy.jpg"),
-      url("../img/galaxy.jpg"), 
-      repeating-linear-gradient(
-        82deg, 
-        rgb(219, 204, 86) calc(var(--space)*1), 
-        rgb(121, 199, 58) calc(var(--space)*2), 
-        rgb(58, 192, 183) calc(var(--space)*3), 
-        rgb(71, 98, 207) calc(var(--space)*4), 
-        rgb(170, 69, 209) calc(var(--space)*5), 
-        rgb(255, 90, 180) calc(var(--space)*6), 
-        rgb(255, 90, 180) calc(var(--space)*7), 
-        rgb(170, 69, 209) calc(var(--space)*8), 
-        rgb(71, 98, 207) calc(var(--space)*9), 
-        rgb(58, 192, 183) calc(var(--space)*10), 
-        rgb(121, 199, 58) calc(var(--space)*11), 
-        rgb(219, 204, 86) calc(var(--space)*12) 
-      ), 
-      radial-gradient( 
-        farthest-corner circle 
-        at var(--mx) var(--my), 
-        rgba(255, 255, 255, 0.6) 5%, 
-        rgba(150, 150, 150, .3) 40%, 
-        rgb(0, 0, 0) 100% 
-    );
-  
-    background-blend-mode: color-dodge, color-burn, saturation, screen;
-    background-position: var(--galaxybg, cover), var(--galaxybg, cover), var(--galaxybg, cover), calc(((50% - var(--posx)) * 2.5) + 50%) calc(((50% - var(--posy)) * 2.5) + 50%), center;
-    background-size: cover, cover, cover, 400% 900%, cover;
-  
-    filter: brightness(.75) contrast(1.2) saturate(1.5);
-    mix-blend-mode: color-dodge;
-  
-  }
-  
-  .card[data-rarity="rare holo"][data-subtypes^="stage"] .card__shine,
-  .card[data-rarity="rare holo galaxy"][data-subtypes^="stage"] .card__shine,
-  .card[data-rarity="rare holo"][data-subtypes^="stage"] .card__glare:after,
-  .card[data-rarity="rare holo galaxy"][data-subtypes^="stage"] .card__glare:after {
-    clip-path: polygon(91.78% 10%, 57% 10%, 53.92% 12.00%, 17% 12%, 16% 14%, 12% 16%, 8.5% 16%, 7.93% 47.41%, 92.07% 47.41%);
-  }
-  .card[data-rarity="rare holo"][data-subtypes^="supporter"] .card__shine,
-  .card[data-rarity="rare holo galaxy"][data-subtypes^="supporter"] .card__shine,
-  .card[data-rarity="rare holo"][data-subtypes^="supporter"] .card__glare:after,
-  .card[data-rarity="rare holo galaxy"][data-subtypes^="supporter"] .card__glare:after {
-    clip-path: inset(14.5% 7.9% 48.2% 8.7%);
-  }
-  
-  /*
-  
-    V
-  
-  */
-  
-  .card[data-rarity*="rare holo v"] .card__shine,
-  .card[data-rarity*="rare holo v"] .card__shine:after {
-  
-    --space: 5%;
-    --angle: 133deg;
-    --imgsize: 500px;
-  
-    background-image:
-      var(--grain),
-      repeating-linear-gradient( 0deg, 
-        rgb(255, 119, 115) calc(var(--space)*1), 
-        rgba(255,237,95,1) calc(var(--space)*2), 
-        rgba(168,255,95,1) calc(var(--space)*3), 
-        rgba(131,255,247,1) calc(var(--space)*4), 
-        rgba(120,148,255,1) calc(var(--space)*5), 
-        rgb(216, 117, 255) calc(var(--space)*6), 
-        rgb(255, 119, 115) calc(var(--space)*7)
-      ),
-      repeating-linear-gradient( 
-        var(--angle), 
-        #0e152e 0%, 
-        hsl(180, 10%, 60%) 3.8%, 
-        hsl(180, 29%, 66%) 4.5%, 
-        hsl(180, 10%, 60%) 5.2%, 
-        #0e152e 10% , 
-        #0e152e 12% 
-        ),
-      radial-gradient(
-        farthest-corner circle 
-        at var(--mx) var(--my),
-        rgba(0, 0, 0, .1) 12%, 
-        rgba(0, 0, 0, .15) 20%, 
-        rgba(0, 0, 0, .25) 120%
-      );
-  
-    background-blend-mode: screen, hue, hard-light;
-    background-size: var(--imgsize) 100%, 200% 700%, 300% 100%, 200% 100%;
-    background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
-    
-    filter: brightness(.8) contrast(2.95) saturate(.5);
-  
-  }
-  
-  .card[data-rarity="rare holo v"] .card__shine:after {
-  
-    content: "";
-  
-    background-position: center, 0% var(--posy), calc( var(--posx) * -1) calc( var(--posy) * -1), var(--posx) var(--posy);
-    background-size: var(--imgsize) 100%, 200% 400%, 195% 100%, 200% 100%;
-  
-    filter: brightness(1) contrast(2.5) saturate(1.75);
-    mix-blend-mode: soft-light;
-  
-  }
-  
-  
-  
-  
-  
-  /*
-  
-    VMAX
-  
-  */
-  
-  .card[data-rarity="rare holo vmax"] .card__shine {
-    --space: 6%;
-    --angle: 133deg;
-    --imgsize: 60% 30%;
-    background-image:
-      url("../img/vmaxbg.jpg"),
-      repeating-linear-gradient( -33deg, 
-        rgb(206, 42, 36) calc(var(--space)*1),  
-        rgb(157, 170, 223) calc(var(--space)*2), 
-        rgb(45, 153, 146) calc(var(--space)*3), 
-        rgb(29, 151, 36) calc(var(--space)*4), 
-        rgb(181, 64, 228) calc(var(--space)*5), 
-        rgb(206, 42, 36) calc(var(--space)*6)
-      ),
-      repeating-linear-gradient( 
-        var(--angle), 
-        rgba(14, 21, 46, 0.5) 0%, 
-        hsl(180, 10%, 50%) 2.5%, 
-        hsl(83, 50%, 35%) 5%, 
-        hsl(180, 10%, 50%) 7.5%, 
-        rgba(14, 21, 46, 0.5) 10% , 
-        rgba(14, 21, 46, 0.5) 15% 
-        ),
-      radial-gradient(
-        farthest-corner circle 
-        at var(--mx) var(--my),
-        rgba(6, 218, 255, 0.6) 0%, 
-        rgba(38, 235, 127, 0.6) 25%, 
-        rgba(155, 78, 228, 0.6) 50%, 
-        rgba(228, 78, 90, 0.6) 75%
-      );
-  
-    background-blend-mode: color-burn, screen, soft-light;
-    background-size: var(--imgsize), 1100% 1100%, 600% 600%, 200% 200%;
-    background-position: 
-      center, 
-      0% var(--posy), 
-      var(--posx) var(--posy), 
-      var(--posx) var(--posy);
-  
-    filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(.6);
-  
-  }
-  
-  
-  
-  
-  
-  /*
-  
-    VSTAR
-  
-  */
-  
-  .card[data-rarity="rare holo vstar"][data-supertype="pokémon"] .card__shine,
-  .card[data-rarity="rare holo vstar"][data-supertype="pokémon"] .card__shine:after {
-  
-    --space: 5%;
-    --angle: 133deg;
-    --imgsize: 18% 15%;
-  
-    background-image:
-      url("../img/ancient.png"),
-      repeating-linear-gradient( 0deg, 
-        rgb(255, 119, 115) calc(var(--space)*1), 
-        rgba(255,237,95,1) calc(var(--space)*2), 
-        rgba(168,255,95,1) calc(var(--space)*3), 
-        rgba(131,255,247,1) calc(var(--space)*4), 
-        rgba(120,148,255,1) calc(var(--space)*5), 
-        rgb(216, 117, 255) calc(var(--space)*6), 
-        rgb(255, 119, 115) calc(var(--space)*7)
-      ),
-      repeating-linear-gradient( 
-        var(--angle), 
-        #0e152e 0%, 
-        hsl(180, 10%, 60%) 3.8%, 
-        hsl(180, 29%, 66%) 4.5%, 
-        hsl(180, 10%, 60%) 5.2%, 
-        #0e152e 10% , 
-        #0e152e 12% 
-        ),
-      radial-gradient(
-        farthest-corner circle 
-        at var(--mx) var(--my),
-        rgba(0, 0, 0, .1) 12%, 
-        rgba(0, 0, 0, .15) 20%, 
-        rgba(0, 0, 0, .25) 120%
-      );
-  
-    background-blend-mode: soft-light, hue, hard-light;
-    background-size: var(--imgsize), 200% 700%, 300% 100%, 200% 100%;
-    background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
-    
-    filter: brightness(calc((var(--hyp) * .5) + 0.5)) contrast(2) saturate(.75);
-  
-  }
-  
-  .card[data-rarity="rare holo vstar"][data-supertype="pokémon"] .card__shine:after {
-  
-    content: "";
-  
-    background-size: var(--imgsize), 200% 400%, 195% 100%, 200% 100%;
-    background-position: center, 0% var(--posy), calc( var(--posx) * -1) calc( var(--posy) * -1), var(--posx) var(--posy);
-  
-    filter: brightness(calc((var(--hyp) * .5) + 0.8)) contrast(1.5) saturate(1.75);
-    mix-blend-mode: exclusion;
-  
-  }
-  
-  
-  
-  
-  
-  /*
-  
-    FULL / ALTERNATE ART
-  
-  */
-  
-  .card[data-rarity="rare ultra"][data-supertype="pokémon"] .card__shine,
-  .card[data-rarity="rare ultra"][data-supertype="pokémon"] .card__shine:after {
-  
-    --space: 5%;
-    --angle: 133deg;
-    --imgsize: 50% 42%;
-  
-    background-image:
-      url("../img/illusion.png"),
-      repeating-linear-gradient( 0deg, 
-        rgb(255, 119, 115) calc(var(--space)*1), 
-        rgba(255,237,95,1) calc(var(--space)*2), 
-        rgba(168,255,95,1) calc(var(--space)*3), 
-        rgba(131,255,247,1) calc(var(--space)*4), 
-        rgba(120,148,255,1) calc(var(--space)*5), 
-        rgb(216, 117, 255) calc(var(--space)*6), 
-        rgb(255, 119, 115) calc(var(--space)*7)
-      ),
-      repeating-linear-gradient( 
-        var(--angle), 
-        #0e152e 0%, 
-        hsl(180, 10%, 60%) 3.8%, 
-        hsl(180, 29%, 66%) 4.5%, 
-        hsl(180, 10%, 60%) 5.2%, 
-        #0e152e 10% , 
-        #0e152e 12% 
-        ),
-      radial-gradient(
-        farthest-corner circle 
-        at var(--mx) var(--my),
-        rgba(0, 0, 0, .1) 12%, 
-        rgba(0, 0, 0, .15) 20%, 
-        rgba(0, 0, 0, .25) 120%
-      );
-  
-    background-blend-mode: exclusion, hue, hard-light;
-    background-size: var(--imgsize), 200% 700%, 300% 100%, 200% 100%;
-    background-position: center center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
-  
-    filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2) saturate(1.5);
-  
-  }
-  
-  .card[data-rarity="rare ultra"][data-supertype="pokémon"] .card__shine:after {
-  
-    content: "";
-  
-    background-size: var(--imgsize), 200% 400%, 195% 100%, 200% 100%;
-    background-position: center center, 0% var(--posy), calc( var(--posx) * -1) calc( var(--posy) * -1), var(--posx) var(--posy);
-  
-    filter: brightness(calc((var(--hyp)*0.5) + .8)) contrast(1.6) saturate(1.4);
-    mix-blend-mode: exclusion;
-  
-  }
-  
-  
-  
-  
-  
-  /*
-  
-    TRAINER FULL-ART
-  
-  */
-  
-  .card[data-rarity="rare ultra"][data-subtypes*="supporter"] .card__shine,
-  .card[data-rarity="rare ultra"][data-subtypes*="supporter"] .card__shine:after {
-  
-    --space: 5%;
-    --angle: 133deg;
-    --imgsize: 25% 20%;
-  
-    background-image:
-    url("../img/trainerbg.png"),
-      repeating-linear-gradient( 0deg, 
-        rgb(255, 119, 115) calc(var(--space)*1), 
-        rgba(255,237,95,1) calc(var(--space)*2), 
-        rgba(168,255,95,1) calc(var(--space)*3), 
-        rgba(131,255,247,1) calc(var(--space)*4), 
-        rgba(120,148,255,1) calc(var(--space)*5), 
-        rgb(216, 117, 255) calc(var(--space)*6), 
-        rgb(255, 119, 115) calc(var(--space)*7)
-      ),
-      repeating-linear-gradient( 
-        var(--angle), 
-        #0e152e 0%, 
-        hsl(180, 10%, 60%) 3.8%, 
-        hsl(180, 29%, 66%) 4.5%, 
-        hsl(180, 10%, 60%) 5.2%, 
-        #0e152e 10% , 
-        #0e152e 12% 
-        ),
-      radial-gradient(
-        farthest-corner circle 
-        at var(--mx) var(--my),
-        rgba(0, 0, 0, .1) 12%, 
-        rgba(0, 0, 0, .15) 20%, 
-        rgba(0, 0, 0, .25) 120%
-      );
-  
-    background-blend-mode: difference, hue, hard-light;
-    background-size: var(--imgsize), 200% 700%, 300% 100%, 200% 100%;
-    background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
-  
-    filter: brightness(0.75) contrast(2.5) saturate(.75);
-    
-  }
-  
-  .card[data-rarity="rare ultra"][data-subtypes*="supporter"] .card__shine:after {
-  
-    content: "";
-  
-    background-size: var(--imgsize), 200% 400%, 195% 100%, 200% 100%;
-    background-position: center, 0% var(--posy), calc( var(--posx) * -1) calc( var(--posy) * -1), var(--posx) var(--posy);
-  
-    filter: brightness(1.2) contrast(1) saturate(1.75);
-    mix-blend-mode: exclusion;
-  
-  }
-  
-  
-  
-  
-  
-  /*
-  
-    RAINBOW SECRET
-  
-  */
-  
-  .card[data-rarity^="rare rainbow"] .card__shine,
-  .card[data-rarity^="rare rainbow"] .card__shine:after {
-  
-    --rainbowspace: 9%;
-    --overlayspace: 12%;
-    --angle: -20deg;
-    --angle2: 130deg;
-    --imgsize: 130% 180%;
-  
-    background-image:
-      url("../img/glitter.png"),
-      repeating-linear-gradient( var(--angle), 
-        rgb(253, 71, 65) calc(var(--rainbowspace)*1), 
-        rgb(255, 243, 151) calc(var(--rainbowspace)*2), 
-        rgb(95, 255, 180) calc(var(--rainbowspace)*3), 
-        rgba(131,255,247,1) calc(var(--rainbowspace)*4), 
-        rgb(75, 198, 255) calc(var(--rainbowspace)*5), 
-        rgb(255, 73, 246) calc(var(--rainbowspace)*6), 
-        rgb(255, 56, 49) calc(var(--rainbowspace)*7)
-      ),
-      repeating-linear-gradient( var(--angle2), 
-        rgba(89, 46, 80, 0.5) calc(var(--overlayspace)*1), 
-        hsl(263, 43%, 76%) calc(var(--overlayspace)*2), 
-        rgb(223, 96, 202) calc(var(--overlayspace)*3), 
-        hsl(180, 57%, 56%) calc(var(--overlayspace)*4), 
-        rgba(14, 21, 46, 0.5) calc(var(--overlayspace)*5) , 
-        rgba(14, 21, 46, 0.5) calc(var(--overlayspace)*6) 
-      ),
-      url("../img/illusion2.png");
-  
-    background-size: 20% 15%, 500% 500%, 1000% 1000%, var(--imgsize);
-    background-position: center, calc( var(--posx) * 1.5 ) calc( var(--posy) * 1.5 ), calc( var(--posx) * 1.5 ) var(--posy), bottom left;
-    background-blend-mode: color-burn, soft-light, normal;
-  
-    filter: brightness(calc((var(--hyp)*0.25) + 0.66)) contrast(2.2) saturate(.9);
-  
-  }
-  
-  .card[data-rarity^="rare rainbow"] .card__shine:after {
-  
-    content: "";
-  
-    background-position: center, 0% calc( var(--posy) * -1.75 ), calc( var(--posx) * -1.75 ) calc( var(--posy) * -1 ) , bottom left;
-    mix-blend-mode: exclusion;
-  
-  }
-  
-  
-  /*
-  
-    RAINBOW SECRET FULL/ALT
-  
-  */
-  
-  .card[data-rarity="rare rainbow alt"] .card__shine,
-  .card[data-rarity="rare rainbow alt"] .card__shine:after {
-  
-    filter: brightness(calc((var(--hyp)*0.25) + 0.66)) contrast(3) saturate(.7);
-  
-  }
-  
-  
-  
-  
-  /*
-  
-    GOLD SECRET
-  
-  */
-  
-  .card[data-rarity="rare secret"] .card__shine,
-  .card[data-rarity="rare secret"] .card__shine:after {
-  
-    --angle: 110deg;
-    --imgsize: 28% 23%;
-  
-    background-image:
-      url("../img/glitter.png"),
-      repeating-linear-gradient( var(--angle), 
-        rgba(89, 46, 80, 0.5) 0%, 
-        hsl(39, 37%, 60%) 2.5%, 
-        rgb(216, 183, 92) 5%, 
-        hsl(39, 37%, 60%) 7.5%, 
-        rgba(14, 21, 46, 0.5) 10% , 
-        rgba(14, 21, 46, 0.5) 15% 
-      ), 
-      url("../img/metal.png");
-  
-    background-size: 25% 25%, 600% 100%, var(--imgsize);
-    background-position: center, var(--posx) var(--posy), center;
-    background-blend-mode: color-burn, darken;
-  
-    filter: brightness(calc((var(--hyp)*0.4) + 0.7)) contrast(3) saturate(.66);
-  
-  
-  }
-  
-  .card[data-rarity="rare secret"] .card__shine:after {
-  
-    content: "";
-  
-    background-image:
-      url("../img/glitter.png"),
-      repeating-linear-gradient( var(--angle), 
-        rgba(89, 46, 80, 0.5) 0%, 
-        hsl(39, 37%, 60%) 2.5%, 
-        rgb(216, 183, 92) 5%, 
-        hsl(39, 37%, 60%) 7.5%, 
-        rgba(14, 21, 46, 0.5) 10% , 
-        rgba(14, 21, 46, 0.5) 15% 
-      );
-  
-    background-position: center, calc( var(--posx) * -1 ) calc( var(--posy) * -1 ), center;
-  
-    filter: brightness(calc((var(--hyp)*0.3) + 0.7)) contrast(2.5) saturate(.66);
-    mix-blend-mode: exclusion;
-  
-  }
-  
-  
-  
-  
-  
-  /*
-  
-    RADIANT
-  
-  */
-  
-  .card[data-rarity*="radiant"] .card__shine {
-  
-    --barwidth: 1.2%;
-    --space: 200px;
-  
-    clip-path: inset(2.8% 4% round 2.55% / 1.5%);
-  
-    background-image: 
-      repeating-linear-gradient( 0deg, 
-        hsl(180, 70%, 50%) calc(var(--space)*1), 
-        hsl(110, 80%, 50%) calc(var(--space)*2), 
-        hsl(80, 90%, 50%) calc(var(--space)*3), 
-        hsl(50, 90%, 50%) calc(var(--space)*4), 
-        hsl(80, 90%, 50%) calc(var(--space)*5), 
-        hsl(110, 80%, 50%) calc(var(--space)*6), 
-        hsl(180, 70%, 50%) calc(var(--space)*7) 
-      ),
-      repeating-linear-gradient( 
-        45deg, 
-        hsl(0,0%,10%) 0% ,  
-        hsl(0,0%,10%) 1% , 
-        hsl(0,0%,10%) var(--barwidth),
-        hsl(0,0%,20%) calc( var(--barwidth) + 0.01% ) ,
-        hsl(0,0%,20%) calc( var(--barwidth) * 2 ),
-        hsl(0,0%,35%) calc( var(--barwidth) * 2 + 0.01% ) ,
-        hsl(0,0%,35%) calc( var(--barwidth) * 3 ) ,
-        hsl(0,0%,42.5%) calc( var(--barwidth) * 3 + 0.01% ) ,
-        hsl(0,0%,42.5%) calc( var(--barwidth) * 4 ) ,
-        hsl(0,0%,50%) calc( var(--barwidth) * 4 + 0.01% ) ,
-        hsl(0,0%,50%) calc( var(--barwidth) * 5 ) ,
-        hsl(0,0%,42.5%) calc( var(--barwidth) * 5 + 0.01% ) ,
-        hsl(0,0%,42.5%) calc( var(--barwidth) * 6 ) ,
-        hsl(0,0%,35%) calc( var(--barwidth) * 6 + 0.01% ) ,
-        hsl(0,0%,35%) calc( var(--barwidth) * 7 ) ,
-        hsl(0,0%,20%) calc( var(--barwidth) * 7 + 0.01% ) ,
-        hsl(0,0%,20%) calc( var(--barwidth) * 8 )  ,
-        hsl(0,0%,10%) calc( var(--barwidth) * 8 + 0.01% ) ,
-        hsl(0,0%,10%) calc( var(--barwidth) * 9 )  ,
-        hsl(0,0%,0%) calc( var(--barwidth) * 9 + 0.01% ) ,
-        hsl(0,0%,0%) calc( var(--barwidth) * 10 ) 
-      ),
-      repeating-linear-gradient( 
-        -45deg, 
-        hsl(0,0%,10%) 0% ,  
-        hsl(0,0%,10%) 1% , 
-        hsl(0,0%,10%) var(--barwidth),
-        hsl(0,0%,20%) calc( var(--barwidth) + 0.01% ) ,
-        hsl(0,0%,20%) calc( var(--barwidth) * 2 ),
-        hsl(0,0%,35%) calc( var(--barwidth) * 2 + 0.01% ) ,
-        hsl(0,0%,35%) calc( var(--barwidth) * 3 ) ,
-        hsl(0,0%,42.5%) calc( var(--barwidth) * 3 + 0.01% ) ,
-        hsl(0,0%,42.5%) calc( var(--barwidth) * 4 ) ,
-        hsl(0,0%,50%) calc( var(--barwidth) * 4 + 0.01% ) ,
-        hsl(0,0%,50%) calc( var(--barwidth) * 5 ) ,
-        hsl(0,0%,42.5%) calc( var(--barwidth) * 5 + 0.01% ) ,
-        hsl(0,0%,42.5%) calc( var(--barwidth) * 6 ) ,
-        hsl(0,0%,35%) calc( var(--barwidth) * 6 + 0.01% ) ,
-        hsl(0,0%,35%) calc( var(--barwidth) * 7 ) ,
-        hsl(0,0%,20%) calc( var(--barwidth) * 7 + 0.01% ) ,
-        hsl(0,0%,20%) calc( var(--barwidth) * 8 )  ,
-        hsl(0,0%,10%) calc( var(--barwidth) * 8 + 0.01% ) ,
-        hsl(0,0%,10%) calc( var(--barwidth) * 9 )  ,
-        hsl(0,0%,0%) calc( var(--barwidth) * 9 + 0.01% ) ,
-        hsl(0,0%,0%) calc( var(--barwidth) * 10 ) 
-      );
-  
-    background-size: 400% 400%, 210% 210%, 210% 210%;
-    background-position: 
-      calc( ((var(--posx) - 50%) * -2.5) + 50% ) calc( ((var(--posy) - 50%) * -2.5) + 50% ), 
-      calc( ((var(--posx) - 50%) * 1.5) + 50% ) calc( ((var(--posy) - 50%) * 1.5) + 50% ), 
-      calc( ((var(--posx) - 50%) * 1.5) + 50% ) calc( ((var(--posy) - 50%) * 1.5) + 50% );
-  
-    background-blend-mode: exclusion, darken, color-dodge;
-  
-    filter: brightness(.95) contrast(4) saturate(0.75);
-    mix-blend-mode: color-dodge;
-  
-  }
-  
-  .card[data-rarity*="radiant"] .card__shine:after {
-  
-    content: "";
-  
-    background-image: 
-      url("../img/glitter.png"), 
-      repeating-linear-gradient( 55deg, 
-      rgb(255, 161, 158) calc(var(--space)*1), 
-      rgb(85, 178, 255) calc(var(--space)*2), 
-      rgb(255, 199, 146) calc(var(--space)*3), 
-      rgb(130, 255, 213) calc(var(--space)*4), 
-      rgb(253, 170, 240) calc(var(--space)*5), 
-      rgb(148, 241, 255) calc(var(--space)*6), 
-      rgb(255, 161, 158) calc(var(--space)*7) 
-    );
-  
-    background-size: 25% 25%, 400% 100%;
-    background-position: center, calc( ((var(--posx) - 50%) * -2.5) + 50% ) calc( ((var(--posy) - 50%) * -2.5) + 50% );
-    
-    filter: brightness(1) contrast(1) saturate(0);
-    mix-blend-mode: soft-light;
-  
-    background-blend-mode: multiply;
-    
-  }
-  
-  .card[data-rarity*="radiant"] .card__shine:before {
-    
-    content: "";
-    z-index: 7;
-    grid-area: 1/1;
-  
-    background-image:
-      radial-gradient(
-        farthest-corner ellipse 
-        at calc( ((var(--mx)) * 0.5) + 25% ) calc( ((var(--my)) * 0.5) + 25% ),
-        rgba(100, 100, 100, .5) 5%, 
-        rgba(50, 50, 50, .4) 15%, 
-        rgba(0, 0, 0, .6) 30%
-      );
-  
-    background-image:
-      radial-gradient( farthest-corner ellipse at calc( ((var(--mx)) * 0.5) + 25% ) calc( ((var(--my)) * 0.5) + 25% ), rgba(100, 100, 100, .8) 10%, rgba(50, 50, 50, .34) 20%, rgba(0, 0, 0, 1) 50% );
-  
-    background-position: center;
-    background-size: 350% 350%;
-  
-    mix-blend-mode: multiply;
-  
-  }
-  
-  
-  
-  
-  
-  /*
-  
-    TRAINER GALLERY HOLO
-  
-  */
-  
-  .card[data-rarity="rare holo"][data-gallery="true"] .card__shine {
-  
-    --space: 5%;
-    --angle: -22deg;
-    --imgsize: 200% 400%;
-  
-    clip-path: inset(2.8% 4% round 2.55% / 1.5%);
-  
-    background-image:
-      repeating-linear-gradient( var(--angle),  
-        rgba(174, 102, 202, 0.75) calc(var(--space)*1),
-        rgba(228, 77, 72, 0.75) calc(var(--space)*2), 
-        rgba(216, 197, 55, 0.75) calc(var(--space)*3),  
-        rgba(124, 201, 62, 0.75) calc(var(--space)*4),  
-        rgba(80, 177, 170, 0.75) calc(var(--space)*5),  
-        rgba(136, 160, 255, 0.75) calc(var(--space)*6), 
-        rgba(176, 105, 204, 0.75) calc(var(--space)*7)
-      );
-      
-      background-blend-mode: color-dodge;
-      background-size: var(--imgsize);
-      background-position: 0% calc(var(--posy) * 1), var(--posx) var(--posy);
-      
-      filter: brightness(calc((var(--hyp)*0.3) + 0.6)) contrast(2.3) saturate(1.1);
-  
-  }
-  
-  .card[data-rarity="rare holo"][data-gallery="true"] .card__shine:after {
-    
-    content: "";
-  
-    background-image: 
-      radial-gradient( 
-        farthest-corner ellipse 
-        at calc( ((var(--mx)) * 0.5) + 25% ) calc( ((var(--my)) * 0.5) + 25% ), 
-        rgb(255, 255, 255) 5%, 
-        rgba(55, 0, 55, .6) 25%, 
-        rgb(55, 55, 55) 90% 
-      );
-  
-    background-position: center;
-    background-size: 200% 200%;
-  
-    filter: brightness(calc((var(--hyp)*0.2) + 0.4)) contrast(.85) saturate(1.1);
-    mix-blend-mode: hard-light;
-  
-  }
-  
-  
-  
-  
-  
-  /*
-  
-    TRAINER GALLERY V
-  
-  */
-  
-  .card[data-rarity="rare holo v"][data-gallery="true"] .card__shine,
-  .card[data-rarity="rare holo v"][data-gallery="true"] .card__shine:after {
-  
-    --space: 5%;
-    --angle: 133deg;
-    --img: url("../img/illusion.png");
-    --imgsize: 60% 52%;
-  
-    background-image:
-      var(--img),
-      repeating-linear-gradient( 0deg, 
-        rgb(255, 119, 115) calc(var(--space)*1), 
-        rgba(255,237,95,1) calc(var(--space)*2), 
-        rgba(168,255,95,1) calc(var(--space)*3), 
-        rgba(131,255,247,1) calc(var(--space)*4), 
-        rgba(120,148,255,1) calc(var(--space)*5), 
-        rgb(216, 117, 255) calc(var(--space)*6), 
-        rgb(255, 119, 115) calc(var(--space)*7)
-      ),
-      repeating-linear-gradient( 
-        var(--angle), 
-        #0e152e 0%, 
-        hsl(180, 10%, 60%) 3.8%, 
-        hsl(180, 29%, 66%) 4.5%, 
-        hsl(180, 10%, 60%) 5.2%, 
-        #0e152e 10% , 
-        #0e152e 12% 
-        ),
-      radial-gradient(
-        farthest-corner circle 
-        at var(--mx) var(--my),
-        rgba(0, 0, 0, .1) 12%, 
-        rgba(0, 0, 0, .15) 20%, 
-        rgba(0, 0, 0, .25) 120%
-      );
-  
-    background-blend-mode: exclusion, hue, hard-light;
-    background-size: var(--imgsize), 200% 700%, 300% 100%, 200% 100%;
-    background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
-  
-    filter: brightness(calc((var(--hyp)*0.4) + .5)) contrast(2.5) saturate(1);
-  
-  }
-  
-  .card[data-rarity="rare holo v"][data-gallery="true"] .card__shine:after {
-  
-    content: "";
-  
-    background-size: var(--imgsize), 200% 400%, 195% 100%, 200% 100%;
-    background-position: center, 0% var(--posy), calc( var(--posx) * -1) calc( var(--posy) * -1), var(--posx) var(--posy);
-  
-    filter: brightness(calc((var(--hyp)*0.5) + .7)) contrast(2) saturate(1);
-    mix-blend-mode: exclusion;
-  
-  }
-  
-  
-  .card[data-rarity="rare holo v"][data-gallery="true"][data-subtypes*="vmax"] .card__shine,
-  .card[data-rarity="rare holo v"][data-gallery="true"][data-subtypes*="vmax"] .card__shine:after {
-  
-      --img: url("../img/stylish.png");
-      --imgsize: 30% 26%;
-  
-  }
-  
-  
-
 /*=============== HOME ===============*/
 
 .home__container{
@@ -2198,7 +1366,10 @@ position: absolute;
 	color: #fff;
 }
 .vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
-.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2;  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center; }
 .vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
 @media (min-aspect-ratio: 16/9) {
   .video-foreground { height: 300%; top: -100%; }
@@ -2708,3 +1879,71 @@ position: absolute;
 }
 
 
+
+/*=============== THEME ===============*/
+.change-theme{
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: .3s;
+}
+.change-theme:hover{
+  color: var(--first-color);
+}
+/*========== Variables Dark theme ==========*/
+body.light-theme{
+  --title-color: hsla(var(--second-hue), 15%, 15%);
+  --text-color: hsla(var(--second-hue), 8%, 35%);
+  --body-color: hsla(var(--second-hue), 100%, 99%);
+  --container-color: #fff;
+}
+
+/*========== 
+    Color changes in some parts of 
+    the website, in light theme
+==========*/
+.light-theme .scroll-header{
+  box-shadow: 0 2px 4px hsla(0, 0%, 4%, .3);
+}
+.light-theme .nav__menu{
+  background-color: hsla(var(--second-hue), 30%, 85%, .8);
+}
+.light-theme .section__subtitle{
+  color: var(--text-color);
+}
+.light-theme .home__social-link{
+  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, .1);
+}
+.light-theme .home__social::after,
+.light-theme .footer__social-link{
+  background-color: var(--title-color);
+}
+.light-theme .home__social-link, 
+.light-theme .home__scroll,
+.light-theme .button,
+.light-theme .button:hover,
+.light-theme .active-work,
+.light-theme .footer__title,
+.light-theme .footer__link,
+.light-theme .footer__copy{
+  color: var(--title-color);
+}
+.light-theme .about__box{
+  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, .1);
+}
+.light-theme .skills__content, 
+.light-theme .services__card,
+.light-theme .work__card,
+.light-theme .testimonial__card,
+.light-theme .contact__card
+{
+  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, .1);
+}
+.light-theme::-webkit-scrollbar{
+  background-color: hsl(var(--second-hue), 8%, 66%);
+}
+.light-theme::-webkit-scrollbar-thumb{
+  background-color: hsl(var(--second-hue), 8%, 66%);
+}
+.light-theme::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(var(--second-hue), 8%, 44%);
+}
