@@ -23,13 +23,20 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-secondary);  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
