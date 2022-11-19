@@ -7,7 +7,7 @@
 <meta name="description" content="source here : Une exploration en Css pour Cyberpunk 2077, Le-Xandre (Alexandre Coté). "/>
 <link rel="canonical" href="https://le-xandre.github.io/Responsive-Portfolio-Alex/index.html" content="Le-Xandre (Alexandre Coté)."/>
 
-
+<link rel="stylesheet" href="style.css"/>
         <!--=============== FAVICON ===============-->
         <link rel="shortcut icon" href="img/slides/slide (220).png" type="image/x-icon">
 
@@ -28,87 +28,214 @@
 
 
 <!-- Css  -->
-
+<link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="dist/output.css" />
 
 <link rel="stylesheet" href="css/demo.css">
 
-<link rel="stylesheet" href="css/styles.css">
+
+
 <link rel="stylesheet" href="css/style.css">
 
-<link rel="stylesheet" href="./css/ArchitectureStyleNeon.css">
 
-        <!--=============== SWIPER CSS ===============-->
-<link rel="stylesheet" href="css/swiper-bundle.min.css">
+
         
 <link rel="stylesheet" href="./css/normalize.min.css">
 <!--
--->
-
+--><link rel="stylesheet" href="./css/ArchitectureStyleNeon.css">
+        <!--=============== SWIPER CSS ===============-->
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 
-<body>
+<body class="main-container">
 	
         <!--=============== HEADER ===============-->
 
         <header class="header" id="header">
-            <a href="#" class="nav__logo"><h2>Cyberpunk <strong>2077</strong></h2></a>
-			<nav class="nav container">				                
-				
-                							
-					
-				<div class="nav__menu">
+           			<div class="nav__menu">
 
-                    <ul class="nav__list"><!-- theme change -->
-						<i class="bx bx-moon change-theme" id="theme-button"></i> 
+				<ul class="nav__list"><!-- theme change -->
+					<i class="bx bx-moon change-theme" id="theme-button"></i> 
 
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link" title="home">
-                                <i class='bx bx-home-heart'></i>
-                            </a><h3 class="nav__item-title">Menu</h3>
-                            
-                        </li>
-                        <li class="nav_item">
-                            <a href="#about" class="nav__link" title="about">
-                                <i class="bx bx-user"></i>
-                            </a><h3 class="nav__item-title">A propos</h3>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link" title="skills">
-                                <i class="bx bx-book-open"></i>
-                            </a><h3 class="nav__item-title">Skills</h3>
-                        </li>
-                        <!-- <li class="nav__item">
-                            <a href="#services" class="nav__link" title="services">
-                                <i class="bx bx-briefcase"></i>
-                            </a><h3 class="nav__item-title">Services</h3>
-                        </li> -->
-                        <li class="nav__item">
-                            <a href="#work" class="nav__link" title="work">
-                                <i class="bx bx-briefcase-alt"></i>
-                            </a><h3 class="nav__item-title">Portfolio</h3>
-                        </li>
-                        <!-- <li class="nav__item">
-                            <a href="#testimonial" class="nav__link" title="testimonial" alt="Témoignages">
-                                <i class='bx bx-male-female'></i>
-                            </a><h3 class="nav__item-title">Témoignages</h3>
-                        </li> -->
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link" title="contact">
-                                <i class="bx bx-message-square-detail"></i>
-                            </a><h3 class="nav__item-title">Contacts</h3>
-                        </li>
+					<li class="nav__item">
+						<a href="#home" class="nav__link active-link" title="home">
+							<i class='bx bx-home-heart'></i>
+						</a><h3 class="nav__item-title">Menu</h3>
 						
-                    </ul>
-            </div>
-		</nav>
-		
+					</li>
+					<li class="nav_item">
+						<a href="#about" class="nav__link" title="about">
+							<i class="bx bx-user"></i>
+						</a><h3 class="nav__item-title">A propos</h3>
+					</li>
+					<li class="nav__item">
+						<a href="#skills" class="nav__link" title="skills">
+							<i class="bx bx-book-open"></i>
+						</a><h3 class="nav__item-title">Skills</h3>
+					</li>
+					<!-- <li class="nav__item">
+						<a href="#services" class="nav__link" title="services">
+							<i class="bx bx-briefcase"></i>
+						</a><h3 class="nav__item-title">Services</h3>
+					</li> -->
+					<li class="nav__item">
+						<a href="#work" class="nav__link" title="work">
+							<i class="bx bx-briefcase-alt"></i>
+						</a><h3 class="nav__item-title">Portfolio</h3>
+					</li>
+					<!-- <li class="nav__item">
+						<a href="#testimonial" class="nav__link" title="testimonial" alt="Témoignages">
+							<i class='bx bx-male-female'></i>
+						</a><h3 class="nav__item-title">Témoignages</h3>
+					</li> -->
+					<li class="nav__item">
+						<a href="#contact" class="nav__link" title="contact">
+							<i class="bx bx-message-square-detail"></i>
+						</a><h3 class="nav__item-title">Contacts</h3>
+					</li>
+					
+				</ul>
+					</div>
+			
+		   <div class="logo" id="">
+			<a href="#" class="logo"> 
+						CYBERPUNK
+					</a>
+			 <button class="cybr-btn">
+				<span aria-hidden="true">
+					
+					<a href="#" class="sublogo" aria-hidden="false">
+						2077</a>
+					</span>
+					
+				<span aria-hidden="false" class="cybr-btn__glitch">Retour vers le haut 
+					<br>
+					 →▲←<br>►↕◄<br>
+				</span>
+					<span aria-hidden="false" class=" heart-bit-neon cybr-btn__tag"><a href="https://www.cyberpunk.net/fr/fr/" class="sky-neon" aria-hidden="false"> Site Officiel </a>↔ R23 ↔<a href="index (2).html" class="sky-neon" aria-hidden="false"> Reset </a></span>
+					
+			</button>
+			</div>
+			
+			<!--<div class="menu"> 
+				<ul>
+			  <li>Continue</li>
+			  <li>New Game</li>
+			  <li>Load Game</li>
+			  <li>Settings</li>
+			  <li>Credits</li>
+			</ul> 
+		</div>-->
+
+
         </header>
 
-		<main>
+		<main class="glitch-area">
+<br><section class="bg-gray-900 h-screen flex justify-center items-center gap-x-16 text-white">
+	<div
+	class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
+	>
+	<div
+	class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
+	>
+	<div class="absolute backface-hidden border-2 w-full h-full">
+	<img src="src/assets/Cyberpunk_2077_Lifepath_Nomad.png" class="w-full h-full"  alt="c77"/>
+	</div>
+	<div
+	class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
+	>
+	<div
+	class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
+	>
+	<h1 class="text-3xl font-semibold">Nomad</h1>
+	<p class="my-2">9.0 Rating</p>
+	<p>
+	Lorem ipsum sit amet consectetur adipisicing elit, odit natus
+	veritatis enim culpa nam inventore doloribus quidem temporibus
+	amet accusamus.
+	</p>
+	<button
+	class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+	>
+	Watch Now
+	</button>
+	</div>
+	</div>
+	</div>
+	</div> 
+	 		  
+		  <div
+		  class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
+		  >
+		  <div
+		  class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
+		  >
+		  <div class="absolute backface-hidden border-2 w-full h-full">
+		  <img src="src/assets/Cyberpunk_2077_Lifepath_Streetkid.png" class="w-full h-full" alt="c77"/>
+		  </div>
 
+		  <div
+		  class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
+		  >
+		  <div
+		  class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
+		  >
+		  <h1 class="text-3xl font-semibold">StreetKid</h1>
+		  <p class="my-2">8.00 Rating</p>
+		  <p><img class="slide-image" src="src/assets/Cyberpunk_2077_Lifepath_Nomad_Streetkid_Corpo.png" alt="c77"/>
+			  <!-- <div class="bg-transparent">
+				
+			</div> -->
+		  </p>
+		  <button
+		  class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+		  >
+		  Watch Now
+		  </button>
+		  </div>
+
+		  </div>
+
+		  </div>
+		  </div>
+
+
+	<div
+			  class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
+			  >
+			  <div
+			  class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
+			  >
+			  <div class="absolute backface-hidden border-2 w-full h-full">
+			  <img src="src/assets/Cyberpunk_2077_Lifepath_Corpo.png" class="w-full h-full" alt="c77"/>
+			  </div>
+			  <div
+			  class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
+			  >
+			  <div
+			  class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
+			  >
+			  <h1 class="text-3xl font-semibold">Corpo</h1>
+			  <p class="my-2">7.0 Rating</p>
+			  <p>
+			  Lorem ipsum odit natus veritatis enim culpa nam inventore doloribus quidem temporibus
+			  amet velit accusamus.
+			  </p>
+			  <button
+			  class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+			  >
+			  Watch Now
+			  </button>
+			  </div>
+			  </div>
+			  </div>
+			  <span class="c-news__image--glitch-effect" style="background-image: url(https://static.cdprojektred.com/cms.cdprojektred.com/16x9_big/23f12c864022304aeaf05d8f760417d583a1602d-1280x720.jpg);"></span>
+		  </div> 
+
+	</section>
+<br>
 <section class="cyber-slider" id="Cyberpunk">		
-
+	<br>
 <div id="cyberSlider" class="cyber-slider">
 
 <ul class="cyber-slider__wrapper">
@@ -298,23 +425,12 @@ Erreur 404
 </section>
 	
 <section class="cyber-slider">
-		<iframe id="ytplayer" type="text/html" width="auto" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLDisKgcnAC4SqX0mi1J5_gd7-hrIS5yJp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+			
 <iframe id="ytplayer" class="v-header" type="video/mp4" width="100%" height="360" src="https://www.youtube.com/embed/1DSutjnvTX4?list=PL4dX1IHww9p1ZnvQrC5Um3rXIEBGRY7Rk" title="Cyberpunk 2077 — Bande-annonce de lancement officielle — V" autoplay="autoplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
 		</iframe>
 
 </section>
-<button class="cybr-btn">
-	Cyber<span aria-hidden="true">_</span>
-		<span aria-hidden="true" class="cybr-btn__glitch"><a href="https://www.cyberpunk.net/fr/fr/">Cyber_</a></span>
-	
-	<span aria-hidden="false" class="cybr-btn__tag sky-neon">R24</span>
-</button><button class="cybr-btn" aria-hidden="true">
-	_<span aria-hidden="true">Buttons</span>
-	<a href="https://youtu.be/gyM_HysQN7s"><span aria-hidden="true" class="cybr-btn__glitch">
-		Buttons_</span></a>
-	<span aria-hidden="false" class="cybr-btn__tag sky-neon">R25</span>
-  </button>
 <br>
 
 <section class="cyber-slider" id="Cyberpunk">
@@ -480,284 +596,8 @@ visuals, complexity and depth.</p>
 </ul>
 </div>
 </section>
-<section class="cyber-slider">
-	<iframe id="iframe" src="https://open.spotify.com/embed/playlist/6KH41lq4pKgNZ6DRmbzse7?si=94d644f944b04317utm_source=generator" width="auto" height="315" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><iframe  id="ytplayer" class="v-header" type="video/mp4" width="100%"  height="240" src="https://www.youtube.com/embed/gyM_HysQN7s" title="Cyberpunk 2077: Phantom Liberty — Teaser officiel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen alt="Teaser">
-</iframe>
-</section>
-
-
-
-<section class="cyber-slider">
-
-<section class="cyber-slider__content">
-
-	
-	  
-	<div class="container sky-neon">
-			<h1>DÉFI MODE PHOTO <br><br>- 2e édition<br><br> </h1>N°3 : Verticalité
-			<button class="cybr-btn" aria-hidden="true">
-				 <span aria-hidden="true">
-				</span>
-				<span aria-hidden="false" class="cybr-btn__glitch">°... :x ...°</span>
-				<a href="https://www.cyberpunk.net/fr/photo-mode-challenge">Participer<box-icon name='down-arrow-alt' type='solid' animation='tada' flip='vertical'></box-icon></a>
-				<span aria-hidden="false" class="cybr-btn__tag sky-neon"><i class='bx bxs-down-arrow-alt bx-tada bx-flip-vertical'><br></i>R26</span>
-			</button>
-		<hr>
-	</div>
-
-</section>
-
-
-</section>
-
-<section class="cyber-slider" id="Cyberpunk">
-
-	
-	<div class="container">
-		<!-- <h1 class="main-title">Our Products</h1> -->
-		<!-- <p class="min-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores corporis ipsa tempora,
-		  blanditiis nam
-		  perferendis deleniti iure error velit alias omnis facere, illum numquam molestiae eveniet nisi in molestias
-		  laborum rerum! Omnis assumenda sunt excepturi facere. At rem maiores accusamus.</p> -->
-		<div class="product-grid">
-		  <div class="card stacked featured">
-			<img src="img/slides/slide  (25).png" alt="a grey baseball hat with a small palm tree on the front" class="card__img">
-			<div class="card__content">
-			  <h2 class="card__title">Lorem, ipsum dolor.</h2>
-			  <p class="card__price">$325</p>
-			  <p class="card__description">Lorem, ipsum dolor.</p>
-			</div>
-		  </div>
-	
-		  <div class="card stacked">
-			<img src="img/slides/slide  (26).png" alt="" class="card__img">
-			<div class="card__content">
-			  <h2 class="card__title">Ullam, cum ut.</h2>
-			  <p class="card__price">$315</p>
-			  <p class="card__description">Iure, voluptate corrupti.</p>
-			</div>
-		  </div>
-		  <div class="card stacked">
-			<img src="img/slides/slide  (27).png" alt="" class="card__img">
-			<div class="card__content">
-			  <h2 class="card__title">Libero, ab dolorem?</h2>
-			  <p class="card__price">$225</p>
-			  <p class="card__description">Eveniet, necessitatibus id.</p>
-			</div>
-		  </div>
-		  <div class="card stacked">
-			<img src="img/slides/slide  (31).png" alt="" class="card__img">
-			<div class="card__content">
-			  <h2 class="card__title">Minima, earum ipsam.</h2>
-			  <p class="card__price">$500</p>
-			  <p class="card__description">Illo, dolorem magnam?</p>
-			</div>
-		  </div>
-		  <div class="card stacked">
-			<img src="img/slides/slide  (28).png" alt="" class="card__img">
-			<div class="card__content">
-			  <h2 class="card__title">Odio, nam consequatur.</h2>
-			  <p class="card__price">$255</p>
-			  <p class="card__description">Quos, facere alias.</p>
-			</div>
-		  </div>
-		  <div class="card stacked">
-			<img src="img/slides/slide  (29).png" alt="" class="card__img">
-			<div class="card__content">
-			  <h2 class="card__title">Quidem, aut numquam!</h2>
-			  <p class="card__price">$345</p>
-			  <p class="card__description">Aliquid, enim ea.</p>
-			</div>
-		  </div>
-		  <div class="card stacked">
-			<img src="img/slides/slide  (30).png" alt="" class="card__img">
-			<div class="card__content">
-			  <h2 class="card__title">Accusantium, placeat dolores?</h2>
-			  <p class="card__price">$105</p>
-			  <p class="card__description">Corporis, commodi facilis!</p>
-			</div>
-		  </div>
-	
-		</div>
-	
-	
-	  
-	  </div> 
-
-</section>
-
-
-
-<section class="cyber-slider" id="Cyberpunk">
-
-	<div id="cyberSlider" class="cyber-slider">
-	
-	<ul class="cyber-slider__wrapper">
-	<li data-slideid="17" class="cyber-slider__slide ">
-	<span class="cyber-slider__imgwrap">
-	<img class="slide-image" src="./img/slides/slide  (17).png" alt="Slide 17">
-	<span class="glitch-area">
-	
-	</span>
-	</span>
-	
-	<div class="cyber-slider__content">
-	<!-- class glitching -->
-	<div class="cyber-slider__slidetext">
-	Slide 17 : <h3 class="heading-lg">CRÉEZ VOTRE PROPRE CYBERPUNK</h3>
-	<p>
-	
-	Devenez un hors-la-loi urbain équipé d'améliorations cybernétiques et forgez votre légende dans les rues de Night City.</p>
-	<img class="slide-image" src="./img/slides/slide  (17).png" alt="Slide 17"><br></div>
-	</div>
-	</li>
-	
-	<li data-slideid="18" class="cyber-slider__slide ">
-	<span class="cyber-slider__imgwrap">
-	<img class="slide-image" src="./img/slides/slide  (18).png" alt="Slide 18">
-	<span class="glitch-area">
-	
-	</span>
-	</span>
-	
-	<div class="cyber-slider__content">
-	<!-- class glitching -->
-	<div class="cyber-slider__slidetext">
-	Slide 18 : <h3 class="heading-lg">FORGEZ VOTRE LÉGENDE</h3>
-	<p>Arpentez les rues d’une ville immense, explorez des zones où les guerres de gangs font rage, dévalisez des paradis fiscaux et sillonnez un centre-ville en effervescence.</p><img class="slide-image" src="./img/slides/slide  (18).png" alt="Slide 18">
-	</div>
-	</div>
-	</li>
-	
-	<li data-slideid="19" class="cyber-slider__slide ">
-	<span class="cyber-slider__imgwrap">
-	<img class="slide-image" src="./img/slides/slide  (19).png" alt="Slide 19">
-	<span class="glitch-area">
-	
-	</span>
-	</span>
-	
-	<div class="cyber-slider__content">
-	<!-- class glitching -->
-	<div class="cyber-slider__slidetext">
-	Slide 19<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (19).png" alt="Slide 19">
-	<p>
-	Lancez-vous dans des aventures risquées et nouez des relations avec des personnages inoubliables dont le sort dépendra de vos choix.</p>
-	</div>
-	</div>
-	</li>
-	
-	<li data-slideid="20" class="cyber-slider__slide ">
-	<span class="cyber-slider__imgwrap">
-	<img class="slide-image" src="./img/slides/slide  (20).png" alt="Slide 20">
-	<span class="glitch-area">
-	
-	</span>
-	</span>
-	
-	<div class="cyber-slider__content">
-	<!-- class glitching -->
-	<div class="cyber-slider__slidetext">
-	Slide 20<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (20).png" alt="Slide 20">
-	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
-	visuals, complexity and depth.</p>
-	
-	</div>
-	</div>
-	</li>
-	
-	<li data-slideid="21" class="cyber-slider__slide ">
-	<span class="cyber-slider__imgwrap">
-	<img class="slide-image" src="./img/slides/slide  (21).png" alt="Slide 21">
-	<span class="glitch-area">
-	
-	</span>
-	</span>
-	
-	<div class="cyber-slider__content">
-	<!-- class glitching -->
-	<div class="cyber-slider__slidetext">
-	Slide 21<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (21).png" alt="Slide 21">
-	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
-	visuals, complexity and depth.</p>
-	</div>
-	</div>
-	</li>
-	
-	<li data-slideid="22" class="cyber-slider__slide ">
-	<span class="cyber-slider__imgwrap">
-	<img class="slide-image" src="./img/slides/slide  (22).png" alt="Slide 22">
-	<span class="glitch-area">
-	
-	</span>
-	</span>
-	
-	<div class="cyber-slider__content">
-	<!-- class glitching -->
-	<div class="cyber-slider__slidetext">
-	Slide 22<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (22).png" alt="Slide 22">
-	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
-	visuals, complexity and depth.</p>
-	</div>
-	</div>
-	</li>
-	
-	<li data-slideid="23" class="cyber-slider__slide ">
-	<span class="cyber-slider__imgwrap">
-	<img class="slide-image" src="./img/slides/slide  (23).png" alt="Slide 23">
-	<span class="glitch-area">
-	
-	</span>
-	</span>
-	
-	<div class="cyber-slider__content">
-	<!-- class glitching -->
-	<div class="cyber-slider__slidetext">
-	Slide 23<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (23).png" alt="Slide 23">
-	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
-	visuals, complexity and depth.</p>
-	</div>
-	</div>
-	</li>
-	
-	<li data-slideid="24" class="cyber-slider__slide ">
-	<span class="cyber-slider__imgwrap">
-	<img class="slide-image" src="./img/slides/slide  (24).png" alt="Slide 24">
-	<span class="glitch-area">
-	
-	</span>
-	</span>
-	
-	<div class="cyber-slider__content">
-	<!-- class glitching -->
-	<div class="cyber-slider__slidetext">
-	Slide 24<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (24).png" alt="Slide 24">
-	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
-	visuals, complexity and depth.</p>
-	</div>
-	</div>
-	</li>
-	</ul>
-	
-	<ul class="cyber-slider__controls">
-	<li data-slide="17" class="#Slide 17"><a href="#Slide 17"><span class="sr-only">Slide 17</span></a></li>
-	<li data-slide="18"><a href="#Slide 18"><span class="sr-only">Slide 18</span></a></li>
-	<li data-slide="19"><a href="#Slide 19"><span class="sr-only">Slide 19</span></a></li>                
-	<li data-slide="20"><a href="#Slide 20"><span class="sr-only">Slide 20</span></a></li>
-	<li data-slide="21"><a href="#Slide 21"><span class="sr-only">Slide 21
-	</span></a></li>
-	<li data-slide="22"><a href="#Slide 22"><span class="sr-only">Slide 22</span></a></li>
-	<li data-slide="23"><a href="#Slide 23"><span class="sr-only">Slide 23</span></a></li>
-	<li data-slide="24"><a href="#Slide 24"><span class="sr-only">Slide 24</span></a></li>
-	</ul>
-	
-	</div>
-	<hr>
-
-</section>
-
 <section class="bg-gray-900 h-screen flex justify-center items-center gap-x-16 text-white">
-
+<hr>
 	<div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
 	<div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
 	<div class="absolute backface-hidden border-2 w-full h-full">
@@ -814,98 +654,181 @@ visuals, complexity and depth.</p>
 	</div>
 </section>
 
- 	<section class="bg-gray-900 h-screen flex justify-center items-center gap-x-16 text-white">
-	<div
-	class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
-	>
-	<div
-	class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
-	>
-	<div class="absolute backface-hidden border-2 w-full h-full">
-	<img src="src/assets/kingsman.jpg" class="w-full h-full"  alt="c77"/>
-	</div>
-	<div
-	class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
-	>
-	<div
-	class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
-	>
-	<h1 class="text-3xl font-semibold">The King's Man</h1>
-	<p class="my-2">9.0 Rating</p>
-	<p>
-	Lorem ipsum sit amet consectetur adipisicing elit, odit natus
-	veritatis enim culpa nam inventore doloribus quidem temporibus
-	amet accusamus.
-	</p>
-	<button
-	class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
-	>
-	Watch Now
-	</button>
-	</div>
-	</div>
-	</div>
-	</div>  <div
-			  class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
-			  >
-			  <div
-			  class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
-			  >
-			  <div class="absolute backface-hidden border-2 w-full h-full">
-			  <img src="public/assets/spider.jpg" class="w-full h-full" alt="c77"/>
-			  </div>
-			  <div
-			  class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
-			  >
-			  <div
-			  class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
-			  >
-			  <h1 class="text-3xl font-semibold">Spider Man</h1>
-			  <p class="my-2">9.0 Rating</p>
-			  <p>
-			  Lorem ipsum odit natus veritatis enim culpa nam inventore doloribus quidem temporibus
-			  amet velit accusamus.
-			  </p>
-			  <button
-			  class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
-			  >
-			  Watch Now
-			  </button>
-			  </div>
-			  </div>
-			  </div>
-			  <span class="c-news__image--glitch-effect" style="background-image: url(https://static.cdprojektred.com/cms.cdprojektred.com/16x9_big/23f12c864022304aeaf05d8f760417d583a1602d-1280x720.jpg);"></span>
-		  </div> <div
-		  class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
-		  >
-		  <div
-		  class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
-		  >
-		  <div class="absolute backface-hidden border-2 w-full h-full">
-		  <img src="public/assets/rednotice.jpg" class="w-full h-full" alt="c77"/>
-		  </div>
-		  <div
-		  class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
-		  >
-		  <div
-		  class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
-		  >
-		  <h1 class="text-3xl font-semibold">The Red Notice</h1>
-		  <p class="my-2">10.05 Rating</p>
-		  <p>
-			  <div class="bg-transparent"><img class="slide-image" src="img/slides/slide  (17).png" alt="c77"/></div>
-		  </p>
-		  <button
-		  class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
-		  >
-		  Watch Now
-		  </button><div id="app">
-		  </div>
-		  </div>
-		  </div>
-		  </div>
-		  </div>
+
+	
+<section class="cyber-slider">
+	<iframe  id="ytplayer" class="v-header" type="video/mp4" width="100%"  height="240" src="https://www.youtube.com/embed/gyM_HysQN7s" title="Cyberpunk 2077: Phantom Liberty — Teaser officiel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen alt="Teaser">
+</iframe>
+</section>
+
+	<section class="cyber-slider" id="Cyberpunk">
+	
+		<div id="cyberSlider" class="cyber-slider">
+		
+		<ul class="cyber-slider__wrapper">
+		<li data-slideid="17" class="cyber-slider__slide ">
+		<span class="cyber-slider__imgwrap">
+		<img class="slide-image" src="./img/slides/slide  (17).png" alt="Slide 17">
+		<span class="glitch-area">
+		
+		</span>
+		</span>
+		
+		<div class="cyber-slider__content">
+		<!-- class glitching -->
+		<div class="cyber-slider__slidetext">
+		Slide 17 : <h3 class="heading-lg">CRÉEZ VOTRE PROPRE CYBERPUNK</h3>
+		<p>
+		
+		Devenez un hors-la-loi urbain équipé d'améliorations cybernétiques et forgez votre légende dans les rues de Night City.</p>
+		<img class="slide-image" src="./img/slides/slide  (17).png" alt="Slide 17"><br></div>
+		</div>
+		</li>
+		
+		<li data-slideid="18" class="cyber-slider__slide ">
+		<span class="cyber-slider__imgwrap">
+		<img class="slide-image" src="./img/slides/slide  (18).png" alt="Slide 18">
+		<span class="glitch-area">
+		
+		</span>
+		</span>
+		
+		<div class="cyber-slider__content">
+		<!-- class glitching -->
+		<div class="cyber-slider__slidetext">
+		Slide 18 : <h3 class="heading-lg">FORGEZ VOTRE LÉGENDE</h3>
+		<p>Arpentez les rues d’une ville immense, explorez des zones où les guerres de gangs font rage, dévalisez des paradis fiscaux et sillonnez un centre-ville en effervescence.</p><img class="slide-image" src="./img/slides/slide  (18).png" alt="Slide 18">
+		</div>
+		</div>
+		</li>
+		
+		<li data-slideid="19" class="cyber-slider__slide ">
+		<span class="cyber-slider__imgwrap">
+		<img class="slide-image" src="./img/slides/slide  (19).png" alt="Slide 19">
+		<span class="glitch-area">
+		
+		</span>
+		</span>
+		
+		<div class="cyber-slider__content">
+		<!-- class glitching -->
+		<div class="cyber-slider__slidetext">
+		Slide 19<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (19).png" alt="Slide 19">
+		<p>
+		Lancez-vous dans des aventures risquées et nouez des relations avec des personnages inoubliables dont le sort dépendra de vos choix.</p>
+		</div>
+		</div>
+		</li>
+		
+		<li data-slideid="20" class="cyber-slider__slide ">
+		<span class="cyber-slider__imgwrap">
+		<img class="slide-image" src="./img/slides/slide  (20).png" alt="Slide 20">
+		<span class="glitch-area">
+		
+		</span>
+		</span>
+		
+		<div class="cyber-slider__content">
+		<!-- class glitching -->
+		<div class="cyber-slider__slidetext">
+		Slide 20<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (20).png" alt="Slide 20">
+		<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+		visuals, complexity and depth.</p>
+		
+		</div>
+		</div>
+		</li>
+		
+		<li data-slideid="21" class="cyber-slider__slide ">
+		<span class="cyber-slider__imgwrap">
+		<img class="slide-image" src="./img/slides/slide  (21).png" alt="Slide 21">
+		<span class="glitch-area">
+		
+		</span>
+		</span>
+		
+		<div class="cyber-slider__content">
+		<!-- class glitching -->
+		<div class="cyber-slider__slidetext">
+		Slide 21<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (21).png" alt="Slide 21">
+		<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+		visuals, complexity and depth.</p>
+		</div>
+		</div>
+		</li>
+		
+		<li data-slideid="22" class="cyber-slider__slide ">
+		<span class="cyber-slider__imgwrap">
+		<img class="slide-image" src="./img/slides/slide  (22).png" alt="Slide 22">
+		<span class="glitch-area">
+		
+		</span>
+		</span>
+		
+		<div class="cyber-slider__content">
+		<!-- class glitching -->
+		<div class="cyber-slider__slidetext">
+		Slide 22<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (22).png" alt="Slide 22">
+		<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+		visuals, complexity and depth.</p>
+		</div>
+		</div>
+		</li>
+		
+		<li data-slideid="23" class="cyber-slider__slide ">
+		<span class="cyber-slider__imgwrap">
+		<img class="slide-image" src="./img/slides/slide  (23).png" alt="Slide 23">
+		<span class="glitch-area">
+		
+		</span>
+		</span>
+		
+		<div class="cyber-slider__content">
+		<!-- class glitching -->
+		<div class="cyber-slider__slidetext">
+		Slide 23<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (23).png" alt="Slide 23">
+		<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+		visuals, complexity and depth.</p>
+		</div>
+		</div>
+		</li>
+		
+		<li data-slideid="24" class="cyber-slider__slide ">
+		<span class="cyber-slider__imgwrap">
+		<img class="slide-image" src="./img/slides/slide  (24).png" alt="Slide 24">
+		<span class="glitch-area">
+		
+		</span>
+		</span>
+		
+		<div class="cyber-slider__content">
+		<!-- class glitching -->
+		<div class="cyber-slider__slidetext">
+		Slide 24<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (24).png" alt="Slide 24">
+		<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+		visuals, complexity and depth.</p>
+		</div>
+		</div>
+		</li>
+		</ul>
+		
+		<ul class="cyber-slider__controls">
+		<li data-slide="17" class="#Slide 17"><a href="#Slide 17"><span class="sr-only">Slide 17</span></a></li>
+		<li data-slide="18"><a href="#Slide 18"><span class="sr-only">Slide 18</span></a></li>
+		<li data-slide="19"><a href="#Slide 19"><span class="sr-only">Slide 19</span></a></li>                
+		<li data-slide="20"><a href="#Slide 20"><span class="sr-only">Slide 20</span></a></li>
+		<li data-slide="21"><a href="#Slide 21"><span class="sr-only">Slide 21
+		</span></a></li>
+		<li data-slide="22"><a href="#Slide 22"><span class="sr-only">Slide 22</span></a></li>
+		<li data-slide="23"><a href="#Slide 23"><span class="sr-only">Slide 23</span></a></li>
+		<li data-slide="24"><a href="#Slide 24"><span class="sr-only">Slide 24</span></a></li>
+		</ul>
+		
+		</div>
+		
+	
 	</section>
+
 
 <section class="bg-gray-900 h-screen flex justify-center items-center gap-x-16 text-white">
 
@@ -957,10 +880,553 @@ Watch Now
 	</div>
 	</div>
 </section>
+<section class="cyber-slider" id="Cyberpunk">
+
+	<div id="cyberSlider" class="cyber-slider">
+	
+	<ul class="cyber-slider__wrapper">
+	<li data-slideid="25" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (25).png" alt="Slide 25">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 25 : <h3 class="heading-lg">CRÉEZ VOTRE PROPRE CYBERPUNK</h3>
+	<p>
+	
+	Devenez un hors-la-loi urbain équipé d'améliorations cybernétiques et forgez votre légende dans les rues de Night City.</p>
+	<img class="slide-image" src="./img/slides/slide  (25).png" alt="Slide 25"><br></div>
+	</div>
+	</li>
+	
+	<li data-slideid="26" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (26).png" alt="Slide 26">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 26 : <h3 class="heading-lg">FORGEZ VOTRE LÉGENDE</h3>
+	<p>Arpentez les rues d’une ville immense, explorez des zones où les guerres de gangs font rage, dévalisez des paradis fiscaux et sillonnez un centre-ville en effervescence.</p><img class="slide-image" src="./img/slides/slide  (26).png" alt="Slide 26">
+	</div>
+	</div>
+	</li>
+	
+	<li data-slideid="27" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (27).png" alt="Slide 27">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 27<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (27).png" alt="Slide 27">
+	<p>
+	Lancez-vous dans des aventures risquées et nouez des relations avec des personnages inoubliables dont le sort dépendra de vos choix.</p>
+	</div>
+	</div>
+	</li>
+	
+	<li data-slideid="28" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (28).png" alt="Slide 28">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 28<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (28).png" alt="Slide 28">
+	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+	visuals, complexity and depth.</p>
+	
+	</div>
+	</div>
+	</li>
+	
+	<li data-slideid="29" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (29).png" alt="Slide 29">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 29<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (29).png" alt="Slide 29">
+	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+	visuals, complexity and depth.</p>
+	</div>
+	</div>
+	</li>
+	
+	<li data-slideid="30" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (30).png" alt="Slide 30">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 30<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (30).png" alt="Slide 30">
+	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+	visuals, complexity and depth.</p>
+	</div>
+	</div>
+	</li>
+	
+	<li data-slideid="31" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide  (31).png" alt="Slide 31">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 31<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide  (31).png" alt="Slide 31">
+	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+	visuals, complexity and depth.</p>
+	</div>
+	</div>
+	</li>
+	
+	<li data-slideid="32" class="cyber-slider__slide ">
+	<span class="cyber-slider__imgwrap">
+	<img class="slide-image" src="./img/slides/slide (32).png" alt="Slide 32">
+	<span class="glitch-area">
+	
+	</span>
+	</span>
+	
+	<div class="cyber-slider__content">
+	<!-- class glitching -->
+	<div class="cyber-slider__slidetext">
+	Slide 32<h3 class="heading-lg"></h3><img class="slide-image" src="./img/slides/slide (32).png" alt="Slide 32">
+	<p>Enter the massive open world of Night City, a place that sets new standards in terms of
+	visuals, complexity and depth.</p>
+	</div>
+	</div>
+	</li>
+
+	</ul>
+	
+	<ul class="cyber-slider__controls">
+	<li data-slide="25" class="#Slide 25"><a href="#Slide 25"><span class="sr-only">Slide 25</span></a></li>
+	<li data-slide="26"><a href="#Slide 26"><span class="sr-only">Slide 26</span></a></li>
+	<li data-slide="27"><a href="#Slide 27"><span class="sr-only">Slide 27</span></a></li>                
+	<li data-slide="28"><a href="#Slide 28"><span class="sr-only">Slide 28</span></a></li>
+	<li data-slide="29"><a href="#Slide 29"><span class="sr-only">Slide 29</span></a></li>
+	<li data-slide="30"><a href="#Slide 30"><span class="sr-only">Slide 30</span></a></li>
+	<li data-slide="31"><a href="#Slide 31"><span class="sr-only">Slide 31</span></a></li>
+	<li data-slide="32"><a href="#Slide 32"><span class="sr-only">Slide 32</span></a></li>
+	</ul>
+	
+	</div>
+	<hr>
+
+</section>
+<section class="cyber-slider">
+<hr><button class="cybr-btn">
+	Cyber<span aria-hidden="true">_</span>
+		<span aria-hidden="false" class="cybr-btn__glitch"><a href="https://www.cyberpunk.net/fr/fr/">Cyber_</a></span>
+	
+	<span aria-hidden="false" class="cybr-btn__tag sky-neon">R24</span>
+</button>
+<section class="cyber-slider__content">
+
+<div class="container breath-neon">		
+				<br>
+				<h1>DÉFI MODE PHOTO - 2e édition			
+					<div class="img-slider">
+					<div class="slide active">
+					  <img src="img/slides/slide (79).png" alt="">
+					  <div class="info">
+						<h2>Slide 01</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					  </div>
+					</div>
+
+					<div class="slide">
+					  <img src="img/slides/slide (80).png" alt="">
+					  <div class="info">
+						<h2>Slide 02</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					  </div>
+					</div>
+					
+					<div class="slide">
+					  <img src="img/slides/slide (83).png" alt="">
+					  <div class="info">
+						<h2>Slide 03</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					  </div>
+					</div>
+					<div class="slide">
+					  <img src="img/slides/slide (84).png" alt="">
+					  <div class="info">
+						<h2>Slide 04</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					  </div>
+					</div>
+					<div class="slide">
+					  <img src="img/slides/slide (85).png" alt="">
+					  <div class="info">
+						<h2>Slide 05</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					  </div>
+					</div>
+	
+					<div class="slide">
+						<img src="img/slides/slide (86).png" alt="">
+						<div class="info">
+						  <h2>Slide 06</h2>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					  </div>
+					  <div class="slide">
+						<img src="img/slides/slide (87).png" alt="">
+						<div class="info">
+						  <h2>Slide 07</h2>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					  </div>
+	
+					  <div class="slide">
+						<img src="img/slides/slide (88).png" alt="">
+						<div class="info">
+						  <h2>Slide 08</h2>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					  </div>
+	
+	
+					  <div class="slide">
+						<img src="img/slides/slide (89).png" alt="">
+						<div class="info">
+						  <h2>Slide 09</h2>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					  </div>
+					  
+					  <div class="slide">
+						<img src="img/slides/slide (90).png" alt="">
+						<div class="info">
+						  <h2>Slide 10</h2>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					  </div>
+	
+					<div class="navigation">
+					  <div class="btn active"><h3>1</h3></div>
+					  <div class="btn"><h3>2</h3></div>
+					  <div class="btn"><h3>3</h3></div>
+					  <div class="btn"><h3>4</h3></div>
+					  <div class="btn"><h3>5</h3></div>
+					  <div class="btn"><h3>6</h3></div>
+					  <div class="btn"><h3>7</h3></div>
+					  <div class="btn"><h3>8</h3></div>
+					  <div class="btn"><h3>9</h3></div>
+					  <div class="btn"><h3>10</h3></div>
+					</div>
+				  </div>
+				  <br> </h1>N°3 : Verticalité
+	
+				<button class="cybr-btn" aria-hidden="true">
+					 <span aria-hidden="true">
+					</span>
+					<span aria-hidden="false" class="cybr-btn__glitch">°... :x ...°</span>
+					<a href="https://www.cyberpunk.net/fr/photo-mode-challenge">Participer<box-icon name='down-arrow-alt' type='solid' animation='tada' flip='vertical'></box-icon></a>
+					<span aria-hidden="false" class="cybr-btn__tag sky-neon"><i class='bx bxs-down-arrow-alt bx-tada bx-flip-vertical'><br></i>R29</span>
+				</button>
+					<br>
+<br>		
+				<button class="cybr-btn" aria-hidden="true">
+			Chimères<span aria-hidden="true">_</span>
+				<span aria-hidden="true" class="cybr-btn__glitch"><a href="https://www.cyberpunk.net/fr/fr/">Cyber_</a></span>
+			
+			<span aria-hidden="false" class="cybr-btn__tag sky-neon">R27</span>
+		</button>
+		<button class="cybr-btn" aria-hidden="true">
+			_<span aria-hidden="true">Hard SF</span>
+			<a href="https://youtu.be/gyM_HysQN7s"><span aria-hidden="true" class="cybr-btn__glitch">
+				Buttons_</span></a>
+			<span aria-hidden="false" class="cybr-btn__tag sky-neon">R28</span>
+		  </button>
+		  <br><br><iframe id="ytplayer" type="text/html" width="auto" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLDisKgcnAC4SqX0mi1J5_gd7-hrIS5yJp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<br><iframe id="iframe" src="https://open.spotify.com/embed/playlist/6KH41lq4pKgNZ6DRmbzse7?si=94d644f944b04317utm_source=generator" width="auto" height="315" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+		<section class="cyber-slider__content">
+
+	
+	<div class="container sky-neon">
+			<hr>
+	  <h1>DÉFI MODE PHOTO - 2e édition</h1><br><br>N°3 : Verticalité 
+			<button class="cybr-btn" aria-hidden="true">
+				 <span aria-hidden="true">
+				</span>
+				<span aria-hidden="false" class="cybr-btn__glitch">°... :x ...°</span>
+				<a href="https://www.cyberpunk.net/fr/photo-mode-challenge">Participer<box-icon name='down-arrow-alt' type='solid' animation='tada' flip='vertical'></box-icon></a>
+				<span aria-hidden="false" class="cybr-btn__tag sky-neon"><i class='bx bxs-down-arrow-alt bx-tada bx-flip-vertical'><br></i>R26</span>
+			</button>
+		
+	</div>
+<br>
+</section>
+<br>
+<div class="product-grid">		
+				<div class="card stacked featured">
+				<img src="img/slides/slide (90).png" alt="a grey baseball hat with a small palm tree on the front" class="card__img">
+				<div class="card__content">
+				  <h2 class="card__title">Lorem, ipsum dolor.</h2>
+				  <p class="card__price">$325</p>
+				  <p class="card__description">Lorem, ipsum dolor.</p>
+				</div>
+			  </div>
+		
+			  <div class="card stacked">
+				<img src="img/slides/slide (91).png" alt="" class="card__img">
+				<div class="card__content">
+				  <h2 class="card__title">Ullam, cum ut.</h2>
+				  <p class="card__price">$315</p>
+				  <p class="card__description">Iure, voluptate corrupti.</p>
+				</div>
+			  </div>
+			  <div class="card stacked">
+				<img src="img/slides/slide (92).png" alt="" class="card__img">
+				<div class="card__content">
+				  <h2 class="card__title">Libero, ab dolorem?</h2>
+				  <p class="card__price">$225</p>
+				  <p class="card__description">Eveniet, necessitatibus id.</p>
+				</div>
+			  </div>
+			  <div class="card stacked">
+				<img src="img/slides/slide (93).png" alt="" class="card__img">
+				<div class="card__content">
+				  <h2 class="card__title">Minima, earum ipsam.</h2>
+				  <p class="card__price">$500</p>
+				  <p class="card__description">Illo, dolorem magnam?</p>
+				</div>
+			  </div>
+			  <div class="card stacked">
+				<img src="img/slides/slide (94).png" alt="" class="card__img">
+				<div class="card__content">
+				  <h2 class="card__title">Odio, nam consequatur.</h2>
+				  <p class="card__price">$255</p>
+				  <p class="card__description">Quos, facere alias.</p>
+				</div>
+			  </div>
+			  <div class="card stacked">
+				<img src="img/slides/slide (95).png" alt="" class="card__img">
+				<div class="card__content">
+				  <h2 class="card__title">Quidem, aut numquam!</h2>
+				  <p class="card__price">$345</p>
+				  <p class="card__description">Aliquid, enim ea.</p>
+				</div>
+			  </div>
+			  <div class="card stacked">
+				<img src="img/slides/slide (96).png" alt="" class="card__img">
+				<div class="card__content">
+				  <h2 class="card__title">Accusantium, placeat dolores?</h2>
+				  <p class="card__price">$105</p>
+				  <p class="card__description">Corporis, commodi facilis!</p>
+				</div>
+			  </div>
+			  <div class="card stacked">
+				<img src="img/slides/slide (97).png" alt="" class="card__img">
+				<div class="card__content">
+				  <h2 class="card__title">Accusantium, placeat dolores?</h2>
+				  <p class="card__price">$105</p>
+				  <p class="card__description">Corporis, commodi facilis!</p>
+				</div>
+			  </div>
+			  <div class="card stacked">
+				<img src="img/slides/slide (98).png" alt="" class="card__img">
+				<div class="card__content">
+				  <h2 class="card__title">Accusantium, placeat dolores?</h2>
+				  <p class="card__price">$105</p>
+				  <p class="card__description">Corporis, commodi facilis!</p>
+				</div>
+			  </div>
+			
+	
+			<div class="card stacked">
+			  <img src="img/slides/slide (99).png" alt="" class="card__img">
+			  <div class="card__content">
+				<h2 class="card__title">Ullam, cum ut.</h2>
+				<p class="card__price">$315</p>
+				<p class="card__description">Iure, voluptate corrupti.</p>
+			  </div>
+			</div>
+			<div class="card stacked">
+			  <img src="img/slides/slide (100).png" alt="" class="card__img">
+			  <div class="card__content">
+				<h2 class="card__title">Libero, ab dolorem?</h2>
+				<p class="card__price">$225</p>
+				<p class="card__description">Eveniet, necessitatibus id.</p>
+			  </div>
+			</div>	
+
+			<div class="card stacked featured">
+			  <img src="img/slides/slide (101).png" alt="a grey baseball hat with a small palm tree on the front" class="card__img">
+			  <div class="card__content">
+				<h2 class="card__title">Lorem, ipsum dolor.</h2>
+				<p class="card__price">$325</p>
+				<p class="card__description">Lorem, ipsum dolor.</p>
+			  </div>
+			</div>
+			<div class="card stacked">
+			  <img src="img/slides/slide (102).png" alt="" class="card__img">
+			  <div class="card__content">
+				<h2 class="card__title">Minima, earum ipsam.</h2>
+				<p class="card__price">$500</p>
+				<p class="card__description">Illo, dolorem magnam?</p>
+			  </div>
+			</div>
+			<div class="card stacked">
+			  <img src="img/slides/slide (103).png" alt="" class="card__img">
+			  <div class="card__content">
+				<h2 class="card__title">Odio, nam consequatur.</h2>
+				<p class="card__price">$255</p>
+				<p class="card__description">Quos, facere alias.</p>
+			  </div>
+			</div>
+			<div class="card stacked">
+			  <img src="img/slides/slide (104).png" alt="" class="card__img">
+			  <div class="card__content">
+				<h2 class="card__title">Quidem, aut numquam!</h2>
+				<p class="card__price">$345</p>
+				<p class="card__description">Aliquid, enim ea.</p>
+			  </div>
+			</div>
+			<div class="card stacked">
+			  <img src="img/slides/slide (105).png" alt="" class="card__img">
+			  <div class="card__content">
+				<h2 class="card__title">Accusantium, placeat dolores?</h2>
+				<p class="card__price">$105</p>
+				<p class="card__description">Corporis, commodi facilis!</p>
+			  </div>
+			</div>
+			<div class="card stacked">
+			  <img src="img/slides/slide (106).png" alt="" class="card__img">
+			  <div class="card__content">
+				<h2 class="card__title">Accusantium, placeat dolores?</h2>
+				<p class="card__price">$105</p>
+				<p class="card__description">Corporis, commodi facilis!</p>
+			  </div>
+			</div>
+			<div class="card stacked">
+			  <img src="img/slides/slide (107).png" alt="" class="card__img">
+			  <div class="card__content">
+				<h2 class="card__title">Accusantium, placeat dolores?</h2>
+				<p class="card__price">$105</p>
+				<p class="card__description">Corporis, commodi facilis!</p>
+			  </div>
+			</div>
+		  
+		  <div class="card stacked featured">
+			<img src="img/slides/slide (108).png" alt="a grey baseball hat with a small palm tree on the front" class="card__img">
+			<div class="card__content">
+			  <h2 class="card__title">Lorem, ipsum dolor.</h2>
+			  <p class="card__price">$325</p>
+			  <p class="card__description">Lorem, ipsum dolor.</p>
+			</div>
+		  </div>
+	
+		  <div class="card stacked">
+			<img src="img/slides/slide (109).png" alt="" class="card__img">
+			<div class="card__content">
+			  <h2 class="card__title">Ullam, cum ut.</h2>
+			  <p class="card__price">$315</p>
+			  <p class="card__description">Iure, voluptate corrupti.</p>
+			</div>
+		  </div>
+		  <div class="card stacked">
+			<img src="img/slides/slide (110).png" alt="" class="card__img">
+			<div class="card__content">
+			  <h2 class="card__title">Libero, ab dolorem?</h2>
+			  <p class="card__price">$225</p>
+			  <p class="card__description">Eveniet, necessitatibus id.</p>
+			</div>
+		  </div>
+		  <div class="card stacked">
+			<img src="img/slides/slide (111).png" alt="" class="card__img">
+			<div class="card__content">
+			  <h2 class="card__title">Minima, earum ipsam.</h2>
+			  <p class="card__price">$500</p>
+			  <p class="card__description">Illo, dolorem magnam?</p>
+			</div>
+		  </div>
+		  <div class="card stacked">
+			<img src="img/slides/slide (112).png" alt="" class="card__img">
+			<div class="card__content">
+			  <h2 class="card__title">Odio, nam consequatur.</h2>
+			  <p class="card__price">$255</p>
+			  <p class="card__description">Quos, facere alias.</p>
+			</div>
+		  </div>
+		  <div class="card stacked">
+			<img src="img/slides/slide (113).png" alt="" class="card__img">
+			<div class="card__content">
+			  <h2 class="card__title">Quidem, aut numquam!</h2>
+			  <p class="card__price">$345</p>
+			  <p class="card__description">Aliquid, enim ea.</p>
+			</div>
+		  </div>
+		  <div class="card stacked">
+			<img src="img/slides/slide (114).png" alt="" class="card__img">
+			<div class="card__content">
+			  <h2 class="card__title">Accusantium, placeat dolores?</h2>
+			  <p class="card__price">$105</p>
+			  <p class="card__description">Corporis, commodi facilis!</p>
+			</div>
+		  </div>
+	
+</div>
+</div>
+</section>
+
+<button class="cybr-btn" aria-hidden="true">
+	_<span aria-hidden="false">Buttons</span>
+	<a href="https://youtu.be/gyM_HysQN7s"><span aria-hidden="true" class="cybr-btn__glitch">
+		Buttons_</span></a>
+	<span aria-hidden="false" class="cybr-btn__tag sky-neon">R25</span>
+</button>
+
+</section>
+
+
+
+
+
+
+
+
 </main>
 
 <footer class="footer">
-	<div class="footer__container container"><h2 class="footer__title">2022 / 2023</h2>
+	<a href="#" class="back-to-top" id="back-to-top">°<i class='bx bxs-up-arrow-alt bx-tada bx-box-vertical'></i>°</a>
+		<div class="footer__container container"><h2 class="footer__title">2022 / 2023</h2>
 		
 		<ul class="footer__list">
 			<li>
@@ -988,15 +1454,14 @@ Watch Now
 		</ul>
 	</li>
 		<span class="footer__copy">
-			<h4>&#169; Alex. "All rights reserved"© .
+			<h3>&#169; Alex. "All rights reserved"© .
 			(Inspirations & Thanks to friends.)
 			<br>
-		</h4>
+		</h3>
 		</span>
 	</div>
-	<a href="#" class="back-to-top" id="back-to-top">°0°</a>
+	
 </footer>
-
 </body>
 
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
