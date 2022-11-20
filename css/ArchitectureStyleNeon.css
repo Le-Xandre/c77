@@ -20,13 +20,14 @@
       --height_header03:300px;
       --height_header04:480px;
 
-      --blanc: #f3ebebfd;
       --noir: #000002;
+      --blanc: #f3ebebfd;
+      --body-color: #000000;
       --gris-transparent: #cdd6d6f6;
-      --body-color: #000000f8;
 
-      --premiere-color:rgb(4, 4, 4);
-      --seconde-color:rgba(250, 220, 203, 0.991);
+
+      --premiere-color:rgb(255, 255, 255);
+      --seconde-color:rgba(0, 0, 0, 0.991);
       --third-color:rgba(70, 126, 248, 0.991);
 
       --text-color-light-01: rgb(249, 199, 142);
@@ -520,8 +521,8 @@ cursor:crosshair;
 /* Simple Border Button */
 .border-neon {
     background-color: transparent;
-    border: 2px solid rgb(93, 89, 109);
-    color: rgb(206, 235, 255);
+    border: 2px solid rgba(93, 89, 109, 0.513);
+    color: rgb(0, 0, 0);
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
@@ -530,7 +531,7 @@ cursor:crosshair;
     -webkit-box-shadow: inset 0px 0px 8px 3px #94cbff;
     box-shadow: 0px 0px 10px 3px #94d8ff, inset 0px 0px 10px 3px #94adff;
     border-color: #fff;
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #94adff, 0 0 40px #94a4ff, 0 0 50px #94b9ff, 0 0 60px #94c2ff, 0 0 70px #50bfff
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #94adffa1, 0 0 40px #94a4ffc8, 0 0 50px #94b9ffde, 0 0 60px #94c2ffc5, 0 0 70px #50bfffb3
 }
  
 /* Inner Height Button */
