@@ -17,6 +17,22 @@
 
 
 :root {
+
+  
+  --first-hue: 205;
+  --sat: 45%;
+  --lig: 45%;
+  --second-hue: 245;
+
+  --first-color: hsla(var(--first-hue), var(--sat), var(--lig));
+  --first-color-alt: hsla(var(--first-hue), var(--sat), 71%); /* -4% */
+  --title-color: hsla(var(--second-hue), 15%, 95%);
+  --text-color: hsla(var(--second-hue), 8%, 75%);
+  --text-color-light: hsla(var(--second-hue), 4%, 55%);
+  --body-color: hsla(var(--second-hue), 48%, 8%);
+  --container-color: hsla(var(--second-hue), 32%, 12%);
+
+
   --red: rgba(211, 87, 91, 0.81);
   --red-glow: rgba(211, 87, 91, 0.91);
   --red-scanline: rgba(204, 94, 98, 0.2);
@@ -27,73 +43,60 @@
   --text-shadow: rgb(0, 208, 255);
 }
 
-/*=============== THEME ===============*/
-.change-theme{
-  font-size: 1.25rem;
-  cursor: pointer;
-  transition: .3s;
+.toggle {
+  position: absolute;
+  right: 1.20rem;
+  top: 1.20rem;
 }
-.change-theme:hover{
-  color: var(--first-color);
+.checkbox {
+  display: none;
 }
-/*========== Variables Dark theme ==========*/
-body.light-theme{
-  --title-color: hsla(var(--second-hue), 15%, 15%);
-  --text-color: hsla(var(--second-hue), 8%, 35%);
-  --body-color: hsla(var(--second-hue), 100%, 99%);
-  --container-color: #fff;
+.label {
+  height: 26px;
+  width: 52px;
+  background: rgba(182, 182, 182, 0.633);
+  padding: 5px 8px;
+  border-radius: 22px;
+  cursor:pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transform: scale(1.2);
+  box-shadow: 2px 1px 1px rgb(19, 19, 19);
+}
+.label .ball {
+  background: rgb(201, 204, 204);
+  border-radius: 100%;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  transform: translateX(0px);
+  transition: transform 0.5s cubic-bezier(.45, -1.12, .35,1.78);
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(29px);
+}
+.fa-moon {
+  color: rgb(10, 9, 9);
 }
 
-/*========== 
-    Color changes in some parts of 
-    the website, in light theme
-==========*/
-.light-theme .scroll-header{
-  box-shadow: 0 2px 4px hsla(0, 0%, 4%, .3);
-}
-.light-theme .nav__menu{
-  background-color: hsla(var(--second-hue), 30%, 85%, .8);
-}
-.light-theme .section__subtitle{
-  color: var(--text-color);
-}
-.light-theme .home__social-link{
-  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, .1);
-}
-.light-theme .home__social::after,
-.light-theme .footer__social-link{
-  background-color: var(--title-color);
-}
-.light-theme .home__social-link, 
-.light-theme .home__scroll,
-.light-theme .button,
-.light-theme .button:hover,
-.light-theme .active-work,
-.light-theme .footer__title,
-.light-theme .footer__link,
-.light-theme .footer__copy{
-  color: var(--title-color);
-}
-.light-theme .about__box{
-  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, .1);
-}
-.light-theme .skills__content, 
-.light-theme .services__card,
-.light-theme .work__card,
-.light-theme .testimonial__card,
-.light-theme .contact__card
-{
-  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, .1);
-}
-.light-theme::-webkit-scrollbar{
-  background-color: hsl(var(--second-hue), 8%, 66%);
-}
-.light-theme::-webkit-scrollbar-thumb{
-  background-color: hsl(var(--second-hue), 8%, 66%);
-}
-.light-theme::-webkit-scrollbar-thumb:hover{
-  background-color: hsl(var(--second-hue), 8%, 44%);
-}
+ /* DARK MODE */
+ .dark {
+   background: #333;
+ }
+ .dark main {
+   background: #ffd816;
+ }
+ .dark .label {
+   box-shadow: 1px 1px 1px 1px #fbd309;
+   background: rgb(55, 52, 52);
+ }
+ .dark .ball {
+   background: #fbef09;
+ }
 
 * {
   box-sizing: border-box;
@@ -111,10 +114,24 @@ body {
   font-family: "GinesoSoft-ConMed";
 }
 
-body {
-  background-image: url("");
-  background-size: cover;
 
+body,button,input,textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: .5s; /* pour l'animation du dark theme */
+  background-image: var(--bg-url);
+  font-family: var(--font-family);
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semibold);
+  font-size: clamp(2rem,1rem + 10vw,5rem);
 }
 img {
   max-width: 100%;
@@ -176,6 +193,130 @@ h4 {
 
 p {
   line-height: 1.5;
+}
+
+
+/*=============== THEME ===============*/
+.change-theme{
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: .3s;
+}
+.change-theme:hover{
+  color: var(--first-color);
+}
+/*========== Variables Dark theme ==========*/
+body.light-theme{
+  --title-color: hsla(var(--second-hue), 15%, 15%);
+  --text-color: hsla(var(--second-hue), 8%, 35%);
+  --body-color: hsla(var(--second-hue), 100%, 99%);
+  --container-color: #fff;
+}
+
+
+.toggle {
+  position: absolute;
+  right: 1.20rem;
+  top: 1.20rem;
+}
+.checkbox {
+  display: none;
+}
+.label {
+  height: 26px;
+  width: 52px;
+  background: rgba(182, 182, 182, 0.633);
+  padding: 5px 8px;
+  border-radius: 22px;
+  cursor:pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transform: scale(1.2);
+  box-shadow: 2px 1px 1px rgb(19, 19, 19);
+}
+.label .ball {
+  background: rgb(201, 204, 204);
+  border-radius: 100%;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  transform: translateX(0px);
+  transition: transform 0.5s cubic-bezier(.45, -1.12, .35,1.78);
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(29px);
+}
+.fa-moon {
+  color: rgb(10, 9, 9);
+}
+
+ /* DARK MODE */
+ .dark {
+   background: #333;
+ }
+ .dark main {
+   background: #ffd816;
+ }
+ .dark .label {
+   box-shadow: 1px 1px 1px 1px #fbd309;
+   background: rgb(55, 52, 52);
+ }
+ .dark .ball {
+   background: #fbef09;
+ }
+/*========== 
+    Color changes in some parts of 
+    the website, in light theme
+==========*/
+.light-theme .scroll-header{
+  box-shadow: 0 2px 4px hsla(0, 0%, 4%, .3);
+}
+.light-theme .nav__menu{
+  background-color: hsla(var(--second-hue), 30%, 85%, .8);
+}
+.light-theme .section__subtitle{
+  color: var(--text-color);
+}
+.light-theme .home__social-link{
+  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, .1);
+}
+.light-theme .home__social::after,
+.light-theme .footer__social-link{
+  background-color: var(--title-color);
+}
+.light-theme .home__social-link, 
+.light-theme .home__scroll,
+.light-theme .button,
+.light-theme .button:hover,
+.light-theme .active-work,
+.light-theme .footer__title,
+.light-theme .footer__link,
+.light-theme .footer__copy{
+  color: var(--title-color);
+}
+.light-theme .about__box{
+  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, .1);
+}
+.light-theme .skills__content, 
+.light-theme .services__card,
+.light-theme .work__card,
+.light-theme .testimonial__card,
+.light-theme .contact__card
+{
+  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, .1);
+}
+.light-theme::-webkit-scrollbar{
+  background-color: hsl(var(--second-hue), 8%, 66%);
+}
+.light-theme::-webkit-scrollbar-thumb{
+  background-color: hsl(var(--second-hue), 8%, 66%);
+}
+.light-theme::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(var(--second-hue), 8%, 44%);
 }
 
 
