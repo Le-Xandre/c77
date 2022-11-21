@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="source here : Une exploration en Css pour Cyberpunk 2077, Le-Xandre (Alexandre Coté). "/>
 <link rel="canonical" href="https://le-xandre.github.io/Responsive-Portfolio-Alex/index.html" content="Le-Xandre (Alexandre Coté)."/>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-<link rel="stylesheet" href="style.css"/>
         <!--=============== FAVICON ===============-->
         <link rel="shortcut icon" href="img/slides/slide (220).png" type="image/x-icon">
 
@@ -15,7 +15,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 
-		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 <title>Possibilités pour Cards CSS en Holographic Effect</title>
         <!--=============== ICONS & text ===============-->
@@ -25,7 +24,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Heebo:wght@100..900&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&display=swap">
 
-
+<link rel="stylesheet" href="style.css"/>
 
 <!-- Css  -->
 <link rel="stylesheet" href="css/styles.css">
@@ -52,12 +51,20 @@
         <!--=============== HEADER ===============-->
 
         <header class="header" id="">
-
+<div class="toggle">
+						<input title="input" type="checkbox" class="checkbox" id="dark-mode" />
+						<label for="dark-mode" class="label">
+							<i class="fas fa-moon"></i>
+						  
+						  <i class="fas fa-sun"></i>
+						  <div class="ball"></div>
+						</label>
+	</div>	
 			           			<div class="nav__menu">
 
 				<ul class="nav__list"><!-- theme change -->
 					<i class="bx bx-moon change-theme" id="theme-button"></i> 
-
+					
 					<li class="nav__item">
 						<a href="#home" class="nav__link active-link" title="home">
 							<i class='bx bx-home-heart'></i>
@@ -115,19 +122,121 @@
 					 → ▲ ←
 					<br>
 				</span>
-					<span aria-hidden="false" class=" heart-bit-neon cybr-btn__tag"><a href="https://www.cyberpunk.net/fr/fr/" class="sky-neon" aria-hidden="false"> Site Officiel </a>↔ R23 ↔<a href="index (2).html" class="sky-neon" aria-hidden="false"> Reset </a></span>
+					<span aria-hidden="false" class=" heart-bit-neon cybr-btn__tag"><a href="https://www.cyberpunk.net/fr/fr/" class="sky-neon" aria-hidden="false"> Site Officiel </a>↔ R23 ↔<a href="index.html" class="sky-neon" aria-hidden="false"> Reset </a></span>
 					
 			</button>
 </div>
-<!-- 			 -->
+<!-- 				 --><!---->
 
 
         </header>
-			<!---->
+			<br>
 		<main class="glitch-area">
 			<br>
+	<div class="bg-gray-600 h-screen flex justify-center items-center gap-x-20 text-white">
+	<div
+	class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
+	>
+	<div
+	class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
+	>
+	<div class="absolute backface-hidden border-2 w-full h-full">
+	<img src="src/assets/Cyberpunk_2077_Lifepath_Nomad.png" class="w-full h-full"  alt="c77"/>
+	</div>
+	<div
+	class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
+	>
+	<div
+	class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
+	>
+	<h1 class="text-3xl font-semibold">Nomad</h1>
+	<p class="my-2">9.0 Rating</p>
+	<p>
+	Lorem ipsum sit amet consectetur adipisicing elit, odit natus
+	veritatis enim culpa nam inventore doloribus quidem temporibus
+	amet accusamus.
+	</p>
+	<button
+	class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+	>
+	Watch Now
+	</button>
+	</div>
+	</div>
+	</div>
+	</div> 
+	 		  
+		  <div
+		  class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
+		  >
+		  <div
+		  class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
+		  >
+		  <div class="absolute backface-hidden border-2 w-full h-full">
+		  <img src="src/assets/Cyberpunk_2077_Lifepath_Streetkid.png" class="w-full h-full" alt="c77"/>
+		  </div>
+
+		  <div
+		  class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
+		  >
+		  <div
+		  class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
+		  ><br>
+		  <h1 class="text-3xl font-semibold">Street</h1>
+		  <p class="my-2">8.00 Rating</p>
+		  <p><img class="slide-image" src="src/assets/Cyberpunk_2077_Lifepath_Nomad_Streetkid_Corpo.png" alt="c77"/>
+			  <!-- <div class="bg-transparent">
+				
+			</div> -->
+		  </p>
+		  <button
+		  class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+		  >
+		  Watch Now
+		  </button>
+		  </div>
+
+		  </div>
+
+		  </div>
+		  </div>
+
+
+	<div
+			  class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
+			  >
+			  <div
+			  class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
+			  >
+			  <div class="absolute backface-hidden border-2 w-full h-full">
+			  <img src="src/assets/Cyberpunk_2077_Lifepath_Corpo.png" class="w-full h-full" alt="c77"/>
+			  </div>
+			  <div
+			  class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
+			  >
+			  <div
+			  class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
+			  >
+			  <h1 class="text-3xl font-semibold">Corpo</h1>
+			  <p class="my-2">7.0 Rating</p>
+			  <p>
+			  Lorem ipsum odit natus veritatis enim culpa nam inventore doloribus quidem temporibus
+			  amet velit accusamus.
+			  </p>
+			  <button
+			  class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+			  >
+			  Watch Now
+			  </button>
+			  </div>
+			  </div>
+			  </div>
+			  <span class="c-news__image--glitch-effect" style="background-image: url(https://static.cdprojektred.com/cms.cdprojektred.com/16x9_big/23f12c864022304aeaf05d8f760417d583a1602d-1280x720.jpg);"></span>
+		  </div> 
+
+		</div>
 			<br>
-<section class="cyber-slider" id="Cyberpunk">		
+<section class="cyber-slider" id="home">		
 	<br>
 <div id="cyberSlider" class="cyber-slider">
 
@@ -145,21 +254,24 @@
 <div class="cyber-slider__content">
 <!-- class glitching -->
 <div class="cyber-slider__slidetext">
-<h2 class="heading-lg">VIVRE DANS LA VILLE, <br>DU FUTUR ???</h2>	
+	<h2>Slide 00</h2>
+<h2 class="heading-lg">VIVRE DANS LA VILLE, DU FUTUR ???</h2>
+<br>	
+<br>	
+<p>Entrez dans le très immersif Open World de Cyberpunk 2077.<br></p>
 <br>
-			
 
-					<br>
-					<br>			
+					
+							
 <div class="container">
 				<section class="intro">
 			  </section>
 				  <div class="meta">
-					<br>
+					<br><hr>
 					<div class="meta__inner">
-					  <h1>Slide 01</h1>
-					  <p>Entrez dans le très immersif Open World de Cyberpunk 2077,  <br><br>
-	 <hr><br>un lieu qui établit de nouvelles normes en termes de visuels, 
+					  <h2>Slide 01</h2>
+					  <p><br>
+	 <br>Un lieu qui établit de nouvelles normes en termes de visuels, 
 	<br>de complexité et de profondeur narrative. <br><br><img class="slide-image" src="./img/slides/slide-1.jpg" alt="Slide 3">
 	</p>	
 					</div>
@@ -179,7 +291,7 @@
 						</clipPath>
 						</defs>
 						</svg>	
-				  </div>
+				  </div><hr>
 			  </div><br>
 
 </div>	
@@ -197,10 +309,17 @@
 <div class="cyber-slider__content">
 <!-- class glitching -->
 <div class="cyber-slider__slidetext">
-	<h2>Slide 02</h2><h3 class="heading-lg">NIGHT CITY VOUS TRANSFORME </h3>
-<br><p>
-	
-Cyberpunk 2077 est un jeu d’action-aventure en monde ouvert qui se déroule à Night City.<br> <br><hr><img class="slide-image" src="./img/slides/slide  (3).png" alt="Slide 2"><hr><br>Une mégalopole obsédée par le pouvoir, la séduction et les modifications corporelles...</p>
+	<h2>Slide 02</h2>
+	<h3 class="heading-lg">NIGHT CITY VOUS TRANSFORME !</h3>
+<br>
+<p>	
+Cyberpunk 2077 est un jeu d’action-aventure 
+<br>en monde ouvert et qui se déroule à Night City,<br> surnommé aussi : "La Cité Des Rêves".<br>
+<br>
+<hr>
+<img class="slide-image" src="./img/slides/slide  (3).png" alt="Slide 2">
+<hr>
+<br>Une mégalopole obsédée par le pouvoir, la séduction et les modifications corporelles...</p>
 </div>
 </div>
 </li>
@@ -217,10 +336,11 @@ Cyberpunk 2077 est un jeu d’action-aventure en monde ouvert qui se déroule à
 <!-- class glitching -->
 <div class="cyber-slider__slidetext">
 	<h2> Slide 03</h2><h3 class="heading-lg">Incarnation</h3>
-	<br><p>Vous incarnez & orienté <strong>V</strong> 
-		dans cette fameuse Night City surnommé aussi : "La Cité Des Rêves".
-		<br><br>Vous débutez votre aventure suite à une proposition pour récupérer du matériel cybernétique.<br><br> 
-		<hr><br>Celui-ci pouvant être la clé pour vous, <br>de gagner en prestige & notoriété voir d'après les rumeurs, <br>d'accéder à une certaine immortalité...<br><br><hr>
+	<br><p>Vous incarnez & orienté <strong>V</strong>
+		dans Night City,  <br>
+		vous débutez votre aventure suite à une proposition 
+		pour récupérer du matériel cybernétique.<br><br>
+		<hr>Celui-ci pouvant être la clé pour vous, <br>de gagner en prestige & notoriété voir, d'après les rumeurs <br>d'accéder à une certaine immortalité...<br><hr>
 	<img class="slide-image" src="./img/slides/slide (113).png" alt="Slide 3"><hr>
 		</p>
 </div>
@@ -315,7 +435,7 @@ Erreur 404
 <!-- class glitching -->
 <div class="cyber-slider__slidetext">
 <h2>Slide 8</h2><h3 class="heading-lg">Différents choix</h3>
-<p><br>Découvrez comment vos choix et vos actions influenceront l’histoire du jeu.</p><button class="border-neon" id="vidtop-content"><a href="https://www.cyberpunk.net/fr/edgerunners">Lire <img class="slide-image breath-neon" src="https://www.cyberpunk.net/build/images/edgerunners/phase2/cover-mobile-539a2f80.jpg" alt="Slide 2">Plus ...</a></button><br><img class="slide-image" src="./img/slides/slide  (8).png" alt="Slide 5"><br>
+<p><br>Découvrez comment vos choix et vos actions influenceront l’histoire du jeu.</p><br><img class="slide-image" src="./img/slides/slide  (8).png" alt="Slide 5"><br><button class="border-neon" id="vidtop-content"><a href="https://www.cyberpunk.net/fr/edgerunners">Lire <img class="slide-image breath-neon" src="https://www.cyberpunk.net/build/images/edgerunners/phase2/cover-mobile-539a2f80.jpg" alt="Slide 2">Plus ...</a></button>
 </div>
 </div>
 </li>
@@ -351,112 +471,10 @@ Erreur 404
 </div>
 
 </section>
-<br>
-	<div class="bg-gray-600 h-screen flex justify-center items-center gap-x-20 text-white">
-	<div
-	class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
-	>
-	<div
-	class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
-	>
-	<div class="absolute backface-hidden border-2 w-full h-full">
-	<img src="src/assets/Cyberpunk_2077_Lifepath_Nomad.png" class="w-full h-full"  alt="c77"/>
-	</div>
-	<div
-	class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
-	>
-	<div
-	class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
-	>
-	<h1 class="text-3xl font-semibold">Nomad</h1>
-	<p class="my-2">9.0 Rating</p>
-	<p>
-	Lorem ipsum sit amet consectetur adipisicing elit, odit natus
-	veritatis enim culpa nam inventore doloribus quidem temporibus
-	amet accusamus.
-	</p>
-	<button
-	class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
-	>
-	Watch Now
-	</button>
-	</div>
-	</div>
-	</div>
-	</div> 
-	 		  
-		  <div
-		  class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
-		  >
-		  <div
-		  class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
-		  >
-		  <div class="absolute backface-hidden border-2 w-full h-full">
-		  <img src="src/assets/Cyberpunk_2077_Lifepath_Streetkid.png" class="w-full h-full" alt="c77"/>
-		  </div>
 
-		  <div
-		  class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
-		  >
-		  <div
-		  class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
-		  >
-		  <h1 class="text-3xl font-semibold">StreetKid</h1>
-		  <p class="my-2">8.00 Rating</p>
-		  <p><img class="slide-image" src="src/assets/Cyberpunk_2077_Lifepath_Nomad_Streetkid_Corpo.png" alt="c77"/>
-			  <!-- <div class="bg-transparent">
-				
-			</div> -->
-		  </p>
-		  <button
-		  class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
-		  >
-		  Watch Now
-		  </button>
-		  </div>
-
-		  </div>
-
-		  </div>
-		  </div>
-
-
-	<div
-			  class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
-			  >
-			  <div
-			  class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
-			  >
-			  <div class="absolute backface-hidden border-2 w-full h-full">
-			  <img src="src/assets/Cyberpunk_2077_Lifepath_Corpo.png" class="w-full h-full" alt="c77"/>
-			  </div>
-			  <div
-			  class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
-			  >
-			  <div
-			  class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
-			  >
-			  <h1 class="text-3xl font-semibold">Corpo</h1>
-			  <p class="my-2">7.0 Rating</p>
-			  <p>
-			  Lorem ipsum odit natus veritatis enim culpa nam inventore doloribus quidem temporibus
-			  amet velit accusamus.
-			  </p>
-			  <button
-			  class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
-			  >
-			  Watch Now
-			  </button>
-			  </div>
-			  </div>
-			  </div>
-			  <span class="c-news__image--glitch-effect" style="background-image: url(https://static.cdprojektred.com/cms.cdprojektred.com/16x9_big/23f12c864022304aeaf05d8f760417d583a1602d-1280x720.jpg);"></span>
-		  </div> 
-
-		</div>
 
 <br>	
-<section class="cyber-slider">
+<section class="cyber-slider" id="about">
 			
 <iframe id="ytplayer" class="v-header" type="video/mp4" width="100%" height="360" src="https://www.youtube.com/embed/1DSutjnvTX4?list=PL4dX1IHww9p1ZnvQrC5Um3rXIEBGRY7Rk" title="Cyberpunk 2077 — Bande-annonce de lancement officielle — V" autoplay="autoplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
@@ -465,7 +483,7 @@ Erreur 404
 </section>
 <br>
 
-<section class="cyber-slider" id="Cyberpunk">
+<section class="cyber-slider" id="skills">
 
 <div id="cyberSlider" class="cyber-slider">
 
@@ -641,8 +659,8 @@ visuals, complexity and depth.</p>
 	<h1 class="text-3xl font-semibold">The 01</h1>
 	<p class="my-2">9.0 Rating</p>
 	<p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-	itaque assumenda saepe animi maxime libero non quasi.
+			
+	
 	</p>
 	<button
 	class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
@@ -693,7 +711,7 @@ visuals, complexity and depth.</p>
 </iframe>
 </section>
 
-	<section class="cyber-slider" id="Cyberpunk">
+	<section class="cyber-slider">
 	
 		<div id="cyberSlider" class="cyber-slider">
 		
@@ -913,16 +931,8 @@ Watch Now
 	</div>
 	</div>
 	</div>
-</section><div class="menu" aria-hidden="false">
-	<ul> 
-	  <li>The Continue</li>
-	  <li>New Game</li>
-	  <li>Load Game</li>
-	  <li>Settings</li>
-	  <li>Credits</li>
-	</ul> 	
-</div>
-<section class="cyber-slider" id="Cyberpunk">
+</section>
+<section class="cyber-slider">
 
 	<div id="cyberSlider" class="cyber-slider">
 	
@@ -1089,10 +1099,23 @@ Watch Now
 	<hr>
 
 </section>
-<section class="cyber-slider">
+<section class="cyber-slider" id="work">
 
 <section class="cyber-slider__content">
+	<div class="container sky-neon">
+			<hr>
+	  <h1>DÉFI MODE PHOTO - 2e édition</h1><br><br>N°3 : Verticalité 
+			<button class="cybr-btn" aria-hidden="true">
+				 <span aria-hidden="true">
+				</span>
+				<span aria-hidden="false" class="cybr-btn__glitch">°... :x ...°</span>
+				<a href="https://www.cyberpunk.net/fr/photo-mode-challenge">Participer<box-icon name='down-arrow-alt' type='solid' animation='tada' flip='vertical'></box-icon></a>
+				<span aria-hidden="false" class="cybr-btn__tag sky-neon"><i class='bx bxs-down-arrow-alt bx-tada bx-flip-vertical'><br></i>R26</span>
+			</button>
 
+
+			
+	</div>
 <div class="container breath-neon">		
 			<section class="cyber-slider__content">
 
@@ -1188,20 +1211,7 @@ Watch Now
 					  <div class="btn"><h3>10</h3></div>
 					</div>
 				  </div>
-	<div class="container sky-neon">
-			<hr>
-	  <h1>DÉFI MODE PHOTO - 2e édition</h1><br><br>N°3 : Verticalité 
-			<button class="cybr-btn" aria-hidden="true">
-				 <span aria-hidden="true">
-				</span>
-				<span aria-hidden="false" class="cybr-btn__glitch">°... :x ...°</span>
-				<a href="https://www.cyberpunk.net/fr/photo-mode-challenge">Participer<box-icon name='down-arrow-alt' type='solid' animation='tada' flip='vertical'></box-icon></a>
-				<span aria-hidden="false" class="cybr-btn__tag sky-neon"><i class='bx bxs-down-arrow-alt bx-tada bx-flip-vertical'><br></i>R26</span>
-			</button>
 
-
-			
-	</div>
 <hr><br>
 </section>
 		
@@ -1210,7 +1220,7 @@ Watch Now
 		<h1>	
 					
 Liens divers
-				</h1>		<button class="cybr-btn">
+				</h1>	<hr>	<button class="cybr-btn">
 	Cyber<span aria-hidden="true">_</span>
 		<span aria-hidden="false" class="cybr-btn__glitch"><a href="https://www.cyberpunk.net/fr/fr/">Cyber_</a></span>
 	
@@ -1221,7 +1231,7 @@ Liens divers
 	<a href="https://youtu.be/gyM_HysQN7s"><span aria-hidden="true" class="cybr-btn__glitch">
 		Buttons_</span></a>
 	<span aria-hidden="false" class="cybr-btn__tag sky-neon">R25</span>
-</button>	<hr>			
+</button>				
 	<button class="cybr-btn" aria-hidden="true">
 			Chimères<span aria-hidden="true">_</span>
 				<span aria-hidden="true" class="cybr-btn__glitch"><a href="https://www.cyberpunk.net/fr/fr/">Cyber_</a></span>
@@ -1239,9 +1249,7 @@ Liens divers
 
 <br>
 	</div>
-			
-<br> 
-<br>
+
 <div class="product-grid">		
 				<div class="card stacked featured">
 				<img src="img/slides/slide (90).png" alt="a grey baseball hat with a small palm tree on the front" class="card__img">
@@ -1449,7 +1457,8 @@ Liens divers
 			  <p class="card__description">Corporis, commodi facilis!</p>
 			</div>
 		  </div>
-	
+		  <br>
+
 </div>
 </div>
 
@@ -1458,17 +1467,18 @@ Liens divers
 
 
 </section>
-
+<nav class="menu" aria-hidden="false">
+			   <ul> 
+				 <li>The Continue</li>
+				 <li>New Game</li>
+				 <li>Load Game</li>
+				 <li>Settings</li>
+				 <li>Credits</li>
+			   </ul> 	
+			</nav>	
 </main>
 
-
-
-
-
-
-
-
-<footer class="footer">
+<footer class="footer" id="contact">
 	<a href="#" class="back-to-top" id="back-to-top">°<i class='bx bxs-up-arrow-alt bx-tada bx-box-vertical'></i>°</a>
 		<div class="footer__container container"><h2 class="footer__title">2022 / 2023</h2>
 		
@@ -1520,8 +1530,62 @@ Liens divers
         <script src="/js/mixitup.min.js"></script>
 
         <!--=============== MAIN JS ===============-->
-		<script src="src/main.js"></script>
+		<script src="src/main.js"></script>		<script type="text/javascript">
+	var slides = document.querySelectorAll('.slide');
+	var btns = document.querySelectorAll('.btn');
+	let currentSlide = 1;
+  
+	// Javascript for image slider manual navigation
+	var manualNav = function(manual){
+	  slides.forEach((slide) => {
+		slide.classList.remove('active');
+  
+		btns.forEach((btn) => {
+		  btn.classList.remove('active');
+		});
+	  });
+  
+	  slides[manual].classList.add('active');
+	  btns[manual].classList.add('active');
+	}
+  
+	btns.forEach((btn, i) => {
+	  btn.addEventListener("click", () => {
+		manualNav(i);
+		currentSlide = i;
+	  });
+	});
+  
+	// Javascript for image slider autoplay navigation
+	// var repeat = function(activeClass){
+	//   let active = document.getElementsByClassName('active');
+	//   let i = 1;
+  
+	//   var repeater = () => {
+	// 	setTimeout(function(){
+	// 	  [...active].forEach((activeSlide) => {
+	// 		activeSlide.classList.remove('active');
+	// 	  });
+  
+	// 	slides[i].classList.add('active');
+	// 	btns[i].classList.add('active');
+	// 	i++;
+  
+	// 	if(slides.length == i){
+	// 	  i = 0;
+	// 	}
+	// 	if(i >= slides.length){
+	// 	  return;
+	// 	}
+	// 	repeater();
+	//   },10000);
+	//   }
+	//   repeater();
+	// }
+	// repeat();
+	</script>
 		<script src="./js/scripts.js"></script>
 		
 		<script src="src/index.js"></script>
+
 </body></html>
