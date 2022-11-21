@@ -51,8 +51,10 @@
         <!--=============== HEADER ===============-->
 
         <header class="header" id="">
-<div class="toggle"id=" theme-button change-theme">
-						<input title="input" type="checkbox" class="checkbox" id="dark-mode" />
+
+
+<div class="toggle" id="change-theme-button">
+						<input title="input" type="checkbox" class="checkbox" id="dark-mode"/>
 						<label for="dark-mode" class="label">
 							<i class="bx bx-moon"></i>
 						  
@@ -60,10 +62,11 @@
 						  <div class="ball"></div>
 						</label>
 	</div>	
-			           			<div class="nav__menu">
 
-				<ul class="nav__list"><!-- theme change -->
-					<i class="bx bx-moon change-theme" id="theme-button"></i> 
+<nav class="nav__menu" aria-hidden="false">
+<ul class="nav__list"><!-- theme change -->
+
+<i class="bx bx-moon change-theme" id="theme-button"></i> 
 					
 					<li class="nav__item">
 						<a href="#home" class="nav__link active-link" title="home">
@@ -102,13 +105,14 @@
 						</a><h3 class="nav__item-title">Contacts</h3>
 					</li>
 					
-					<iframe id="ytplayer" type="text/html" width="35" height="35" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLDisKgcnAC4SqX0mi1J5_gd7-hrIS5yJp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></ul>
-					</div>
-			
+					<iframe id="ytplayer" type="text/html" width="35" height="35" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLDisKgcnAC4SqX0mi1J5_gd7-hrIS5yJp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</ul>
+</nav>
+</div>	
 		   <div class="logo" id="">
 			<a href="#" class="logo"> 
 						CYBERPUNK
-					</a>
+					</a>			
 					
 			 <button class="cybr-btn" aria-hidden="true">
 				<span aria-hidden="true">
@@ -125,6 +129,8 @@
 					<span aria-hidden="false" class=" heart-bit-neon cybr-btn__tag"><a href="https://www.cyberpunk.net/fr/fr/" class="sky-neon" aria-hidden="false"> Site Officiel </a>↔ R23 ↔<a href="index.html" class="sky-neon" aria-hidden="false"> Reset </a></span>
 					
 			</button>
+			
+			
 </div>
 <!-- 				 --><!---->
 
@@ -457,11 +463,20 @@ Erreur 404
 <div class="cyber-slider__content">
 <!-- class glitching -->
 <div class="cyber-slider__slidetext">
-<h2>Slide 8</h2><h3 class="heading-lg">Différents choix</h3>
-<p><br>Découvrez comment vos choix et vos actions influenceront l’histoire du jeu.</p><br><button class="border-neon" id="vidtop-content"><a href="https://www.cyberpunk.net/fr/edgerunners">Lire <img class="slide-image breath-neon" src="https://www.cyberpunk.net/build/images/edgerunners/phase2/cover-mobile-539a2f80.jpg" alt="Slide 2">Plus ...</a></button>
+<h2>Slide 8</h2>
+<h3 class="heading-lg">Différents choix</h3>
 <p>
-<span class="glitch-area cybr-btn"><a href="https://youtu.be/-x4s6NIdS_I" class="" title="Cyberpunk 2077 PHANTOM LIBERTY : Bande Annonce 4K">Easter Eggs</a></span>
-<br><img class="slide-image" src="./img/slides/slide  (8).png" alt="Slide 5">
+	<br>Découvrez comment vos choix et vos actions influenceront l’histoire du jeu.
+</p>
+<br>
+<p>
+	<button class="border-neon" id="vidtop-content"><a href="https://www.cyberpunk.net/fr/edgerunners">Lire<img class="slide-image breath-neon" src="https://www.cyberpunk.net/build/images/edgerunners/phase2/cover-mobile-539a2f80.jpg" alt="Slide 2">Plus ...</a></button>
+
+<span class="glitch-area cybr-btn">
+	<a href="https://youtu.be/-x4s6NIdS_I" class="" title="Cyberpunk 2077 PHANTOM LIBERTY : Bande Annonce 4K">Easter Eggs</a>
+</span>
+<br>
+<img class="slide-image" src="./img/slides/slide  (8).png" alt="Slide 5">
 </p>
 
 </div>
@@ -912,6 +927,29 @@ visuals, complexity and depth.</p>
 <section class="bg-gray-900 h-screen flex justify-center items-center gap-x-16 text-white">
 
 <div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
+	<div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+	<div class="absolute backface-hidden border-2 w-full h-full" id="">
+	<img src="img/slides/slide (71).png" class="w-full card__glare" alt="c77">
+	<h1 class="text-3xl font-semibold">The 04</h1><img src="img/slides/slide (108).png" class="w-full card__glare" alt="c77">
+	</div>
+	
+	<div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden" >
+	<div class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24" >
+	<h1 class="text-3xl font-semibold">The 04</h1>
+	<p class="my-2">X Rating</p>
+	<p>
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+	itaque assumenda saepe animi maxime libero non quasi.
+	</p>
+	<button
+	class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+	>
+	Watch Now
+	</button>
+	</div>
+	</div>
+	</div>
+	</div><div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
 <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
 <div class="absolute backface-hidden border-2 w-full h-full">
 	<img src="img/slides/slide (108).png" class="w-full card__glare" alt="c77">
@@ -935,31 +973,6 @@ Watch Now
 </div>
 </div>
 </div>
-
-<div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
-	<div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
-	<div class="absolute backface-hidden border-2 w-full h-full" id="">
-	<img src="img/slides/slide (71).png" class="w-full card__glare" alt="c77">
-	<h1 class="text-3xl font-semibold">The 04</h1><img src="img/slides/slide (108).png" class="w-full card__glare" alt="c77">
-	</div>
-	
-	<div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden" >
-	<div class="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24" >
-	<h1 class="text-3xl font-semibold">The 04</h1>
-	<p class="my-2">X Rating</p>
-	<p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-	itaque assumenda saepe animi maxime libero non quasi.
-	</p>
-	<button
-	class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
-	>
-	Watch Now
-	</button>
-	</div>
-	</div>
-	</div>
-	</div>
 </section>
 <section class="cyber-slider">
 
@@ -1128,9 +1141,9 @@ Watch Now
 	<hr>
 
 </section>
-<section class="cyber-slider" id="work">
 
-<section class="cyber-slider__content">
+
+<section class="cyber-slider__content" id="work">
 	<div class="container breath-neon">
 			<hr>
 	  <h1>DÉFI MODE PHOTO - 2e édition</h1><br><br>N°3 : Verticalité 
@@ -1145,8 +1158,7 @@ Watch Now
 
 			
 	</div>
-	<section class="cyber-slider__content">
-<div class="container sky-neon">		
+	<div class="container sky-neon">		
 			
 
 	<div class="img-slider">
@@ -1328,29 +1340,42 @@ Watch Now
 					  <div class="btn"><h3>20</h3></div>
 	</div>
 </div>
-<hr><br>				  
+			  
 </div>
-
-
 </section>
-		
+
+<section class="cyber-slider__content">
+
+<hr>
 				
 <div class="container">
-		<h1>	
-					
-Liens divers
-				</h1>	<hr>	<button class="cybr-btn">
+		<h1>Liens divers</h1>
+		<nav class="menu nav__list" aria-hidden="false">
+			<ul class=" nav__link"> 
+		<!-- <li>Continue</li> <br> -->
+		<li>New Game</li>
+		<li>Load Game</li>
+		<!-- <li class="">Settings & Credits</li> -->
+	  </ul> 
+</nav>	
+<br>		
+<hr>	
+<button class="cybr-btn">
 	Cyber<span aria-hidden="true">_</span>
-		<span aria-hidden="false" class="cybr-btn__glitch"><a href="https://www.cyberpunk.net/fr/fr/">Cyber_</a></span>
+		<span aria-hidden="false" class="cybr-btn__glitch">
+			<a href="https://www.cyberpunk.net/fr/fr/">Cyber_</a>
+		</span>
 	
 	<span aria-hidden="false" class="cybr-btn__tag sky-neon">R24</span>
 </button>
+
 <button class="cybr-btn" aria-hidden="true">
 	_<span aria-hidden="false">Buttons</span>
 	<a href="https://youtu.be/gyM_HysQN7s"><span aria-hidden="true" class="cybr-btn__glitch">
 		Buttons_</span></a>
 	<span aria-hidden="false" class="cybr-btn__tag sky-neon">R25</span>
-</button>				
+</button>		
+
 	<button class="cybr-btn" aria-hidden="true">
 			Chimères<span aria-hidden="true">_</span>
 				<span aria-hidden="true" class="cybr-btn__glitch"><a href="https://www.cyberpunk.net/fr/fr/">Cyber_</a></span>
@@ -1365,11 +1390,11 @@ Liens divers
 			<span aria-hidden="false" class="cybr-btn__tag sky-neon">R28</span>
 		  </button>
 
-
 <br>
 	</div>
 
-<div class="product-grid">		
+<div class="product-grid">	
+		
 				<div class="card stacked featured">
 				<img src="img/slides/slide (90).png" alt="a grey baseball hat with a small palm tree on the front" class="card__img">
 				<div class="card__content">
@@ -1582,10 +1607,14 @@ Liens divers
 </div>
 
 </section>
-
+		
 
 
 </section>
+
+
+<!-- <section class="cyber-slider">
+</section> -->
 
 </main>
 
@@ -1622,15 +1651,7 @@ Liens divers
 			<h3>&#169; Alex. "All rights reserved"© .
 			(Inspirations & Thanks to friends.)
 			<br>
-		</h3><h2 class="footer__title">2022 / 2023<nav class="menu" aria-hidden="false">
-			   <ul> 
-				 <li>The Continue</li>
-				 <li>New Game</li>
-				 <li>Load Game</li>
-				 <li>Settings</li>
-				 <li>Credits</li>
-			   </ul> 	
-			</nav>	</h2>
+		</h3><h2 class="footer__title">2022 / 2023	</h2>
 		</span>
 	</div>
 	
@@ -1707,4 +1728,6 @@ Liens divers
 		
 		<script src="src/index.js"></script>
 
-</body></html>
+</body>
+
+</html>
