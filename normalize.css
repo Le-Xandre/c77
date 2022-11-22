@@ -24,6 +24,7 @@
 		@author Sylvain Pigeard
 		@see https://github.com/twbs/bootstrap/issues/20732
 */
+
 .sr-only-focusable:focus,
 .sr-only-focusable:active {
 	clip: auto !important;
