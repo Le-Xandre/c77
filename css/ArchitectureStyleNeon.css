@@ -1,6 +1,5 @@
 
 @import "normalize.css";
-
 @import "style.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,400;8..144,600&family=Spectral:ital,wght@0,200;0,400;0,600;1,400&display=swap');
@@ -26,7 +25,7 @@
       --noir: #000002;
       --blanc: #f3ebebfd;
       --body-color: #000000;
-      --gris-transparent: #cdd6d6f6;
+      --gris-transparent: #2b2d2df6;
 
 
       --premiere-color:rgb(255, 255, 255);
@@ -34,9 +33,9 @@
       --third-color:rgba(70, 126, 248, 0.991);
 
       --text-color-light-01: rgb(249, 199, 142);
-      --text-color-light-02: rgb(207, 253, 241);
+      --text-color-light-02: rgb(164, 236, 217);
       --text-color-light-03: rgb(255, 153, 0);
-      --text-color-light-04: rgba(3, 24, 74, 0.956);
+      --text-color-light-04: rgba(2, 32, 101, 0.754);
       --text-color-light-05: rgb(255, 0, 43);
       --text-color-light-06: rgb(218, 225, 234);
 
@@ -110,13 +109,13 @@ h1 {
 text-align: center;
     color: var(--text-color-light-04);
 
-    border-bottom: 1px ridge #1f0754;
+    border-bottom: 1px ridge #14023b;
 
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.925), 0 0 10px rgba(255, 255, 255, 0.945),
      0 0 20px #f4b403de, 0 0 30px #f47703b6, 0 0 40px #f4a003d5, 0 0 50px #f48c039f,
-      0 0 60px #f43303c2,0 0 5px rgb(222, 222, 222),
-       0 0 15px rgb(227, 223, 223), 0 0 30px #0377f4, 0 0 35px #619cf5,
-        0 0 40px #8b9ae3, 0 0 45px #9d1dff, 0 0 50px #8d04e2;
+      0 0 60px #c22903c2,0 0 5px rgba(222, 222, 222, 0.874),
+       0 0 15px rgba(227, 223, 223, 0.888), 0 0 30px #0377f4d5, 0 0 35px #619cf5ce,
+        0 0 40px #8b9ae3b1, 0 0 45px #9d1dffa3, 0 0 50px #8d04e2af;
   
 }
 
@@ -141,7 +140,7 @@ color: var(--text-color-light-04);
     border-bottom: 1px ridge #ffbb3e;
 
 text-shadow: 
-0 0 20px #ecf403, 0 0 30px #1ff403, 0 0 40px #03a9f4, 0 0 50px #1f03f4, 0 0 60px #6b03f4, 0 0 5px rgb(255 255 255 / 93%), 0 0 10px rgb(80 48 48 / 95%), 0 0 20px #000000de, 0 0 30px #4703f4b6, 0 0 40px #03a8f4d5, 0 0 50px #03a8f49f, 0 0 60px #050c10c2,0 0 5px #fff, 0 0 10px #fff;   
+0 0 20px #ecf403, 0 0 30px #18c102, 0 0 40px #03a9f4, 0 0 50px #1f03f4, 0 0 60px #6b03f4, 0 0 5px rgb(255 255 255 / 93%), 0 0 10px rgb(80 48 48 / 95%), 0 0 20px #000000de, 0 0 30px #3002a47b, 0 0 40px #0273a8b0, 0 0 50px #03a8f49f, 0 0 60px #050c10c2,0 0 5px #fff, 0 0 10px #fff;   
   
 }
 
@@ -163,7 +162,7 @@ h3 {
     text-align: center;
      color: var(--text-color-light-04);
     text-shadow: 0 0 5px #fff, 0 0 20px #fff, 
-    0 0 25px #f44b03, 0 0 30px #4ff403, 0 0 35px #03a9f4, 0 0 40px #03a9f4, 
+    0 0 25px #b03804f6, 0 0 30px #48db03dd, 0 0 35px #03a8f4c3, 0 0 40px #03a9f4, 
     0 0 50px #031a24;    
 }
   
@@ -215,7 +214,7 @@ h3 {
     width: 450px;
     height: 390px;
     pointer-events: none;
-    background: radial-gradient(circle, transparent, transparent 18px, #007fff 20px, #007fff 23px, #1f90ff 23px, #1f90ff 36px, #007fff) center top/60px 60px;
+    background: radial-gradient(circle, transparent, transparent 18px, #007fff 20px, #0080ffe6 23px, #1f90ff 23px, #1f8fffe7 36pxrgba(0, 128, 255, 0.939)ff) center top/60px 60px;
   }
   
   /* Invisible inputs */
@@ -292,12 +291,12 @@ h3 {
   
   /* Red's turn */
   input:hover + .disc {
-    color: #ff010b;
+    color: #d00007;
     opacity: 1;
     transition: opacity 0.2s, top 0s;
   }
   input:checked + .disc {
-    color: #ff010b;
+    color: #d20007;
     opacity: 1;
   }
   /* Yellow's turn */
@@ -445,7 +444,7 @@ cursor:crosshair;
     cursor: pointer;
     color: rgb(0, 0, 0);
     background: #f19e04 center;
-    box-shadow: 0 0 2px rgb(159, 225, 194);
+    box-shadow: 0 0 2px rgb(92, 148, 122);
     outline: none;
     transition: background 0.5s;
 
@@ -454,7 +453,7 @@ cursor:crosshair;
     background: #000000fa radial-gradient(circle, transparent 1%, #4b0321 1%) center/15000%;
   }
   button:active {
-    background-color: #0b66ab;
+    background-color: #005493;
     background-size: 100%;
     transition: background 0.5s;
   }
@@ -475,22 +474,22 @@ cursor:crosshair;
 
 /* Solid Button */
 .sky-neon {
-    color: #175e80;
-    background-color: #86dbff;
+    color: #053146;
+    background-color: #5dc4f1;
     -webkit-transition: .3s all ease-in;
     transition: .3s all ease-in;
     border: 2px solid transparent;
 }
  
 .sky-neon:hover, .sky-neon:focus {
-    -webkit-box-shadow: 0px 0px 20px 15px #3cc6d8;
-    box-shadow: 0px 0px 30px 20px #3cc6d8;
-    background-color: #d7f3ff;
+    -webkit-box-shadow: 0px 0px 20px 15px #39c7d9;
+    box-shadow: 0px 0px 30px 20px #3cccdf;
+    background-color: #c0c6c8;
 }
  
 /* Breath Button */
 .breath-neon {
-    color: #4488f5f3;
+    color: #3f2a5bf3;
     background-color: #010231fa;
     border: 2px solid transparent;
     -webkit-transition: .5s all ease-in;
@@ -501,14 +500,14 @@ cursor:crosshair;
     background-color: #d3ceff;
     -webkit-animation: breathing 3s infinite;
             animation: breathing 3s infinite;
-    -webkit-box-shadow: 0px 0px 10px 0px #b5bcff;
-            box-shadow: 0px 0px 10px 0px #b5b6ff;
+    -webkit-box-shadow: 0px 0px 10px 0px #7681dc;
+            box-shadow: 0px 0px 10px 0px #8d8fe1;
 }
  
 /* Heart Bit Button */
 .heart-bit-neon {
     background-color: #0a122ee3;
-    color: #fff;
+    color: rgb(216, 84, 57);
     border: 2px solid transparent;
 }
  
@@ -524,7 +523,7 @@ cursor:crosshair;
 /* Simple Border Button */
 .border-neon {
     background-color: transparent;
-    border: 2px solid rgba(93, 89, 109, 0.513);
+    border: 2px solid rgba(110, 104, 136, 0.513);
     color: rgb(0, 0, 0);
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
@@ -534,7 +533,7 @@ cursor:crosshair;
     -webkit-box-shadow: inset 0px 0px 8px 3px #94cbff;
     box-shadow: 0px 0px 10px 3px #94d8ff, inset 0px 0px 10px 3px #94adff;
     border-color: #fff;
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #94adffa1, 0 0 40px #94a4ffc8, 0 0 50px #94b9ffde, 0 0 60px #94c2ffc5, 0 0 70px #50bfffb3
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #cfff94a1, 0 0 40px #94ffcbc8, 0 0 50px #e8ff94de, 0 0 60px #e2ff94c5, 0 0 70px #d0ff50b3
 }
  
 /* Inner Height Button */
