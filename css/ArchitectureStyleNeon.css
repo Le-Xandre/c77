@@ -23,12 +23,12 @@
       --height_header04:480px;
 
       --noir: #000002;
-      --blanc: #f3ebebfd;
+      --blanc: #000000fd;
       --body-color: #000000;
-      --gris-transparent: #2b2d2df6;
+      --gris-transparent: #070707f6;
 
 
-      --premiere-color:rgb(255, 255, 255);
+      --premiere-color:rgb(28, 28, 28);
       --seconde-color:rgba(0, 0, 0, 0.991);
       --third-color:rgba(70, 126, 248, 0.991);
 
@@ -37,7 +37,7 @@
       --text-color-light-03: rgb(255, 153, 0);
       --text-color-light-04: rgba(2, 32, 101, 0.754);
       --text-color-light-05: rgb(255, 0, 43);
-      --text-color-light-06: rgb(218, 225, 234);
+      --text-color-light-06: rgb(0, 0, 0);
 
 
       --smaller-font-size: .50rem;
@@ -140,7 +140,7 @@ color: var(--text-color-light-04);
     border-bottom: 1px ridge #ffbb3e;
 
 text-shadow: 
-0 0 20px #ecf403, 0 0 30px #18c102, 0 0 40px #03a9f4, 0 0 50px #1f03f4, 0 0 60px #6b03f4, 0 0 5px rgb(255 255 255 / 93%), 0 0 10px rgb(80 48 48 / 95%), 0 0 20px #000000de, 0 0 30px #3002a47b, 0 0 40px #0273a8b0, 0 0 50px #03a8f49f, 0 0 60px #050c10c2,0 0 5px #fff, 0 0 10px #fff;   
+0 0 20px #ecf403cb, 0 0 30px #18c102cf, 0 0 40px #03a9f4, 0 0 50px #1f03f4, 0 0 60px #6b03f4, 0 0 5px rgb(255 255 255 / 93%), 0 0 10px rgb(80 48 48 / 95%), 0 0 20px #000000de, 0 0 30px #3002a47b, 0 0 40px #0273a8b0, 0 0 50px #03a8f49f, 0 0 60px #050c10c2,0 0 5px #fff, 0 0 10px #fff;   
   
 }
 
@@ -162,8 +162,8 @@ h3 {
     text-align: center;
      color: var(--text-color-light-04);
     text-shadow: 0 0 5px #fff, 0 0 20px #fff, 
-    0 0 25px #b03804f6, 0 0 30px #48db03dd, 0 0 35px #03a8f4c3, 0 0 40px #03a9f4, 
-    0 0 50px #031a24;    
+    0 0 25px #b03804f6, 0 0 30px #47db03a2, 0 0 35px #03a8f48a, 0 0 40px #03a8f493, 
+    0 0 50px #011e2a;    
 }
   
   form {
@@ -214,7 +214,7 @@ h3 {
     width: 450px;
     height: 390px;
     pointer-events: none;
-    background: radial-gradient(circle, transparent, transparent 18px, #007fff 20px, #0080ffe6 23px, #1f90ff 23px, #1f8fffe7 36pxrgba(0, 128, 255, 0.939)ff) center top/60px 60px;
+    background: radial-gradient(circle, transparent, transparent 18px, #0080ffb0 20px, #0080ffa8 23px, #1f8fffb0 23px, #1f8fffa4 36pxrgba(0, 128, 255, 0.939)ff) center top/60px 60px;
   }
   
   /* Invisible inputs */
@@ -282,8 +282,8 @@ h3 {
     top: 0;
     width: 60px;
     height: 60px;
-    color: #fff;
-    background: radial-gradient(circle, currentcolor 12px, #666 13px, currentcolor 14px, currentcolor 21px, #666 22px, transparent 23px, transparent) center/60px;
+    color: rgb(255, 219, 60);
+    background: radial-gradient(circle, currentcolor 12px, #666 13px, currentcolor 14px, currentcolor 21px, rgb(11, 11, 11) 22px, transparent 23px, transparent) center/60px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s, top 0s 0.2s, color 0s 0.2s;
@@ -291,22 +291,22 @@ h3 {
   
   /* Red's turn */
   input:hover + .disc {
-    color: #d00007;
+    color: #e10c13;
     opacity: 1;
     transition: opacity 0.2s, top 0s;
   }
   input:checked + .disc {
-    color: #d20007;
+    color: #960005;
     opacity: 1;
   }
   /* Yellow's turn */
   input:hover + input + .disc {
-    color: #ffd918;
+    color: #ffe45b;
     opacity: 1;
     transition: opacity 0.2s, top 0s;
   }
   input:checked + input + .disc {
-    color: #ffd918;
+    color: #ffd500;
     opacity: 1;
   }
   
@@ -378,7 +378,7 @@ h3 {
     content: counter(player, lower-roman);
     display: inline-block;
     max-width: 840px;
-    min-width: 420px;
+    min-width: 220px;
     letter-spacing: 375px;
     font-family: monospace;
     font-size: var(--normal-font-size);
@@ -387,8 +387,8 @@ h3 {
   
 
   .main-container {
-    padding: 8px;
-    margin: 8px;
+    padding: 4px;
+    margin: 4px;
     text-align: center;    
     text-align: center;
     justify-content: center;
@@ -417,8 +417,7 @@ h3 {
  
 /* Common CSS for all Buttons - commandes css pour tous les boutons */
 button {
-
-    width: 100px;
+    width: 90px;
     height: auto;
     font-family: var(--font-family-03);
     font-size: var(--h2-font-size);
@@ -426,7 +425,7 @@ button {
     align-items: center;
     justify-content: center;
     color: var(--text-color-light-04);
-    -webkit-text-stroke: .25px rgba(0, 0, 0, 0.977);
+    -webkit-text-stroke: .25px rgb(0, 0, 0);
     text-decoration: none;    
 cursor:crosshair;
 }
@@ -444,13 +443,13 @@ cursor:crosshair;
     cursor: pointer;
     color: rgb(0, 0, 0);
     background: #f19e04 center;
-    box-shadow: 0 0 2px rgb(92, 148, 122);
+    box-shadow: 0 0 2px rgba(92, 148, 122, 0.733);
     outline: none;
     transition: background 0.5s;
 
   }
   button:hover {
-    background: #000000fa radial-gradient(circle, transparent 1%, #4b0321 1%) center/15000%;
+    background: #000000fa radial-gradient(circle, transparent 1%, #00b8c9 1%) center/15000%;
   }
   button:active {
     background-color: #005493;
@@ -475,16 +474,16 @@ cursor:crosshair;
 /* Solid Button */
 .sky-neon {
     color: #053146;
-    background-color: #5dc4f1;
+    background-color: #3bbbf1;
     -webkit-transition: .3s all ease-in;
     transition: .3s all ease-in;
     border: 2px solid transparent;
 }
  
 .sky-neon:hover, .sky-neon:focus {
-    -webkit-box-shadow: 0px 0px 20px 15px #39c7d9;
-    box-shadow: 0px 0px 30px 20px #3cccdf;
-    background-color: #c0c6c8;
+    -webkit-box-shadow: 0px 0px 20px 15px #189eb0;
+    box-shadow: 0px 0px 30px 20px #27b1c3;
+    background-color: #8abaca;
 }
  
 /* Breath Button */
@@ -497,23 +496,23 @@ cursor:crosshair;
 }
  
 .breath-neon:hover, .breath-neon:focus {
-    background-color: #d3ceff;
+    background-color: #867fbe;
     -webkit-animation: breathing 3s infinite;
             animation: breathing 3s infinite;
-    -webkit-box-shadow: 0px 0px 10px 0px #7681dc;
-            box-shadow: 0px 0px 10px 0px #8d8fe1;
+    -webkit-box-shadow: 0px 0px 10px 0px #4f5489;
+            box-shadow: 0px 0px 10px 0px #525370;
 }
  
 /* Heart Bit Button */
 .heart-bit-neon {
-    background-color: #0a122ee3;
-    color: rgb(216, 84, 57);
+    background-color: #270a2ee3;
+    color: rgb(152, 25, 0);
     border: 2px solid transparent;
 }
  
 .heart-bit-neon:hover, .heart-bit-neon:focus {
-    background-color: #ffd063d8;
-    color: rgb(255, 255, 255);
+    background-color: #f5bb35d8;
+    color: rgb(255, 180, 180);
     -webkit-animation: heartBit 1.2s infinite;
             animation: heartBit 1.2s infinite;
 
@@ -523,7 +522,7 @@ cursor:crosshair;
 /* Simple Border Button */
 .border-neon {
     background-color: transparent;
-    border: 2px solid rgba(110, 104, 136, 0.513);
+    border: 2px solid rgba(78, 59, 165, 0.513);
     color: rgb(0, 0, 0);
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
@@ -532,8 +531,8 @@ cursor:crosshair;
 .border-neon:hover, .border-neon:focus {
     -webkit-box-shadow: inset 0px 0px 8px 3px #94cbff;
     box-shadow: 0px 0px 10px 3px #94d8ff, inset 0px 0px 10px 3px #94adff;
-    border-color: #fff;
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #cfff94a1, 0 0 40px #94ffcbc8, 0 0 50px #e8ff94de, 0 0 60px #e2ff94c5, 0 0 70px #d0ff50b3
+    border-color: rgb(185, 179, 179);
+    text-shadow: 0 0 10px rgb(206, 206, 206), 0 0 20px #fff, 0 0 30px #cfff94a1, 0 0 40px #94ffcbc8, 0 0 50px #e8ff94de, 0 0 60px #e2ff94c5, 0 0 70px #d0ff50b3
 }
  
 /* Inner Height Button */
@@ -901,6 +900,8 @@ cursor:crosshair;
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
 }
+
+
 .main-container2 {
 display: flex;
 padding: 10px;
@@ -1049,7 +1050,7 @@ iframe {
     }
 
     .neon-img:hover iframe {
-    background-image: -webkit-gradient(linear, left top, right top, from(#9d92ff) , color-stop(#ff7b7b), to(#a599ff));
+    background-image: linear-gradient(linear, left top, right top, from(#9d92ff) , color-stop(#ff7b7b), to(#a599ff));
     background-image: linear-gradient(90deg, #2d3aa2 , #ff7b86, #99e0ff);
     opacity: 0.5;    border: double 5px #063872;
     }
