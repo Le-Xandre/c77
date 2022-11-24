@@ -124,6 +124,32 @@
     --fs-900: 5rem;
   }
 }
+@media only screen and (min-width: 50em) {
+  :root {
+    --fs-100: 0.725rem;
+    --fs-200: 0.875rem;
+    --fs-300: 1rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.325rem;
+    --fs-600: 2rem;
+    --fs-700: 2.75rem;
+    --fs-800: 3.25rem;
+    --fs-900: 4rem;
+  }
+}
+@media only screen and (min-width: 65em) {
+  :root {
+    --fs-100: 0.725rem;
+    --fs-200: 0.875rem;
+    --fs-300: 1rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.325rem;
+    --fs-600: 2rem;
+    --fs-700: 2.75rem;
+    --fs-800: 3.5rem;
+    --fs-900: 5rem;
+  }
+}
   --ff-primary: Heebo, sans-serif;
   --ff-secondary: Bungee, cursive;
   --ff-accent: Bungee Shade, cursive;
@@ -254,6 +280,7 @@
 }
 
 /* Set core root defaults */
+
 html:focus-within {
   scroll-behavior: smooth;
   font-family: "Maven Pro", sans-serif;
@@ -264,6 +291,7 @@ text-align: center;
 }
 
 /* Set core body defaults */
+
 body {
   min-height: 100vh;
   width: 99%;
@@ -297,6 +325,7 @@ text-align: center;
   position: relative;
   margin-bottom: 2vh; 
 } */
+
 section {
 display: grid;
 align-items: center;
@@ -393,19 +422,6 @@ line-height: 1.25;
 
 }
 
-footer {
-  color: whitesmoke;
-  align-items: center;
-  font-family: fantasy;
-text-align: center;
-}
-
-
-
-.back-to-top a {
-  color: inherit;
-  text-decoration: none;
-}
 
 .toggle {
   position: absolute;
@@ -491,6 +507,137 @@ text-align: center;
 }
 
 
+.container {
+  max-width: var(--width, 140ch);
+  margin-inline: auto;
+  padding-inline: var(--spacer);
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, var(--spacer));
+}
+
+.grid,
+.with-sidebar,
+.main-layout,
+.even-columns {
+  display: grid;
+  gap: var(--gap, var(--spacer));
+}
+
+.main-layout {
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.with-sidebar {
+  grid-template-columns: 1fr 20rem;
+}
+
+  
+
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#vidtop-content {
+	top: 0;
+	color: #fff;
+}
+
+.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2;  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center; }
+.vid-info a { display: block; color: #fff; 
+  text-decoration: none; 
+  background: rgba(0,0,0,0.5); 
+  transition: .6s all; 
+  border-bottom: none; 
+  margin: 1rem auto; 
+  text-align: center; 
+}
+
+/*========== Variables Dark theme ==========*/
+body.light-theme{
+  --title-color: hsla(var(--second-hue), 15%, 15%);
+  --text-color: hsla(var(--second-hue), 8%, 35%);
+  --body-color: hsla(var(--second-hue), 100%, 99%);
+  --container-color: rgb(13, 21, 20);
+}
+/*=============== THEME ===============*/
+.change-theme{
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: .3s;
+}
+.change-theme:hover{
+  color: var(--first-color);
+}
+/*========== 
+    Color changes in some parts of 
+    the website, in light theme
+==========*/
+.light-theme .scroll-header{
+  box-shadow: 0 2px 4px rgba(10, 10, 10, 0.92);
+}
+.light-theme .nav__menu{
+  background-color: hsla(var(--second-hue), 30%, 85%, .8);
+}
+.light-theme .section__subtitle{
+  color: var(--text-color);
+}
+.light-theme .home__social-link{
+  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, .1);
+}
+.light-theme .home__social::after,
+.light-theme .footer__social-link{
+  background-color: var(--title-color);
+}
+.light-theme .home__social-link, 
+.light-theme .home__scroll,
+.light-theme .button,
+.light-theme .button:hover,
+.light-theme .active-work,
+.light-theme .footer__title,
+.light-theme .footer__link,
+.light-theme .footer__copy{
+  color: var(--title-color);
+}
+.light-theme .about__box{
+  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, .1);
+}
+.light-theme .skills__content, 
+.light-theme .services__card,
+.light-theme .work__card,
+.light-theme .testimonial__card,
+.light-theme .contact__card
+{
+  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, .1);
+}
+.light-theme::-webkit-scrollbar{
+  background-color: hsl(var(--second-hue), 8%, 66%);
+}
+.light-theme::-webkit-scrollbar-thumb{
+  background-color: hsl(var(--second-hue), 8%, 66%);
+}
+.light-theme::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(var(--second-hue), 8%, 44%);
+}
 
 .heading-lg {
   font-size: 1.25rem;
@@ -620,7 +767,19 @@ text-align: center;
   z-index: 4;
 }
 
+footer {
+  color: whitesmoke;
+  align-items: center;
+  font-family: fantasy;
+text-align: center;
+}
 
+
+
+.back-to-top a {
+  color: inherit;
+  text-decoration: none;
+}
 
 
 /* Single Slide */
@@ -1402,34 +1561,6 @@ body.light-theme{
   background-color: hsl(var(--second-hue), 8%, 44%);
 }
 
-
-@media (min-aspect-ratio: 16/9) {
-  .video-foreground { height: 300%; top: -100%; }
-}
-@media (max-aspect-ratio: 16/9) {
-  .video-foreground { width: 300%; left: -100%; }
-}
-@media all and (max-width: 600px) {
-.vid-info { width: 50%; padding: .5rem; }
-.vid-info h1 { margin-bottom: .2rem; }
-}
-@media all and (max-width: 500px) {
-.vid-info .acronym { display: none; }
-}
-
-
-@media screen and (min-width: 600px) {
-	.card-grid {
-		grid-template-columns: 1fr 1fr;
-	}
-}
-
-@media screen and (min-width: 900px) {
-	.card-grid {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-}
-
   
 /* Single Slide */
 .cyber-slider {
@@ -1986,3 +2117,32 @@ body.light-theme{
 }
 
 
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
+
+
+@media screen and (min-width: 600px) {
+	.card-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.card-grid {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+  
