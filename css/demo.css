@@ -22,7 +22,7 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;
+  margin: 0;text-shadow: rgb(0, 0, 0);
   align-items: center;
   justify-items: center;
   justify-content: center;
@@ -54,7 +54,7 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
 /* A elements that don't have a class get default styles */
@@ -177,7 +177,7 @@ body {
   padding: 0.125em 0.5em;
   margin-bottom: 1em;
   width: auto;
-  /* width: fit-content; */
+  width: fit-content;
 }
 
 p.max-content {
